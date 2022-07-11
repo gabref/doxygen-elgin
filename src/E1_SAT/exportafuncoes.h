@@ -2509,9 +2509,6 @@ extern "C"{
       * > <b>Tipo:</b> Numérico\n
       * > <b>Tamanho:</b> 3\n
       *
-      *  \image html C:\Users\bruno.cruz\Pictures\anexo03.JPG
-      *  \image html C:\Users\bruno.cruz\Pictures\anexo03-a.JPG
-      *
       * \return
       * O retorno da função é do tipo numérico.\n
       * A função bem sucedida deve retornar 0.\n
@@ -2655,7 +2652,39 @@ extern "C"{
       * Caminho raiz onde a estrutura de pasta e o arquivo será gerado.
       * \note
       * Os demais parametros são identicos aos da função #AbreCupomCancelamento
+      * 
+      * \param chCanc
+      * informar a chave de acesso do CF-e a ser cancelado, precedida do literal ‘CFe’,\n
+      * acrescentada a validação do formato.
+      * > TAG : A06\n
+      * > <b>Parametro obrigatório</b>\n
+      * > <b>Tipo:</b> Alfanumérico\n
+      * > <b>Tamanho:</b> 47\n
       *
+      * \param CNPJ
+      * Informar o CNPJ da empresa desenvolvedora do Aplicativo Comercial.\n
+      * Deve ser informado apenas números. Caracteres (ponto, barra, hífen, etc.) serão removidos.\n
+      * Caso o CNPJ tenha menos que 14 digitos a tag será preenchida com 0 não significativos.\n
+      * zeros não significativos.
+      * > <b>TAG:</b> B10\n
+      * > <b>Parametro obrigatório</b>\n
+      * > <b>Tipo:</b> Numérico\n
+      * > <b>Tamanho:</b> 14\n
+      *
+      * \param signAC
+      * Assinatura de (CNPJ Software House + CNPJ Emitente) que gerou o CF-e de cancelamento.
+      * > <b>TAG:</b> B11\n
+      * > <b>Parametro obrigatório</b>\n
+      * > <b>Tipo:</b> Alfanumérico\n
+      * > <b>Tamanho:</b> 1-344\n
+      *
+      * \param numeroCaixa
+      * Número de 0 a 999 referente ao caixa em que o SAT está conectado.
+      * > <b>TAG:</b> B13\n
+      * > <b>Parametro obrigatório</b>\n
+      * > <b>Tipo:</b> Numérico\n
+      * > <b>Tamanho:</b> 3\n
+      * 
       * \return
       * O retorno dessa função deve ser o caminho absoluto onde o arquivo foi gerado.
       */
