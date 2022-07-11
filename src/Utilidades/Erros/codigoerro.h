@@ -142,7 +142,7 @@ enum IMP_Erro_ValidacaoXML{
  * Especificação dos possíveis erros de leitura.\n
  * Faixa -81 à -90.
  */
-enum IMP_Erro_Leitura{
+enum IMP_Erro_Leitura_Impressora{
     NENHUM_DADO_RETORNADO = -81, /**< <b>(-81)</b> Nenhum dado retornou na tentativa de leitura na impressora.*/
     FALHA_AO_ABRIR_ARQUIVO = -82 /**< <b>(-82)</b> Falha ao tentar abrir arquivo para leitura.*/
 };

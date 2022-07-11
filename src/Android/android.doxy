@@ -414,7 +414,7 @@
   * O retorno é numérico.\n
   * A função bem-sucedida deve retornar 0.\n
   *
-  * * Para mais informações sobre retorno consulte #Erro_ConexaoAndroid e #IMP_Erro_Leitura.
+  * * Para mais informações sobre retorno consulte #Erro_ConexaoAndroid e #IMP_Erro_Leitura_Impressora.
   */
  int DirectIO(byte[] writeData, int writeNum, byte[] readData, Inteiro readNum);
 
