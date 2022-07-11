@@ -414,10 +414,15 @@ extern "C"{
      *//**
      * \ingroup g52
      * Função utilizada para obter configuração do servidor
+     * \param retorno - parametro passado por referência que ira armazenar os dados\n
+     * de retorno ao fim da transação.
      * Exemplo:
      * ~~~.json
      * {"e1_bridge_code":0,"e1_bridge_msg":"192.168.0.1|3000|3001"}
      * ~~~
+     * \return código numérico referente ao processamento da função.\n
+     * A função executada com sucesso deve retornar 0.\n
+     * Para mais detalhes sobre o retorno consulte a sessão códigos de erro.
      */
 
     ///@cond
@@ -433,10 +438,15 @@ extern "C"{
      * O valor deve ser entre 0 e 65535, onde 0 será para definir com o valor padrão de 3000.
      * \param portaStatus - Identificação da porta onde serão obtido o status das transações. A porta padrão é 3001\n
      * O valor deve ser entre 0 e 65535, onde 0 será para definir com o valor padrão de 3001.
+     * \param retorno - parametro passado por referência que ira armazenar os dados\n
+     * de retorno ao fim da transação.
      * Exemplo:
      * ~~~.json
      * {"e1_bridge_code":0,"e1_bridge_msg":"Sucesso"}
      * ~~~
+     * \return código numérico referente ao processamento da função.\n
+     * A função executada com sucesso deve retornar 0.\n
+     * Para mais detalhes sobre o retorno consulte a sessão códigos de erro.
      */
 
     ///@cond
@@ -466,10 +476,15 @@ extern "C"{
      * \ingroup g52
      * Obtem o timeout definido para as transações em segundos;\n
      * O valor padrão é de 180 segundos (3 minutos);
+     * \param retorno - parametro passado por referência que ira armazenar os dados\n
+     * de retorno ao fim da transação.
      * Exemplo:
      * ~~~.json
      * {"e1_bridge_code":0,"e1_bridge_msg":"180000"}
      * ~~~
+     * \return código numérico referente ao processamento da função.\n
+     * A função executada com sucesso deve retornar 0.\n
+     * Para mais detalhes sobre o retorno consulte a sessão códigos de erro.
      */
 
     ///@cond
@@ -482,10 +497,15 @@ extern "C"{
      * Configura um timeout para as funções de transação.\n
      * O valor padrão é de 180 segundos (3 minutos);
      * \param timeout - Valor em segundos a ser definido.
+     * \param retorno - parametro passado por referência que ira armazenar os dados\n
+     * de retorno ao fim da transação.
      * Exemplo:
      * ~~~.json
      * {"e1_bridge_code":0,"e1_bridge_msg":"Sucesso"}
      * ~~~
+     * \return código numérico referente ao processamento da função.\n
+     * A função executada com sucesso deve retornar 0.\n
+     * Para mais detalhes sobre o retorno consulte a sessão códigos de erro.
      */
 
     ///@cond
@@ -525,6 +545,11 @@ extern "C"{
      * Deve ser utilizada casos de timeout.
      * \param pdv - Identificação do PDV utilizada nas transações.
      * Consulte a sessão retorno para ter um exemplo de um json de saída e todos os dados.
+     * \param retorno - parametro passado por referência que ira armazenar os dados\n
+     * de retorno ao fim da transação.
+     * \return código numérico referente ao processamento da função.\n
+     * A função executada com sucesso deve retornar 0.\n
+     * Para mais detalhes sobre o retorno consulte a sessão códigos de erro.
      */
 
     ///@cond
@@ -538,11 +563,16 @@ extern "C"{
      * \note Essa Função pode ser usada para impressão de Danfe do MFe (Ceará)
      *
      * \param xml - Dados do XML retornado da operação de venda do SAT.
+     * \param retorno - parametro passado por referência que ira armazenar os dados\n
+     * de retorno ao fim da transação.
      * \return string no formato json
      * Exemplo:
      * ~~~.json
      * {"e1_bridge_code":0,"e1_bridge_msg":"Sucesso"}
      * ~~~
+     * \return código numérico referente ao processamento da função.\n
+     * A função executada com sucesso deve retornar 0.\n
+     * Para mais detalhes sobre o retorno consulte a sessão códigos de erro.
      */
 
     ///@cond
@@ -557,11 +587,16 @@ extern "C"{
      *
      * \param xml - Dados do XML retornado da operação de cancelamento do SAT.
      * \param assQRCode - Assinatura do QRcode retornado na venda cancelada.
+     * \param retorno - parametro passado por referência que ira armazenar os dados\n
+     * de retorno ao fim da transação.
      * \return string no formato json
      * Exemplo:
      * ~~~.json
      * {"e1_bridge_code":0,"e1_bridge_msg":"Sucesso"}
      * ~~~
+     * \return código numérico referente ao processamento da função.\n
+     * A função executada com sucesso deve retornar 0.\n
+     * Para mais detalhes sobre o retorno consulte a sessão códigos de erro.
      */
 
     ///@cond
@@ -581,12 +616,15 @@ extern "C"{
      * > Corresponde a um código de segurança alfanumérico (16 a 36 bytes) de conhecimento apenas da Secretaria \n
      * > da Fazenda da Unidade Federada do emitente e do próprio contribuinte. Anteriormente, o código de segurança\n
      * > CSC era chamado de “Token”.
-     *
-     * \return string no formato json
+     * \param retorno - parametro passado por referência que ira armazenar os dados\n
+     * de retorno ao fim da transação.
      * Exemplo:
      * ~~~.json
      * {"e1_bridge_code":0,"e1_bridge_msg":"Sucesso"}
      * ~~~
+     * \return código numérico referente ao processamento da função.\n
+     * A função executada com sucesso deve retornar 0.\n
+     * Para mais detalhes sobre o retorno consulte a sessão códigos de erro.
      */
 
     ///@cond
@@ -623,8 +661,11 @@ extern "C"{
     * \param pdv - Código identificador do PDV.\n
     * Valor alfanumérico.
     * \param valorTotal - Valor total da venda em centavos, ex: 100 para venda de R$1,00
-    * \return String no formato Json com os dados da transação;
-    * Consulte a sessão retorno para ter um exemplo de um json de saída e todos os dados.
+     * \param retorno - parametro passado por referência que ira armazenar os dados\n
+     * de retorno ao fim da transação.
+     * \return código numérico referente ao processamento da função.\n
+     * A função executada com sucesso deve retornar 0.\n
+     * Para mais detalhes sobre o retorno consulte a sessão códigos de erro.
     */
     ///@cond
     E1_BRIDGESHARED_EXPORT STDCALL
@@ -639,8 +680,11 @@ extern "C"{
      * \param pdv - Código identificador do PDV.\n
      * Valor alfanumérico.
      * \param valorTotal - Valor total da venda em centavos, ex: 100 para venda de R$1,00
-     * \return String no formato Json com os dados da transação;
-     * Consulte a sessão retorno para ter um exemplo de um json de saída e todos os dados.
+     * \param retorno - parametro passado por referência que ira armazenar os dados\n
+     * de retorno ao fim da transação.
+     * \return código numérico referente ao processamento da função.\n
+     * A função executada com sucesso deve retornar 0.\n
+     * Para mais detalhes sobre o retorno consulte a sessão códigos de erro.
      */
 
     ///@cond
@@ -658,8 +702,11 @@ extern "C"{
      * \param valorTotal - Valor total da venda em centavos, ex: 100 para venda de R$1,00
      * \param tipoFinanciamento - Tipo do financiamento (A vista = 1, parcelado emissor = 2 ou parcelado estabelecimento = 3)
      * \param numParcelas - Quantidade de parcelas para as transações parcelada. Para transação a vista o valor sera desconsiderado.
-     * \return String no formato Json com os dados da transação;
-     * Consulte a sessão retorno para ter um exemplo de um json de saída e todos os dados.
+     * \param retorno - parametro passado por referência que ira armazenar os dados\n
+     * de retorno ao fim da transação.
+     * \return código numérico referente ao processamento da função.\n
+     * A função executada com sucesso deve retornar 0.\n
+     * Para mais detalhes sobre o retorno consulte a sessão códigos de erro.
      */
 
     ///@cond
@@ -678,8 +725,11 @@ extern "C"{
      * \param dataHora - Data e hora da transação no formato dd/MM/yyyy HH:mm:ss ou dd/MM/yyyy.\n
      * Este valor é retornado no JSON das vendas na chave dataHoraTransacao.
      * \param nsu - nsu da transação que é retornado no JSON das vendas na chave nsuLocal.
-     * \return String no formato Json com os dados da transação;
-     * Consulte a sessão retorno para ter um exemplo de um json de saída e todos os dados.
+     * \param retorno - parametro passado por referência que ira armazenar os dados\n
+     * de retorno ao fim da transação.
+     * \return código numérico referente ao processamento da função.\n
+     * A função executada com sucesso deve retornar 0.\n
+     * Para mais detalhes sobre o retorno consulte a sessão códigos de erro.
      */
 
     ///@cond
@@ -702,8 +752,11 @@ extern "C"{
      * > Operação de manutenção = 3\n
      * > Teste de comunicação = 4\n
      * > Operação de reimpressão de comprovante = 5\n
-     * \return String no formato Json com os dados da transação;
-     * Consulte a sessão retorno para ter um exemplo de um json de saída e todos os dados.
+     * \param retorno - parametro passado por referência que ira armazenar os dados\n
+     * de retorno ao fim da transação.
+     * \return código numérico referente ao processamento da função.\n
+     * A função executada com sucesso deve retornar 0.\n
+     * Para mais detalhes sobre o retorno consulte a sessão códigos de erro.
      */
 
     ///@cond
@@ -904,6 +957,7 @@ extern "C"{
      * > Corresponde a um código de segurança alfanumérico (16 a 36 bytes) de conhecimento apenas da Secretaria da Fazenda\n
      * > da Fazenda da Unidade Federada do emitente e do próprio contribuinte. Anteriormente, o código de segurança\n
      * > CSC era chamado de “Token”.
+     * \param path Informa o caminho do arquivo onde o json de retorno da função será salvo
      *
      * \return Retorno tipo int. Operação realizada com sucesso deve retornar ZERO(0).\n
      * e os dados no formato json estarão disponíveis no arquivo informado por path.\n
@@ -914,6 +968,7 @@ extern "C"{
     E1_BRIDGESHARED_EXPORT STDCALL
     ///@endcond
     int ImprimirCupomNfceArq(const char* xml, int indexcsc, const char* csc, const char* path);
+
     /*!
      * \ingroup g53
      * \brief configura a senha do terminal remotamente.
@@ -1093,7 +1148,7 @@ extern "C"{
     * Adiciona um texto ao arquivo base de acordo com as características informadas nos parâmetros.
     *
     * \param info    - Informação e/ou texto a ser adicionado ao arquivo.\n
-    * \param posição - Parâmetro tipo numérico que define a posição do texto a ser impresso.\n
+    * \param posicao - Parâmetro tipo numérico que define a posição do texto a ser impresso.\n
     * > 0 - Esquerda\n
     * > 1 - Centro\n
     * > 2 - Direita\n
@@ -1188,7 +1243,7 @@ extern "C"{
     *1		|UPC-E			|6, 7, 8, 11 ou 12			|0 até 9						            |Quantidade = 6 se 1º != 0
     *2		|JAN13 / EAN 13	|12 ou 13					|0 até 9						            |-
     *3		|JAN8 / EAN 8	|7 ou 8						|0 até 9						            |-
-    *4		|CODE 39		|1 até 255					|0 até 9, A até Z\nSP, $, %, *, +, -, \, .	|-												
+    *4		|CODE 39		|1 até 255					|0 até 9, A até Z\\nSP, $, %, *, +, -, \, .	|-												
     *5		|ITF			|2 até 255 (números pares)	|0 até 9						            |-
     *6		|CODE BAR		|1 até 255					|0 até 9, A até D, a até d\n$, +, -, ., /, :|1º e nº devem ser A até D ou a até d
     *7		|CODE 93		|1 até 255					|00H até 7FH					            |-
@@ -1222,7 +1277,7 @@ extern "C"{
     *
     *\param dados             - Conjunto de informações que irão compor o QRCode.\n
     *\param tamanho           - Tamanho do QRCode. Valor de 1 até 6.\n
-    *\param nivel de correção - Define o nível de correção a ser configurado para o QRCode.\n
+    *\param nivelCorrecao de correção - Define o nível de correção a ser configurado para o QRCode.\n
     *1 - 7%\n
     *2 - 15%\n
     *3 - 25%\n
@@ -1472,7 +1527,7 @@ extern "C"{
     * \ingroup g56
     * Personalizar a cor da fonte.
     *
-    *\param corBackground - Cor no formato hexadecimal. Ex: "#FFA500".\n
+    *\param corFonte - Cor no formato hexadecimal. Ex: "#FFA500".\n
     *\return Retorno tipo const char* no formato JSON com o valor do status da operação.\n
     * Exemplo para operação realizada com sucesso
     *\code{.json}
@@ -1492,7 +1547,7 @@ extern "C"{
     * \ingroup g56
     * Personalizar a cor da fonte do teclado.
     *
-    *\param corBackground - Cor no formato hexadecimal. Ex: "#FFA500".\n
+    *\param corFonteTeclado - Cor no formato hexadecimal. Ex: "#FFA500".\n
     *\return Retorno tipo const char* no formato JSON com o valor do status da operação.\n
     * Exemplo para operação realizada com sucesso
     *\code{.json}
@@ -1512,7 +1567,7 @@ extern "C"{
     * \ingroup g56
     * Personalizar a cor de fundo da toolbar.
     *
-    *\param corBackground - Cor no formato hexadecimal. Ex: "#FFA500".\n
+    *\param corFundoToolbar - Cor no formato hexadecimal. Ex: "#FFA500".\n
     *\return Retorno tipo const char* no formato JSON com o valor do status da operação.\n
     * Exemplo para operação realizada com sucesso
     *\code{.json}
@@ -1532,7 +1587,7 @@ extern "C"{
     * \ingroup g56
     * Personalizar a cor do fundo de tela.
     *
-    *\param corBackground - Cor no formato hexadecimal. Ex: "#FFA500".\n
+    *\param corFundoTela - Cor no formato hexadecimal. Ex: "#FFA500".\n
     *\return Retorno tipo const char* no formato JSON com o valor do status da operação.\n
     * Exemplo para operação realizada com sucesso
     *\code{.json}
@@ -1552,7 +1607,7 @@ extern "C"{
     * \ingroup g56
     * Personalizar a cor da tecla liberada no teclado.
     *
-    *\param corBackground - Cor no formato hexadecimal. Ex: "#FFA500".\n
+    *\param corTeclaLiberadaTeclado - Cor no formato hexadecimal. Ex: "#FFA500".\n
     *\return Retorno tipo const char* no formato JSON com o valor do status da operação.\n
     * Exemplo para operação realizada com sucesso
     *\code{.json}
@@ -1572,7 +1627,7 @@ extern "C"{
     * \ingroup g56
     * Personalizar a cor de fundo do teclado.
     *
-    *\param corBackground - Cor no formato hexadecimal. Ex: "#FFA500".\n
+    *\param corFundoTeclado - Cor no formato hexadecimal. Ex: "#FFA500".\n
     *\return Retorno tipo const char* no formato JSON com o valor do status da operação.\n
     * Exemplo para operação realizada com sucesso
     *\code{.json}
@@ -1592,7 +1647,7 @@ extern "C"{
     * \ingroup g56
     * Personalizar a cor do texto da caixa de edição.
     *
-    *\param corBackground - Cor no formato hexadecimal. Ex: "#FFA500".\n
+    *\param corTextoCaixaEdicao - Cor no formato hexadecimal. Ex: "#FFA500".\n
     *\return Retorno tipo const char* no formato JSON com o valor do status da operação.\n
     * Exemplo para operação realizada com sucesso
     *\code{.json}
@@ -1612,7 +1667,7 @@ extern "C"{
     * \ingroup g56
     * Personalizar a cor do separador do menu.
     *
-    *\param corBackground - Cor no formato hexadecimal. Ex: "#FFA500".\n
+    *\param corSeparadorMenu - Cor no formato hexadecimal. Ex: "#FFA500".\n
     *\return Retorno tipo const char* no formato JSON com o valor do status da operação.\n
     * Exemplo para operação realizada com sucesso
     *\code{.json}

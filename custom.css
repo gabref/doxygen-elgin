@@ -50,3 +50,23 @@ html .footer img {
 html.dark-mode .footer img {
     content: url('logo-dark.png');
 }
+
+blockquote::before, blockquote::after {
+    font-weight: bold;
+    font-family: serif;
+    font-size: 360%;
+    opacity: .15;
+    position: absolute;
+}
+
+blockquote::before {
+    content: "";
+    left: -10px;
+    top: 4px;
+}
+
+blockquote::after {
+    content: "";
+    right: -8px;
+    bottom: -25px;
+}

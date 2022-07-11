@@ -265,7 +265,7 @@ extern "C"{
      * \param leituraContinua - Parâmetro do tipo booleano que define o tipo de leitura a ser realizada.\n
      * Passe <b>true</b> caso esteja trabalhando com protocolo contínuo; passe <b>false</b> caso esteja
      * trabalhando com protocolo demanda.\n
-     * * <b>OBS: Parâmetro utilizado/disponível somente na versão Android desta biblioteca.</b>\n
+     * @note <b>Parâmetro utilizado/disponível somente na versão Android desta biblioteca.</b>\n
      *
      * \return
      * O retorno da função é do tipo numérico.\n
@@ -478,8 +478,6 @@ extern "C"{
      * \param continuousReadTime - Parâmetro do tipo numérico que define o tempo máximo, em milissegundos, que a
      * operação de <b>leitura contínua</b> deve durar.
      *
-     * \return
-     * Essa função não apresenta retorno (void).
      */
 
     ///@cond

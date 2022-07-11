@@ -167,7 +167,7 @@ public void iniciaOperacaoAdministrativa(Operacoes operacoes, Context context,Ha
  * Notas:\n
  * - O ícone utilizado no exemplo está localizado no diretório sdcard do dispositivo;\n
  * - A fonte utilizada no exemplo é uma fonte do sistema Android;\n
- * - As cores devem ser informadas em #rgb.\n
+ * - As cores devem ser informadas em rgb.\n
  * \n
  */
  public void setPersonalizacao(Personalizacao mPersonalizacao);

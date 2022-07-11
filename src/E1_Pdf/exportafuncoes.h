@@ -41,7 +41,7 @@ extern  "C"{
     *
     * Essa função recebe o XML de retorno da venda do SAT, valida o conteúdo, constrói o Danfe e realiza a geração do pdf de acordo com
     * a especificação da SEFAZ SP.
-    * \param dados - Conteúdo do XML de retorno da venda do SAT.
+    * \param dados_xml - Conteúdo do XML de retorno da venda do SAT.
     *
     * \param param - Parâmetro do tipo numérico para ativar bits que modificam o cupom a ser impresso.\n
     * \n
@@ -78,7 +78,7 @@ extern  "C"{
      *
      * Essa função recebe o XML de retorno da operação de cancelamento e os dados de assinatura do QRCode de venda, valida as
      * informações, constrói o Danfe e realiza geração do cupom no formato PDF de acordo com a especificação da SEFAZ SP.
-     * \param dados - Conteúdo do XML de cancelamento retornado pelo SAT.
+     * \param dados_xml - Conteúdo do XML de cancelamento retornado pelo SAT.
      * \param assQRCode - Assinatura do QRCode retornado na operação de Venda. Essa informação é necessária porque o XML de retorno
      * da operação de cancelamento não contém essa informação.
      *

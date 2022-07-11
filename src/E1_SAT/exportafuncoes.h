@@ -30,9 +30,9 @@ extern "C"{
      * > Bematech SATGO\n
      *
      * Convenções usadas nas chamadas das funções da biblioteca:\n
-     *<b>Windows</b>\n
+     ***Windows**\n
      *  > __stdcall
-     *<b>Linux</b>\n
+     ***Linux**\n
      *  > __cdecl\n
      *
      *  ### Arquivo de configuracao
@@ -91,7 +91,7 @@ extern "C"{
      *
      *
      * \n\n
-     * > <b><i> Exemplo json para uso com Serviço.</b></i>
+     * > **<i> Exemplo json para uso com Serviço.**</i>
      * ~~~~~~~.json
      *  {
      *      "Modulo": "SAT",
@@ -107,7 +107,7 @@ extern "C"{
      * ~~~~~~~
      *
      * \n
-     * > <b><i> Exemplo de comando com separadores para uso do Serviço no modo troca de arquivos.</b></i>
+     * > **<i> Exemplo de comando com separadores para uso do Serviço no modo troca de arquivos.**</i>
      * ~~~~~~~.json
      * SAT:|AtivarSAT:|00008:|2:|123456789:|14200166000166:|15
      * ~~~~~~~
@@ -133,8 +133,8 @@ extern "C"{
      * O retorno em caso de sucesso será um string informando resultado da operação.
      *
      *
-     * \n\n
-     * > <b><i> Exemplo json para uso com Serviço.</i></b>
+     * \n
+     * > Exemplo json para uso com Serviço
      * @code{.json}
      *  {
      *      "Modulo": "SAT",
@@ -148,7 +148,7 @@ extern "C"{
      * @endcode
      *
      * \n
-     * > <b><i> Exemplo de comando com separadores para uso do Serviço no modo troca de arquivos.</i></b>
+     * > Exemplo de comando com separadores para uso do Serviço no modo troca de arquivos
      * ~~~~~~~.json
      * SAT:|EnviarDadosVenda:|00009:|123456789:|<?xml version=\"1.0\"?> <CFe> <infCFe versaoDadosEnt=\"0.07\"> <ide><CNPJ>16716114000172</CNPJ><signAC>SGR-SAT SISTEMA DE GESTAO E RETAGUARDA DO SAT</signAC><numeroCaixa>001</numeroCaixa> </ide><emit><CNPJ>14200166000166</CNPJ><IE>111111111111</IE><indRatISSQN>N</indRatISSQN></emit><dest></dest><det nItem=\"1\"> <prod> <cProd>00000000000001</cProd> <xProd>PRODUTO NFCE 1</xProd> <NCM>94034000</NCM> <CFOP>5102</CFOP> <uCom>UN</uCom> <qCom>1.0000</qCom> <vUnCom>3.51</vUnCom> <indRegra>T</indRegra> </prod> <imposto> <ICMS><ICMS00><Orig>0</Orig><CST>00</CST><pICMS>7.00</pICMS></ICMS00> </ICMS><PIS><PISAliq><CST>01</CST><vBC>6.51</vBC><pPIS>0.0165</pPIS></PISAliq> </PIS> <COFINS><COFINSAliq><CST>01</CST><vBC>6.51</vBC><pCOFINS>0.0760</pCOFINS></COFINSAliq> </COFINS> </imposto> </det> <total><DescAcrEntr><vDescSubtot>0.51</vDescSubtot></DescAcrEntr><vCFeLei12741>0.56</vCFeLei12741></total><pgto> <MP> <cMP>01</cMP> <vMP>6.51</vMP> </MP></pgto><infAdic> <infCpl>Trib aprox R$ 0,36 federal, R$ 1,24 estadual e R$ 0,00 municipal&lt;br&gt;CAIXA: 001 OPERADOR: ROOT</infCpl></infAdic></infCFe></CFe>
      * ~~~~~~~
@@ -176,7 +176,7 @@ extern "C"{
       * O retorno, em caso de sucesso, será uma string informando o resultado da operação.
       * \n
       *
-      * > <b><i> Exemplo JSON para uso com Serviço. </i></b>
+      * > **<i> Exemplo JSON para uso com Serviço. </i>**
       * ~~~~~~~.json
       *  {
       *      "Modulo": "SAT",
@@ -194,7 +194,7 @@ extern "C"{
       * ~~~~~~~
       * \n
       *
-      * > <b><i> Exemplo de comando com separadores para uso com Serviço. </i></b>
+      * > **<i> Exemplo de comando com separadores para uso com Serviço. </i>**
       * ~~~~~~~.json
       * SAT:|CancelarUltimaVenda:|00001:|123456789:|CFe13181114200166000166599000162500104927318337:|<CFeCanc><infCFe chCanc=\"CFe13181114200166000166599000162500104927318337\"><ide><CNPJ>16716114000172</CNPJ><signAC>MD2Nof/O0tQMPKiYeeAydSjYt7YV9kU0nWKZGXHVdYIzR2W9Z6tgXni/Y5bnjmUAk8MkqlBJIiOOIskKCjJ086k7vAP0EU5cBRYj/nzHUiRdu9AVD7WRfVs00BDyb5fsnnKg7gAXXH6SBgCxG9yjAkxJ0l2E2idsWBAJ5peQEBZqtHytRUC+FLaSfd3+66QNxIBlDwQIRzUGPaU6fvErVDSfMUf8WpkwnPz36fCQnyLypqe/5mbox9pt3RCbbXcYqnR/4poYGr9M9Kymj4/PyX9xGeiXwbgzOOHNIU5M/aAs0rulXz948bZla0eXABgEcp6mDkTzweLPZTbmOhX+eA==</signAC><numeroCaixa>001</numeroCaixa></ide><emit/><dest></dest><total/></infCFe></CFeCanc>
       * ~~~~~~~
@@ -216,7 +216,7 @@ extern "C"{
      *
      *
      * \n\n
-     * > <b><i> Exemplo json para uso com Serviço.</i></b>
+     * > **<i> Exemplo json para uso com Serviço.</i>**
      * ~~~~~~~.json
      *  {
      *      "Modulo": "SAT",
@@ -228,7 +228,7 @@ extern "C"{
      * ~~~~~~~
      *
      * \n
-     * > <b><i> Exemplo de comando com separadores para uso do Serviço no modo troca de arquivos.</i></b>
+     * > **<i> Exemplo de comando com separadores para uso do Serviço no modo troca de arquivos.</i>**
      * ~~~~~~~.json
      * SAT:|ConsultarSat:|00004
      * ~~~~~~~
@@ -256,7 +256,7 @@ extern "C"{
      *
      *
      * \n\n
-     * > <b><i> Exemplo json para uso com Serviço.</i></b>
+     * > **<i> Exemplo json para uso com Serviço.</i>**
      * ~~~~~~~.json
      *  {
      *      "Modulo": "SAT",
@@ -268,7 +268,7 @@ extern "C"{
      * ~~~~~~~
      *
      * \n
-     * > <b><i> Exemplo de comando com separadores para uso do Serviço no modo troca de arquivos.</i></b>
+     * > **<i> Exemplo de comando com separadores para uso do Serviço no modo troca de arquivos.</i>**
      * ~~~~~~~.json
      * SAT:|TesteFimAFim:|00002
      * ~~~~~~~
@@ -292,7 +292,7 @@ extern "C"{
      * O retorno em caso de sucesso será um string com as informações do SAT separadas por pipe.
      *
      * \n\n
-     * > <b><i> Exemplo json para uso com Serviço.</b></i>
+     * > **<i> Exemplo json para uso com Serviço.**</i>
      * ~~~~~~~.json
      *  {
      *      "Modulo": "SAT",
@@ -305,7 +305,7 @@ extern "C"{
      * ~~~~~~~
      *
      * \n
-     * > <b><i> Exemplo de comando com separadores para uso do Serviço no modo troca de arquivos.</b></i>
+     * > **<i> Exemplo de comando com separadores para uso do Serviço no modo troca de arquivos.**</i>
      * ~~~~~~~.json
      * SAT:|ConsultarStatusOperacional:|00002:|123456789
      * ~~~~~~~
@@ -331,7 +331,7 @@ extern "C"{
      *
      *
      * \n\n
-     * > <b><i> Exemplo json para uso com Serviço.</b></i>
+     * > **<i> Exemplo json para uso com Serviço.**</i>
      * ~~~~~~~.json
      *  {
      *      "Modulo": "SAT",
@@ -345,7 +345,7 @@ extern "C"{
      * ~~~~~~~
      *
      * \n
-     * > <b><i> Exemplo de comando com separadores para uso do Serviço no modo troca de arquivos.</b></i>
+     * > **<i> Exemplo de comando com separadores para uso do Serviço no modo troca de arquivos.**</i>
      * ~~~~~~~.json
      * SAT:|ConsultarNumeroSessao:|00002:|123456789:|1800
      * ~~~~~~~
@@ -370,7 +370,7 @@ extern "C"{
       * O retorno, em caso de sucesso, será uma string informando o resultado da operação.
       * \n
       *
-      * > <b><i> Exemplo JSON para uso com Serviço. </b></i>
+      * > **<i> Exemplo JSON para uso com Serviço. **</i>
       * ~~~~~~~.json
       *  {
       *      "Modulo": "SAT",
@@ -386,7 +386,7 @@ extern "C"{
       * ~~~~~~~
       * \n
       *
-      * > <b><i> Exemplo de comando com separadores para uso com Serviço. </b></i>
+      * > **<i> Exemplo de comando com separadores para uso com Serviço. **</i>
       * ~~~~~~~.json
       * SAT:|ConsultarUltimaSessaoFiscal:|00001:|123456789
       * ~~~~~~~
@@ -412,7 +412,7 @@ extern "C"{
      *
      *
      * \n\n
-     * > <b><i> Exemplo json para uso com Serviço.</b></i>
+     * > **<i> Exemplo json para uso com Serviço.**</i>
      * ~~~~~~~.json
      *  {
      *      "Modulo": "SAT",
@@ -426,7 +426,7 @@ extern "C"{
      * ~~~~~~~
      *
      * \n
-     * > <b><i> Exemplo de comando com separadores para uso do Serviço no modo troca de arquivos.</b></i>
+     * > **<i> Exemplo de comando com separadores para uso do Serviço no modo troca de arquivos.**</i>
      * ~~~~~~~.json
      * SAT:|ConfigurarInterfaceDeRede:|00001:|123456789:|<?xml version=\"1.0\" encoding=\"UTF - 8\"?><config><tipoInter>ETHE</tipoInter><tipoLan>DHCP</tipoLan></config>
      * ~~~~~~~
@@ -454,7 +454,7 @@ extern "C"{
      *
      *
      * \n\n
-     * > <b><i> Exemplo json para uso com Serviço.</b></i>
+     * > **<i> Exemplo json para uso com Serviço.**</i>
      * ~~~~~~~.json
      *  {
      *      "Modulo": "SAT",
@@ -470,7 +470,7 @@ extern "C"{
      *
      *
      * \n
-     * > <b><i> Exemplo de comando com separadores para uso do Serviço no modo troca de arquivos.</b></i>
+     * > **<i> Exemplo de comando com separadores para uso do Serviço no modo troca de arquivos.**</i>
      * ~~~~~~~.json
      * SAT:|AssociarAssinatura:|00002:|123456789:|16716114000172:|SGR-SAT SISTEMA DE GESTAO E RETAGUARDA DO SAT
      * ~~~~~~~
@@ -495,7 +495,7 @@ extern "C"{
      *
      *
      * \n\n
-     * > <b><i> Exemplo json para uso com Serviço.</b></i>
+     * > **<i> Exemplo json para uso com Serviço.**</i>
      * ~~~~~~~.json
      *  {
      *      "Modulo": "SAT",
@@ -508,7 +508,7 @@ extern "C"{
      * ~~~~~~~
      *
      * \n
-     * > <b><i> Exemplo de comando com separadores para uso do Serviço no modo troca de arquivos.</b></i>
+     * > **<i> Exemplo de comando com separadores para uso do Serviço no modo troca de arquivos.**</i>
      * ~~~~~~~.json
      * SAT:|AtualizarSoftwareSAT:|00005:|123456789
      * ~~~~~~~
@@ -532,7 +532,7 @@ extern "C"{
      *
      *
      * \n\n
-     * > <b><i> Exemplo json para uso com Serviço.</b></i>
+     * > **<i> Exemplo json para uso com Serviço.**</i>
      * ~~~~~~~.json
      *  {
      *      "Modulo": "SAT",
@@ -545,7 +545,7 @@ extern "C"{
      * ~~~~~~~
      *
      * \n
-     * > <b><i> Exemplo de comando com separadores para uso do Serviço no modo troca de arquivos.</b></i>
+     * > **<i> Exemplo de comando com separadores para uso do Serviço no modo troca de arquivos.**</i>
      * ~~~~~~~.json
      * SAT:|ExtrairLogs:|00006:|123456789
      * ~~~~~~~
@@ -569,7 +569,7 @@ extern "C"{
      *
      *
      * \n\n
-     * > <b><i> Exemplo json para uso com Serviço.</b></i>
+     * > **<i> Exemplo json para uso com Serviço.**</i>
      * ~~~~~~~.json
      *  {
      *      "Modulo": "SAT",
@@ -582,7 +582,7 @@ extern "C"{
      * ~~~~~~~
      *
      * \n
-     * > <b><i> Exemplo de comando com separadores para uso do Serviço no modo troca de arquivos.</b></i>
+     * > **<i> Exemplo de comando com separadores para uso do Serviço no modo troca de arquivos.**</i>
      * ~~~~~~~.json
      * SAT:|BloquearSAT:|00008:|123456789
      * ~~~~~~~
@@ -606,7 +606,7 @@ extern "C"{
      *
      *
      * \n\n
-     * > <b><i> Exemplo json para uso com Serviço.</b></i>
+     * > **<i> Exemplo json para uso com Serviço.**</i>
      * ~~~~~~~.json
      *  {
      *      "Modulo": "SAT",
@@ -619,7 +619,7 @@ extern "C"{
      * ~~~~~~~
      *
      * \n
-     * > <b><i> Exemplo de comando com separadores para uso do Serviço no modo troca de arquivos.</b></i>
+     * > **<i> Exemplo de comando com separadores para uso do Serviço no modo troca de arquivos.**</i>
      * ~~~~~~~.json
      * SAT:|DesbloquearSAT:|00008:|123456789
      * ~~~~~~~
@@ -650,7 +650,7 @@ extern "C"{
      *
      *
      * \n\n
-     * > <b><i> Exemplo json para uso com Serviço.</b></i>
+     * > **<i> Exemplo json para uso com Serviço.**</i>
      * ~~~~~~~.json
      *  {
      *      "Modulo": "SAT",
@@ -667,7 +667,7 @@ extern "C"{
      *
      *
      * \n
-     * > <b><i> Exemplo de comando com separadores para uso do Serviço no modo troca de arquivos.</b></i>
+     * > **<i> Exemplo de comando com separadores para uso do Serviço no modo troca de arquivos.**</i>
      * ~~~~~~~.json
      * SAT:|TrocarCodigoDeAtivacao:|00009:|123456789:|1:|1234567890:|1234567890
      * ~~~~~~~
@@ -687,10 +687,10 @@ extern "C"{
       * \n
       *
       * A função bem-sucedida deve retornar ??.??.??, que representa a versão da DLL
-      * em que esta função foi chamada; cada <b>?</b> é um dígito entre 0 e 9.
+      * em que esta função foi chamada; cada **?** é um dígito entre 0 e 9.
       * \n
       *
-      * > <b><i> Exemplo JSON para uso com Serviço. </b></i>
+      * > **<i> Exemplo JSON para uso com Serviço. **</i>
       * ~~~~~~~.json
       *  {
       *      "Modulo": "SAT",
@@ -705,7 +705,7 @@ extern "C"{
       * ~~~~~~~
       * \n
       *
-      * > <b><i> Exemplo de comando com separadores para uso com Serviço. </b></i>
+      * > **<i> Exemplo de comando com separadores para uso com Serviço. **</i>
       * ~~~~~~~.json
       * SAT:|GetVersaoDLL
       * ~~~~~~~
@@ -837,63 +837,63 @@ extern "C"{
       *
       *  \param versaoDadosEnt
       * Versão do leiautedo arquivo dedados do AC. (Ex: 0.07 ou 0.08).\n
-      * > <b>TAG:</b> A03\n
-      * > <b>Parametro obrigatório</b>\n
-      * > <b>Tipo:</b> Alfanumérico\n
-      * > <b>Tamanho:</b> 1-4 \n
-      * > <b>Casas decimais:</b> 2\n
+      * > **TAG:** A03\n
+      * > **Parametro obrigatório**\n
+      * > **Tipo:** Alfanumérico\n
+      * > **Tamanho:** 1-4 \n
+      * > **Casas decimais:** 2\n
       *
       * \param CNPJ_SH
       * CNPJ Software House.\n
       * Deve ser informado apenas números. Caracteres (ponto, barra, hífen, etc.) serão removidos.\n
       * Caso o CNPJ tenha menos que 14 digitos a tag será preenchida com 0 não significativos.\n
       * Nos casos de teste fim-a-fim de ativação, completar com 14 dígitos “0”(zero).\n
-      * > <b>TAG:</b> B11\n
-      * > <b>Parametro obrigatório</b>\n
-      * > <b>Tipo:</b> Numérico\n
-      * > <b>Tamanho:</b> 14\n
+      * > **TAG:** B11\n
+      * > **Parametro obrigatório**\n
+      * > **Tipo:** Numérico\n
+      * > **Tamanho:** 14\n
       *
       * \param signAC
       * Assinatura do Aplicativo Comercial\n
       * Assinatura de (CNPJ Software House + CNPJ Emitente) que gerou o CF-e.\n
       * Nos casos de teste fim-a-fim de ativação, completar com 344 dígitos “0”(zero).\n
-      * > <b>TAG:</b> B12\n
-      * > <b>Parametro obrigatório</b>\n
-      * > <b>Tipo:</b> Alfanumérico\n
-      * > <b>Tamanho:</b> 1-344 \n
+      * > **TAG:** B12\n
+      * > **Parametro obrigatório**\n
+      * > **Tipo:** Alfanumérico\n
+      * > **Tamanho:** 1-344 \n
       *
       * \param numeroCaixa
       * Número de 0 a 999 referente ao Caixa em que o SAT está conectado.\n
-      * > <b>TAG:</b> B14\n
-      * > <b>Parametro obrigatório</b>\n
-      * > <b>Tipo:</b> Numérico\n
-      * > <b>Tamanho:</b> 3 \n
+      * > **TAG:** B14\n
+      * > **Parametro obrigatório**\n
+      * > **Tipo:** Numérico\n
+      * > **Tamanho:** 3 \n
       *
       * \param CNPJ_emit
       * CNPJ do emitente.\n
       * Deve ser informado apenas números. Caracteres (ponto, barra, hífen, etc.) serão removidos.\n
       * Caso o CNPJ tenha menos que 14 digitos a tag será preenchida com 0 não significativos.\n
-      * > <b>TAG:</b> C02\n
-      * > <b>Parametro obrigatório</b>\n
-      * > <b>Tipo:</b> Numérico\n
-      * > <b>Tamanho:</b> 14 \n
+      * > **TAG:** C02\n
+      * > **Parametro obrigatório**\n
+      * > **Tipo:** Numérico\n
+      * > **Tamanho:** 14 \n
       *
       * \param IE
       * Deve ser informado apenas caracteres alfanumérico. Caracteres (ponto, barra, hífen, etc.) serão removidos.\n
       * Caso IE tenha menos que 12 digitos a tag será preenchida com espaços a direita.\n
-      * > <b>TAG:</b> C12\n
-      * > <b>Parametro obrigatório</b>\n
-      * > <b>Tipo:</b> Numérico\n
-      * > <b>Tamanho:</b> 2-14 \n
+      * > **TAG:** C12\n
+      * > **Parametro obrigatório**\n
+      * > **Tipo:** Numérico\n
+      * > **Tamanho:** 2-14 \n
       *
       * \param IM
       * Inscrição Municipal.\n
       * Este campo deve ser informado, quando ocorrer a emissão de CF-e conjugada, com prestação
       * de serviços sujeitos ao ISSQN e fornecimento de peças sujeitos ao ICMS.\n
-      * > <b>TAG:</b> C13\n
+      * > **TAG:** C13\n
       * > Essa TAG não é obrigatória e para que não seja incluida no XML deve-se passar parametro vazio.\n
-      * > <b>Tipo:</b> Numérico\n
-      * > <b>Tamanho:</b> 1-15 \n
+      * > **Tipo:** Numérico\n
+      * > **Tamanho:** 1-15 \n
       *
       * \param cRegTribISSQN
       * Regime Especial de Tributação do ISSQN\n
@@ -902,46 +902,46 @@ extern "C"{
       * 3 - Sociedade de Profissionais;\n
       * 4 - Cooperativa;\n
       * 5 - Microempresário Individual(MEI);\n
-      * > <b>TAG:</b> C15\n
+      * > **TAG:** C15\n
       * > Essa TAG não é obrigatória e para que não seja incluida no XML deve-se passar parametro vazio.\n
-      * > <b>Tipo:</b> Numérico\n
-      * > <b>Tamanho:</b> 1 \n
+      * > **Tipo:** Numérico\n
+      * > **Tamanho:** 1 \n
       *
       * \param indRatISSQN
       * Indicador de rateio do Desconto sobre subtotal entre itens sujeitos à tributação pelo ISSQN.
       * Informa se o Desconto sobre subtotal deve ser rateado entre os itens sujeitos à tributação pelo ISSQN.\n
       * 'S' - Desconto sobre subtotal será rateado entre os itens sujeitos ao ISSQN.\n
       * 'N' - Desconto sobre subtotal não será rateado entre os itens sujeitos ao ISSQN.\n
-      * > <b>TAG:</b> C16\n
-      * > <b>Parametro obrigatório</b>\n
-      * > <b>Tipo:</b> Alfanumérico\n
-      * > <b>Tamanho:</b> 1 \n
+      * > **TAG:** C16\n
+      * > **Parametro obrigatório**\n
+      * > **Tipo:** Alfanumérico\n
+      * > **Tamanho:** 1 \n
       *
       * \param CNPJ_dest
       * CNPJ do destinatário.\n
       * Deve ser informado apenas números. Caracteres (ponto, barra, hífen, etc.) serão removidos.\n
       * Caso o CNPJ tenha menos que 14 digitos a tag será preenchida com 0 não significativos.\n
-      * > <b>TAG:</b> E02\n
+      * > **TAG:** E02\n
       * > Essa TAG não é obrigatória e para que não seja incluida no XML deve-se passar parametro vazio.\n
-      * > <b>Tipo:</b> Numérico\n
-      * > <b>Tamanho:</b> 14 \n
+      * > **Tipo:** Numérico\n
+      * > **Tamanho:** 14 \n
       *
       * \param CPF_dest
       * CPF do destinatário.\n
       * Deve ser informado apenas números. Caracteres (ponto, barra, etc.) serão removidos.\n
       * Caso o CPF tenha menos que 11 digitos a tag será preenchida com 0 não significativos.\n
-      * > <b>TAG:</b> E03\n
+      * > **TAG:** E03\n
       * > Essa TAG não é obrigatória e para que não seja incluida no XML deve-se passar parametro vazio.\n
-      * > <b>Tipo:</b> Numérico\n
-      * > <b>Tamanho:</b> 11 \n
+      * > **Tipo:** Numérico\n
+      * > **Tamanho:** 11 \n
       * * Caso o CNPJ do destinatário tenha sido informado, a tag CPF não será incluida.\n
       *
       * \param xNome_dest
       * Razão Social ou Nome do destinatário
-      * > <b>TAG:</b> E04\n
+      * > **TAG:** E04\n
       * > Essa TAG não é obrigatória e para que não seja incluida no XML deve-se passar parametro vazio.\n
-      * > <b>Tipo:</b> Alfanumérico\n
-      * > <b>Tamanho:</b> 2-60 \n
+      * > **Tipo:** Alfanumérico\n
+      * > **Tamanho:** 2-60 \n
       *
       * \return
       * O retorno da função é do tipo numérico.\n
@@ -987,63 +987,63 @@ extern "C"{
       * 
       * \param versaoDadosEnt
       * Versão do leiautedo arquivo dedados do AC. (Ex: 0.07 ou 0.08).\n
-      * > <b>TAG:</b> A03\n
-      * > <b>Parametro obrigatório</b>\n
-      * > <b>Tipo:</b> Alfanumérico\n
-      * > <b>Tamanho:</b> 1-4 \n
-      * > <b>Casas decimais:</b> 2\n
+      * > **TAG:** A03\n
+      * > **Parametro obrigatório**\n
+      * > **Tipo:** Alfanumérico\n
+      * > **Tamanho:** 1-4 \n
+      * > **Casas decimais:** 2\n
       *
       * \param CNPJ_SH
       * CNPJ Software House.\n
       * Deve ser informado apenas números. Caracteres (ponto, barra, hífen, etc.) serão removidos.\n
       * Caso o CNPJ tenha menos que 14 digitos a tag será preenchida com 0 não significativos.\n
       * Nos casos de teste fim-a-fim de ativação, completar com 14 dígitos “0”(zero).\n
-      * > <b>TAG:</b> B11\n
-      * > <b>Parametro obrigatório</b>\n
-      * > <b>Tipo:</b> Numérico\n
-      * > <b>Tamanho:</b> 14\n
+      * > **TAG:** B11\n
+      * > **Parametro obrigatório**\n
+      * > **Tipo:** Numérico\n
+      * > **Tamanho:** 14\n
       *
       * \param signAC
       * Assinatura do Aplicativo Comercial\n
       * Assinatura de (CNPJ Software House + CNPJ Emitente) que gerou o CF-e.\n
       * Nos casos de teste fim-a-fim de ativação, completar com 344 dígitos “0”(zero).\n
-      * > <b>TAG:</b> B12\n
-      * > <b>Parametro obrigatório</b>\n
-      * > <b>Tipo:</b> Alfanumérico\n
-      * > <b>Tamanho:</b> 1-344 \n
+      * > **TAG:** B12\n
+      * > **Parametro obrigatório**\n
+      * > **Tipo:** Alfanumérico\n
+      * > **Tamanho:** 1-344 \n
       *
       * \param numeroCaixa
       * Número de 0 a 999 referente ao Caixa em que o SAT está conectado.\n
-      * > <b>TAG:</b> B14\n
-      * > <b>Parametro obrigatório</b>\n
-      * > <b>Tipo:</b> Numérico\n
-      * > <b>Tamanho:</b> 3 \n
+      * > **TAG:** B14\n
+      * > **Parametro obrigatório**\n
+      * > **Tipo:** Numérico\n
+      * > **Tamanho:** 3 \n
       *
       * \param CNPJ_emit
       * CNPJ do emitente.\n
       * Deve ser informado apenas números. Caracteres (ponto, barra, hífen, etc.) serão removidos.\n
       * Caso o CNPJ tenha menos que 14 digitos a tag será preenchida com 0 não significativos.\n
-      * > <b>TAG:</b> C02\n
-      * > <b>Parametro obrigatório</b>\n
-      * > <b>Tipo:</b> Numérico\n
-      * > <b>Tamanho:</b> 14 \n
+      * > **TAG:** C02\n
+      * > **Parametro obrigatório**\n
+      * > **Tipo:** Numérico\n
+      * > **Tamanho:** 14 \n
       *
       * \param IE
       * Deve ser informado apenas caracteres alfanumérico. Caracteres (ponto, barra, hífen, etc.) serão removidos.\n
       * Caso IE tenha menos que 12 digitos a tag será preenchida com espaços a direita.\n
-      * > <b>TAG:</b> C12\n
-      * > <b>Parametro obrigatório</b>\n
-      * > <b>Tipo:</b> Numérico\n
-      * > <b>Tamanho:</b> 2-14 \n
+      * > **TAG:** C12\n
+      * > **Parametro obrigatório**\n
+      * > **Tipo:** Numérico\n
+      * > **Tamanho:** 2-14 \n
       *
       * \param IM
       * Inscrição Municipal.\n
       * Este campo deve ser informado, quando ocorrer a emissão de CF-e conjugada, com prestação
       * de serviços sujeitos ao ISSQN e fornecimento de peças sujeitos ao ICMS.\n
-      * > <b>TAG:</b> C13\n
+      * > **TAG:** C13\n
       * > Essa TAG não é obrigatória e para que não seja incluida no XML deve-se passar parametro vazio.\n
-      * > <b>Tipo:</b> Numérico\n
-      * > <b>Tamanho:</b> 1-15 \n
+      * > **Tipo:** Numérico\n
+      * > **Tamanho:** 1-15 \n
       *
       * \param cRegTribISSQN
       * Regime Especial de Tributação do ISSQN\n
@@ -1052,46 +1052,46 @@ extern "C"{
       * 3 - Sociedade de Profissionais;\n
       * 4 - Cooperativa;\n
       * 5 - Microempresário Individual(MEI);\n
-      * > <b>TAG:</b> C15\n
+      * > **TAG:** C15\n
       * > Essa TAG não é obrigatória e para que não seja incluida no XML deve-se passar parametro vazio.\n
-      * > <b>Tipo:</b> Numérico\n
-      * > <b>Tamanho:</b> 1 \n
+      * > **Tipo:** Numérico\n
+      * > **Tamanho:** 1 \n
       *
       * \param indRatISSQN
       * Indicador de rateio do Desconto sobre subtotal entre itens sujeitos à tributação pelo ISSQN.
       * Informa se o Desconto sobre subtotal deve ser rateado entre os itens sujeitos à tributação pelo ISSQN.\n
       * 'S' - Desconto sobre subtotal será rateado entre os itens sujeitos ao ISSQN.\n
       * 'N' - Desconto sobre subtotal não será rateado entre os itens sujeitos ao ISSQN.\n
-      * > <b>TAG:</b> C16\n
-      * > <b>Parametro obrigatório</b>\n
-      * > <b>Tipo:</b> Alfanumérico\n
-      * > <b>Tamanho:</b> 1 \n
+      * > **TAG:** C16\n
+      * > **Parametro obrigatório**\n
+      * > **Tipo:** Alfanumérico\n
+      * > **Tamanho:** 1 \n
       *
       * \param CNPJ_dest
       * CNPJ do destinatário.\n
       * Deve ser informado apenas números. Caracteres (ponto, barra, hífen, etc.) serão removidos.\n
       * Caso o CNPJ tenha menos que 14 digitos a tag será preenchida com 0 não significativos.\n
-      * > <b>TAG:</b> E02\n
+      * > **TAG:** E02\n
       * > Essa TAG não é obrigatória e para que não seja incluida no XML deve-se passar parametro vazio.\n
-      * > <b>Tipo:</b> Numérico\n
-      * > <b>Tamanho:</b> 14 \n
+      * > **Tipo:** Numérico\n
+      * > **Tamanho:** 14 \n
       *
       * \param CPF_dest
       * CPF do destinatário.\n
       * Deve ser informado apenas números. Caracteres (ponto, barra, etc.) serão removidos.\n
       * Caso o CPF tenha menos que 11 digitos a tag será preenchida com 0 não significativos.\n
-      * > <b>TAG:</b> E03\n
+      * > **TAG:** E03\n
       * > Essa TAG não é obrigatória e para que não seja incluida no XML deve-se passar parametro vazio.\n
-      * > <b>Tipo:</b> Numérico\n
-      * > <b>Tamanho:</b> 11 \n
+      * > **Tipo:** Numérico\n
+      * > **Tamanho:** 11 \n
       * * Caso o CNPJ do destinatário tenha sido informado, a tag CPF não será incluida.\n
       *
       * \param xNome_dest
       * Razão Social ou Nome do destinatário
-      * > <b>TAG:</b> E04\n
+      * > **TAG:** E04\n
       * > Essa TAG não é obrigatória e para que não seja incluida no XML deve-se passar parametro vazio.\n
-      * > <b>Tipo:</b> Alfanumérico\n
-      * > <b>Tamanho:</b> 2-60 \n
+      * > **Tipo:** Alfanumérico\n
+      * > **Tamanho:** 2-60 \n
       *
       *
       * \return
@@ -1126,45 +1126,45 @@ extern "C"{
       *
       * \param xLgr
       * Logradouro
-      * > <b>TAG:</b> G02\n
-      * > <b>Parametro obrigatório</b>\n
-      * > <b>Tipo:</b> Alfanumérico\n
-      * > <b>Tamanho:</b> 2-60 \n
+      * > **TAG:** G02\n
+      * > **Parametro obrigatório**\n
+      * > **Tipo:** Alfanumérico\n
+      * > **Tamanho:** 2-60 \n
       *
       * \param nro
       * Número
-      * > <b>TAG:</b> G03\n
-      * > <b>Parametro obrigatório</b>\n
-      * > <b>Tipo:</b> Numérico\n
-      * > <b>Tamanho:</b> 1-60 \n
+      * > **TAG:** G03\n
+      * > **Parametro obrigatório**\n
+      * > **Tipo:** Numérico\n
+      * > **Tamanho:** 1-60 \n
       *
       * \param xCpl
       * Complemento
-      * > <b>TAG:</b> G04\n
+      * > **TAG:** G04\n
       * > Essa TAG não é obrigatória e para que não seja incluida no XML deve-se passar parametro vazio.\n
-      * > <b>Tipo:</b> Alfanumérico\n
-      * > <b>Tamanho:</b> 1-60 \n
+      * > **Tipo:** Alfanumérico\n
+      * > **Tamanho:** 1-60 \n
       *
       * \param xBairro
       * Bairro
-      * > <b>TAG:</b> G05\n
-      * > <b>Parametro obrigatório</b>\n
-      * > <b>Tipo:</b> Alfanumérico\n
-      * > <b>Tamanho:</b> 1-60 \n
+      * > **TAG:** G05\n
+      * > **Parametro obrigatório**\n
+      * > **Tipo:** Alfanumérico\n
+      * > **Tamanho:** 1-60 \n
       *
       * \param xMun
       * Nome do município
-      * > <b>TAG:</b> G06\n
-      * > <b>Parametro obrigatório</b>\n
-      * > <b>Tipo:</b> Alfanumérico\n
-      * > <b>Tamanho:</b> 2-60 \n
+      * > **TAG:** G06\n
+      * > **Parametro obrigatório**\n
+      * > **Tipo:** Alfanumérico\n
+      * > **Tamanho:** 2-60 \n
       *
       * \param UF
       * Sigla da UF
-      * > <b>TAG:</b> G07\n
-      * > <b>Parametro obrigatório</b>\n
-      * > <b>Tipo:</b> Alfanumérico\n
-      * > <b>Tamanho:</b> 2 \n
+      * > **TAG:** G07\n
+      * > **Parametro obrigatório**\n
+      * > **Tipo:** Alfanumérico\n
+      * > **Tamanho:** 2 \n
       *
       * \return
       * O retorno da função é do tipo numérico.\n
@@ -1189,79 +1189,79 @@ extern "C"{
       *
       * \param cProd
       * Código do produto ou serviço, interno do contribuinte.
-      * > <b>TAG:</b> I02\n
-      * > <b>Parametro obrigatório</b>\n
-      * > <b>Tipo:</b> Alfanumérico\n
-      * > <b>Tamanho:</b> 1-60 \n
+      * > **TAG:** I02\n
+      * > **Parametro obrigatório**\n
+      * > **Tipo:** Alfanumérico\n
+      * > **Tamanho:** 1-60 \n
       *
       * \param cEAN
       * GTIN (Global Trade Item Number) do produto, antigo código EAN ou código de barras.\n
       * Preencher com o código GTIN-8, GTIN-12, GTIN-13 ou GTIN-14 (antigos códigos EAN, UPC e\n
       * DUN-14), não informar o conteúdo da TAG em caso de o produto não possuir este código.
-      * > <b>TAG:</b> I03\n
+      * > **TAG:** I03\n
       * > Essa TAG não é obrigatória e para que não seja incluida no XML deve-se passar parametro vazio.\n
-      * > <b>Tipo:</b> Alfanumérico\n
-      * > <b>Tamanho:</b> 8, 12, 13, 14\n
+      * > **Tipo:** Alfanumérico\n
+      * > **Tamanho:** 8, 12, 13, 14\n
       *
       * \param xProd
       * Descrição detalhada do produto para possibilitar a sua perfeita identificação.
-      * > <b>TAG:</b> I04\n
-      * > <b>Parametro obrigatório</b>\n
-      * > <b>Tipo:</b> Alfanumérico\n
-      * > <b>Tamanho:</b> 1-120 \n
+      * > **TAG:** I04\n
+      * > **Parametro obrigatório**\n
+      * > **Tipo:** Alfanumérico\n
+      * > **Tamanho:** 1-120 \n
       *
       * \param NCM
       * Código NCM (8 posições), informar o gênero (posição do capítulo do NCM) quando a
       * operação não for de comércio exterior (importação/ exportação) ou o produto não seja tributado
       * pelo IPI. Em caso de serviço informar o código 99.
-      * > <b>TAG:</b> I05\n
+      * > **TAG:** I05\n
       * > Essa TAG não é obrigatória e para que não seja incluida no XML deve-se passar parametro vazio.\n
-      * > <b>Tipo:</b> Alfanumérico\n
-      * > <b>Tamanho:</b> 2, 8.\n
+      * > **Tipo:** Alfanumérico\n
+      * > **Tamanho:** 2, 8.\n
       *
       * \param CEST
       * Código Especificador da Substituição Tributária
       * Código CEST que identifica a mercadoria sujeita aos regimes de substituição tributária e de
       * antecipação do recolhimento do imposto.
-      * > <b>TAG:</b> I05w\n
+      * > **TAG:** I05w\n
       * > Essa TAG não é obrigatória e para que não seja incluida no XML deve-se passar parametro vazio.\n
-      * > <b>Tipo:</b> Numérico\n
-      * > <b>Tamanho:</b> 7\n
+      * > **Tipo:** Numérico\n
+      * > **Tamanho:** 7\n
       *
       * \param CFOP
       * Código Fiscal de Operações e Prestações
-      * > <b>TAG:</b> I06\n
-      * > <b>Parametro obrigatório</b>\n
-      * > <b>Tipo:</b> Numérico\n
-      * > <b>Tamanho:</b> 4 \n
+      * > **TAG:** I06\n
+      * > **Parametro obrigatório**\n
+      * > **Tipo:** Numérico\n
+      * > **Tamanho:** 4 \n
       *
       * \param uCom
       * Unidade Comercial
       * Informar a unidade de comercialização do produto. No caso de combustíveis, utilizar a unidade
       * de medida da codificação de produtos do Sistema de Informações de Movimentação de produtos -
       * SIMP (http://www.anp.gov.br/simp).
-      * > <b>TAG:</b> I07\n
-      * > <b>Parametro obrigatório</b>\n
-      * > <b>Tipo:</b> Alfanumérico\n
-      * > <b>Tamanho:</b> 1-6 \n
+      * > **TAG:** I07\n
+      * > **Parametro obrigatório**\n
+      * > **Tipo:** Alfanumérico\n
+      * > **Tamanho:** 1-6 \n
       *
       * \param qCom
       * Quantidade Comercial
       * Informar a quantidade de comercialização do produto.
-      * > <b>TAG:</b> I08\n
-      * > <b>Parametro obrigatório</b>\n
-      * > <b>Tipo:</b> Numérico\n
-      * > <b>Tamanho:</b> 5-15 \n
-      * > <b>Casas decimais:</b> 4\n
+      * > **TAG:** I08\n
+      * > **Parametro obrigatório**\n
+      * > **Tipo:** Numérico\n
+      * > **Tamanho:** 5-15 \n
+      * > **Casas decimais:** 4\n
       *
       * \param vUnCom
       * Valor Unitário de Comercialização.
       * Informar o valor unitário de comercialização do produto.
-      * > <b>TAG:</b> I09\n
-      * > <b>Parametro obrigatório</b>\n
-      * > <b>Tipo:</b> Numérico\n
-      * > <b>Tamanho:</b> 3-15\n
-      * > <b>Casas decimais:</b> 3\n
+      * > **TAG:** I09\n
+      * > **Parametro obrigatório**\n
+      * > **Tipo:** Numérico\n
+      * > **Tamanho:** 3-15\n
+      * > **Casas decimais:** 3\n
       * * Deve ser informado com 3 decimais no caso de combustíveis (Art. 20, da Resolução ANP nº 41/2013),
       *  para os demais com 2 decimais.
       *
@@ -1270,28 +1270,28 @@ extern "C"{
       * Indicador da regra de cálculo utilizada para Valor Bruto dos Produtos e Serviços:
       * A - Arredondamento
       * T - Truncamento
-      * > <b>TAG:</b> I11\n
-      * > <b>Parametro obrigatório</b>\n
-      * > <b>Tipo:</b> Alfanumérico\n
-      * > <b>Tamanho:</b> 1 \n
+      * > **TAG:** I11\n
+      * > **Parametro obrigatório**\n
+      * > **Tipo:** Alfanumérico\n
+      * > **Tamanho:** 1 \n
       *
       * \param vDesc
       * Valor do Desconto sobre item
       * Valor do desconto incidente sobre o valor do item com duas casas decimais
-      * > <b>TAG:</b> I12\n
+      * > **TAG:** I12\n
       * > Essa TAG não é obrigatória e para que não seja incluida no XML deve-se passar parametro vazio.\n
-      * > <b>Tipo:</b> Numérico\n
-      * > <b>Tamanho:</b> 3-15 \n
-      * > <b>Casas decimais:</b> 2\n
+      * > **Tipo:** Numérico\n
+      * > **Tamanho:** 3-15 \n
+      * > **Casas decimais:** 2\n
       *
       * \param vOutro
       * Outras despesas acessórias sobre item
       * Valor de acréscimos sobre valor do item
-      * > <b>TAG:</b> I13\n
+      * > **TAG:** I13\n
       * > Essa TAG não é obrigatória e para que não seja incluida no XML deve-se passar parametro vazio.\n
-      * > <b>Tipo:</b> Numérico\n
-      * > <b>Tamanho:</b> 3-15 \n
-      * > <b>Casas decimais:</b> 2\n
+      * > **Tipo:** Numérico\n
+      * > **Tamanho:** 3-15 \n
+      * > **Casas decimais:** 2\n
       *
       * \return
       * O retorno dessa função será o nItem do produto adicionado ao XML
@@ -1327,15 +1327,15 @@ extern "C"{
       * \param nItem
       * Identificação do produto ao qual será acrecentado a tag obsFiscoDet.
       * Este parametro é retornado da função #InformaProduto
-      * > <b>Parametro obrigatório</b>
+      * > **Parametro obrigatório**
       *
       * \param xCampoDet
       * Identificação do campo
       * No caso de combustíveis, preencher com “Cod. Produto ANP”
-      * > <b>TAG:</b> I18\n
-      * > <b>Parametro obrigatório</b>
-      * > <b>Tipo:</b> Alfanumérico\n
-      * > <b>Tamanho:</b> 1-20 \n
+      * > **TAG:** I18\n
+      * > **Parametro obrigatório**
+      * > **Tipo:** Alfanumérico\n
+      * > **Tamanho:** 1-20 \n
       * * Apenas para o layout 0.07
       * * No caso de produtos sujeitos à substituição tributária, preencher com “Cod. CEST”.
       *
@@ -1345,10 +1345,10 @@ extern "C"{
       * de terceiros destinado a consumidor ou usuário final”, informar código de produto do
       * Sistema de Informações de Movimentação de produtos - SIMP (http://www.anp.gov.br/simp).
       * Informar 999999999 se o produto não possuir código de produto ANP.
-      * > <b>TAG:</b> I19\n
-      * > <b>Parametro obrigatório</b>
-      * > <b>Tipo:</b> Alfanumérico\n
-      * > <b>Tamanho:</b> 1-60 \n
+      * > **TAG:** I19\n
+      * > **Parametro obrigatório**
+      * > **Tipo:** Alfanumérico\n
+      * > **Tamanho:** 1-60 \n
       * * Apenas para o layout 0.07:
       * * No caso de produtos sujeitos à substituição tributária, informar o Código CEST.,
       * conforme definido no Convênio ICMS 92, de 20-08-2015.
@@ -1380,7 +1380,7 @@ extern "C"{
       * \param nItem
       * Identificação do produto ao qual será acrecentado a tag imposto.
       * Este parametro é retornado da função #InformaProduto
-      * > <b>Parametro obrigatório</b>
+      * > **Parametro obrigatório**
       *
       * \param vItem12741
       * Valor aproximado dos tributos do Produto ou serviço – Lei 12741/12.
@@ -1391,11 +1391,11 @@ extern "C"{
       * conforme artigo 2º, §2º da referida lei.
       * - obrigatório, caso o contribuinte não opte por informar o valor em painel afixado no
       * estabelecimento, conforme artigo 2º, §2º da referida lei.
-      * > <b>TAG:</b> M02\n
+      * > **TAG:** M02\n
       * > Essa TAG não é obrigatória e para que não seja incluida no XML deve-se passar parametro vazio.\n
-      * > <b>Tipo:</b> Numérico\n
-      * > <b>Tamanho:</b> 3-15 \n
-      * > <b>Casas decimais:</b> 2\n
+      * > **Tipo:** Numérico\n
+      * > **Tamanho:** 3-15 \n
+      * > **Casas decimais:** 2\n
       *
       * \return
       * O retorno da função é do tipo numérico.\n
@@ -1427,7 +1427,7 @@ extern "C"{
       * \param nItem
       * Identificação do produto ao qual será acrecentado a tag ICMS00.
       * Este parametro é retornado da função #InformaProduto
-      * > <b>Parametro obrigatório</b>
+      * > **Parametro obrigatório**
       *
       * \param Orig
       * Origem da mercadoria.
@@ -1445,10 +1445,10 @@ extern "C"{
       * CAMEX;\n
       * 8 – Nacional, mercadoria ou bem com Conteúdo de Importação superior a 70% (setenta por
       * cento).\n
-      * > <b>TAG:</b> N06\n
-      * > <b>Parametro obrigatório</b>\n
-      * > <b>Tipo:</b> Numérico\n
-      * > <b>Tamanho:</b> 1\n
+      * > **TAG:** N06\n
+      * > **Parametro obrigatório**\n
+      * > **Tipo:** Numérico\n
+      * > **Tamanho:** 1\n
       *
       * \param CST
       * Tributação do ICMS = 00, 20, 90
@@ -1456,18 +1456,18 @@ extern "C"{
       * 00 – Tributada integralmente
       * 20 - Com redução de base de cálculo
       * 90 - Outros
-      * > <b>TAG:</b> N07\n
-      * > <b>Parametro obrigatório</b>\n
-      * > <b>Tipo:</b> Numérico\n
-      * > <b>Tamanho:</b> 2\n
+      * > **TAG:** N07\n
+      * > **Parametro obrigatório**\n
+      * > **Tipo:** Numérico\n
+      * > **Tamanho:** 2\n
       *
       * \param pICMS
       * Alíquota efetiva do imposto
-      * > <b>TAG:</b> N08\n
-      * > <b>Parametro obrigatório</b>\n
-      * > <b>Tipo:</b> Numérico\n
-      * > <b>Tamanho:</b> 3-15\n
-      * > <b>Casas decimais:</b> 2\n
+      * > **TAG:** N08\n
+      * > **Parametro obrigatório**\n
+      * > **Tipo:** Numérico\n
+      * > **Tamanho:** 3-15\n
+      * > **Casas decimais:** 2\n
       *
       * \return
       * O retorno da função é do tipo numérico.\n
@@ -1499,7 +1499,7 @@ extern "C"{
       * \param nItem
       * Identificação do produto ao qual será acrecentado a tag ICMS40.
       * Este parametro é retornado da função #InformaProduto
-      * > <b>Parametro obrigatório</b>
+      * > **Parametro obrigatório**
       *
       * \param Orig
       * Origem da mercadoria
@@ -1518,10 +1518,10 @@ extern "C"{
       * 8 – Nacional, mercadoria ou bem com Conteúdo de Importação superior a 70% (setenta por
       * cento).\n
       *
-      * > <b>TAG:</b> N06\n
-      * > <b>Parametro obrigatório</b>\n
-      * > <b>Tipo:</b> Numérico\n
-      * > <b>Tamanho:</b> 1\n
+      * > **TAG:** N06\n
+      * > **Parametro obrigatório**\n
+      * > **Tipo:** Numérico\n
+      * > **Tamanho:** 1\n
       *
       * \param CST
       * Tributação do ICMS = 40, 41, 60
@@ -1529,10 +1529,10 @@ extern "C"{
       * 40 - Isenta
       * 41 - Não tributada
       * 60 - ICMS cobrado anteriormente por substituição tributária
-      * > <b>TAG:</b> N07\n
-      * > <b>Parametro obrigatório</b>\n
-      * > <b>Tipo:</b> Numérico\n
-      * > <b>Tamanho:</b> 2\n
+      * > **TAG:** N07\n
+      * > **Parametro obrigatório**\n
+      * > **Tipo:** Numérico\n
+      * > **Tamanho:** 2\n
       *
       * \return
       * O retorno da função é do tipo numérico.\n
@@ -1560,7 +1560,7 @@ extern "C"{
       * \param nItem
       * Identificação do produto ao qual será acrecentado a tag ICMSSN102.
       * Este parametro é retornado da função #InformaProduto
-      * > <b>Parametro obrigatório</b>
+      * > **Parametro obrigatório**
       *
       * \param Orig
       * Origem da mercadoria
@@ -1578,10 +1578,10 @@ extern "C"{
       * CAMEX;\n
       * 8 – Nacional, mercadoria ou bem com Conteúdo de Importação superior a 70% (setenta por
       * cento).\n
-      * > <b>TAG:</b> N06\n
-      * > <b>Parametro obrigatório</b>\n
-      * > <b>Tipo:</b> Numérico\n
-      * > <b>Tamanho:</b> 1\n
+      * > **TAG:** N06\n
+      * > **Parametro obrigatório**\n
+      * > **Tipo:** Numérico\n
+      * > **Tamanho:** 1\n
       *
       * \param CSOSN
       * Código de Situação da peração – Simples Nacional
@@ -1590,10 +1590,10 @@ extern "C"{
       * 400 – Não tributada
       * 500 – ICMS cobrado anteriormente por substituição tributária (substituído) ou por
       * antecipação.
-      * > <b>TAG:</b> N10\n
-      * > <b>Parametro obrigatório</b>\n
-      * > <b>Tipo:</b> Numérico\n
-      * > <b>Tamanho:</b> 3\n
+      * > **TAG:** N10\n
+      * > **Parametro obrigatório**\n
+      * > **Tipo:** Numérico\n
+      * > **Tamanho:** 3\n
       *
       * \return
       * O retorno da função é do tipo numérico.\n
@@ -1620,7 +1620,7 @@ extern "C"{
       * \param nItem
       * Identificação do produto ao qual será acrecentado a tag ICMSSN900.\n
       * Este parametro é retornado da função #InformaProduto
-      * > <b>Parametro obrigatório</b>
+      * > **Parametro obrigatório**
       *
       * \param Orig
       * Origem da mercadoria\n
@@ -1638,26 +1638,26 @@ extern "C"{
       * CAMEX;\n
       * 8 – Nacional, mercadoria ou bem com Conteúdo de Importação superior a 70% (setenta por
       * cento).\n
-      * > <b>TAG:</b> N06\n
-      * > <b>Parametro obrigatório</b>\n
-      * > <b>Tipo:</b> Numérico\n
-      * > <b>Tamanho:</b> 1\n
+      * > **TAG:** N06\n
+      * > **Parametro obrigatório**\n
+      * > **Tipo:** Numérico\n
+      * > **Tamanho:** 1\n
       *
       * \param CSOSN
       * Código de Situação da Operação – SIMPLES NACIONAL\n
       * Tributação pelo ICMS 900 - Outros\n
-      * > <b>TAG:</b> N10\n
-      * > <b>Parametro obrigatório</b>\n
-      * > <b>Tipo:</b> Numérico\n
-      * > <b>Tamanho:</b> 3\n
+      * > **TAG:** N10\n
+      * > **Parametro obrigatório**\n
+      * > **Tipo:** Numérico\n
+      * > **Tamanho:** 3\n
       *
       * \param pICMS
       * Alíquota efetiva do imposto\n
-      * > <b>TAG:</b> N08\n
-      * > <b>Parametro obrigatório</b>\n
-      * > <b>Tipo:</b> Numérico\n
-      * > <b>Tamanho:</b> 3-5\n
-      * > <b>Casas decimais:</b> 2\n
+      * > **TAG:** N08\n
+      * > **Parametro obrigatório**\n
+      * > **Tipo:** Numérico\n
+      * > **Tamanho:** 3-5\n
+      * > **Casas decimais:** 2\n
       *
       * \return
       * O retorno da função é do tipo numérico.\n
@@ -1684,34 +1684,34 @@ extern "C"{
       * \param nItem
       * Identificação do produto ao qual será acrecentado a tag PISAliq.
       * Este parametro é retornado da função #InformaProduto
-      * > <b>Parametro obrigatório</b>
+      * > **Parametro obrigatório**
       *
       * \param CST
       * Código de Situação Tributária do PIS.\n
       * 01 – Operação Tributável (base de cálculo = valor da operação alíquota normal (cumulativo/não cumulativo));\n
       * 02 - Operação Tributável (base de cálculo = valor da operação (alíquota diferenciada));\n
       * 05 - Operação Tributável por Substituição Tributária;\n
-      * > <b>TAG:</b> Q07\n
-      * > <b>Parametro obrigatório</b>\n
-      * > <b>Tipo:</b> Numérico\n
-      * > <b>Tamanho:</b> 2\n
+      * > **TAG:** Q07\n
+      * > **Parametro obrigatório**\n
+      * > **Tipo:** Numérico\n
+      * > **Tamanho:** 2\n
       *
       * \param vBC
       * Valor da Base de Cálculo do PIS.
-      * > <b>TAG:</b> Q08\n
-      * > <b>Parametro obrigatório</b>\n
-      * > <b>Tipo:</b> Numérico\n
-      * > <b>Tamanho:</b> 3-15\n
-      * > <b>Casas decimais:</b> 2\n
+      * > **TAG:** Q08\n
+      * > **Parametro obrigatório**\n
+      * > **Tipo:** Numérico\n
+      * > **Tamanho:** 3-15\n
+      * > **Casas decimais:** 2\n
       *
       * \param pPIS
       * Alíquota do PIS (em percentual).\n
       * Ex. Se a alíquota for 0,65% informar 0,0065
-      * > <b>TAG:</b> Q09\n
-      * > <b>Parametro obrigatório</b>\n
-      * > <b>Tipo:</b> Numérico\n
-      * > <b>Tamanho:</b> 5\n
-      * > <b>Casas decimais:</b> 4\n
+      * > **TAG:** Q09\n
+      * > **Parametro obrigatório**\n
+      * > **Tipo:** Numérico\n
+      * > **Tamanho:** 5\n
+      * > **Casas decimais:** 4\n
       *
       * \return
       * O retorno da função é do tipo numérico.\n
@@ -1738,32 +1738,32 @@ extern "C"{
       * \param nItem
       * Identificação do produto ao qual será acrecentado a tag PISQtde.\n
       * Este parametro é retornado da função #InformaProduto
-      * > <b>Parametro obrigatório</b>
+      * > **Parametro obrigatório**
       *
       * \param CST
       * Código de Situação Tributária do PIS.
       * 03 - Operação Tributável (base de cálculo = quantidade vendida x alíquota por unidade de
       * produto);
-      * > <b>TAG:</b> Q07\n
-      * > <b>Parametro obrigatório</b>\n
-      * > <b>Tipo:</b> Numérico\n
-      * > <b>Tamanho:</b> 2\n
+      * > **TAG:** Q07\n
+      * > **Parametro obrigatório**\n
+      * > **Tipo:** Numérico\n
+      * > **Tamanho:** 2\n
       *
       * \param qBCProd
       * Quantidade Vendida.
-      * > <b>TAG:</b> Q11\n
-      * > <b>Parametro obrigatório</b>\n
-      * > <b>Tipo:</b> Numérico\n
-      * > <b>Tamanho:</b> 3-16\n
-      * > <b>Casas decimais:</b> 4\n
+      * > **TAG:** Q11\n
+      * > **Parametro obrigatório**\n
+      * > **Tipo:** Numérico\n
+      * > **Tamanho:** 3-16\n
+      * > **Casas decimais:** 4\n
 
       * \param vAliqProd
       * Alíquota do PIS (em reais)
-      * > <b>TAG:</b> Q12\n
-      * > <b>Parametro obrigatório</b>\n
-      * > <b>Tipo:</b> Numérico\n
-      * > <b>Tamanho:</b> 3-15\n
-      * > <b>Casas decimais:</b> 4\n
+      * > **TAG:** Q12\n
+      * > **Parametro obrigatório**\n
+      * > **Tipo:** Numérico\n
+      * > **Tamanho:** 3-15\n
+      * > **Casas decimais:** 4\n
       *
       * \return
       * O retorno da função é do tipo numérico.\n
@@ -1790,7 +1790,7 @@ extern "C"{
       * \param nItem
       * Identificação do produto ao qual será acrecentado a tag PISNT.\n
       * Este parametro é retornado da função #InformaProduto
-      * > <b>Parametro obrigatório</b>
+      * > **Parametro obrigatório**
       *
       * \param CST
       * Código de Situação Tributária do PIS
@@ -1799,10 +1799,10 @@ extern "C"{
       * 07 - Operação Isenta da Contribuição;\n
       * 08 - Operação Sem Incidência da Contribuição;\n
       * 09 - Operação com Suspensão da Contribuição;\n
-      * > <b>TAG:</b> Q07\n
-      * > <b>Parametro obrigatório</b>\n
-      * > <b>Tipo:</b> Numérico\n
-      * > <b>Tamanho:</b> 2\n
+      * > **TAG:** Q07\n
+      * > **Parametro obrigatório**\n
+      * > **Tipo:** Numérico\n
+      * > **Tamanho:** 2\n
       *
       * \return
       * O retorno da função é do tipo numérico.\n
@@ -1829,15 +1829,15 @@ extern "C"{
       * \param nItem
       * Identificação do produto ao qual será acrecentado a tag PISSN.
       * Este parametro é retornado da função #InformaProduto
-      * > <b>Parametro obrigatório</b>
+      * > **Parametro obrigatório**
       *
       * \param CST
       * Código de Situação Tributária do PIS.\n
       * 49 - Outras Operações de saída;
-      * > <b>TAG:</b> Q07\n
-      * > <b>Parametro obrigatório</b>\n
-      * > <b>Tipo:</b> Numérico\n
-      * > <b>Tamanho:</b> 2\n
+      * > **TAG:** Q07\n
+      * > **Parametro obrigatório**\n
+      * > **Tipo:** Numérico\n
+      * > **Tamanho:** 2\n
       *
       * \return
       * O retorno da função é do tipo numérico.\n
@@ -1867,45 +1867,45 @@ extern "C"{
       * \param nItem
       * Identificação do produto ao qual será acrecentado a tag PISOutr.\n
       * Este parametro é retornado da função #InformaProduto
-      * > <b>Parametro obrigatório</b>
+      * > **Parametro obrigatório**
       *
       * \param grupo
       * Informar ZERO para campos do PIS com aliquota em percentual\n
       * ou UM para campos do PIS com aliquota em valor.
-      * > <b>Parametro obrigatório</b>
+      * > **Parametro obrigatório**
       *
       * \param CST
       * Código de Situação Tributária do PIS.\n
       * 99 - Outras Operações;
-      * > <b>TAG:</b> Q07\n
-      * > <b>Parametro obrigatório</b>\n
-      * > <b>Tipo:</b> Numérico\n
-      * > <b>Tamanho:</b> 3-15\n
-      * > <b>Casas decimais:</b> 2\n
+      * > **TAG:** Q07\n
+      * > **Parametro obrigatório**\n
+      * > **Tipo:** Numérico\n
+      * > **Tamanho:** 3-15\n
+      * > **Casas decimais:** 2\n
       *
       * \param vBC_qBCProd
       * Caso o grupo informado seja ZERO o valor considerado será para TAG vBC (Q08).
       * > Q08 : Valor da Base de Cálculo do PIS\n
-      * > <b>Tipo:</b> Numérico\n
-      * > <b>Tamanho:</b> 3-15\n
-      * > <b>Casas decimais:</b> 2\n
+      * > **Tipo:** Numérico\n
+      * > **Tamanho:** 3-15\n
+      * > **Casas decimais:** 2\n
       * Caso o grupo informado seja UM o valor considerado será para TAG qBCProd(Q11).
       * > Q11 : Quantidade Vendida\n
-      * > <b>Tipo:</b> Numérico\n
-      * > <b>Tamanho:</b> 3-14\n
-      * > <b>Casas decimais:</b> 4\n
+      * > **Tipo:** Numérico\n
+      * > **Tamanho:** 3-14\n
+      * > **Casas decimais:** 4\n
       *
       * \param pPIS_vAliqProd
       * Caso o grupo informado seja ZERO o valor considerado será para TAG pPIS (Q09).
       * > Q09 : Alíquota do PIS (em percentual)\n
-      * > <b>Tipo:</b> Numérico\n
-      * > <b>Tamanho:</b> 5\n
-      * > <b>Casas decimais:</b> 4\n
+      * > **Tipo:** Numérico\n
+      * > **Tamanho:** 5\n
+      * > **Casas decimais:** 4\n
       * caso o grupo informado seja UM o valor considerado será para a TAG vAliqProd(Q12)
       * > Q12 : Alíquota do PIS (em reais).\n
-      * > <b>Tipo:</b> Numérico\n
-      * > <b>Tamanho:</b> 3-15\n
-      * > <b>Casas decimais:</b> 4\n
+      * > **Tipo:** Numérico\n
+      * > **Tamanho:** 3-15\n
+      * > **Casas decimais:** 4\n
       *
       * \return
       * O retorno da função é do tipo numérico.\n
@@ -1933,36 +1933,36 @@ extern "C"{
       * \param nItem
       * Identificação do produto ao qual será acrecentado a tag PISST.\n
       * Este parametro é retornado da função #InformaProduto
-      * > <b>Parametro obrigatório</b>
+      * > **Parametro obrigatório**
       *
       * \param grupo
       * Informar ZERO para campos do PIS com aliquota em percentual\n
       * ou UM para campos do PIS com aliquota em valor.
-      * > <b>Parametro obrigatório</b>
+      * > **Parametro obrigatório**
       *
       * \param vBC_qBCProd
       * Caso o grupo informado seja ZERO o valor considerado será para TAG vBC (R02).
       * > R02 : Valor da Base de Cálculo do PIS\n
-      * > <b>Tipo:</b> Numérico\n
-      * > <b>Tamanho:</b> 3-15\n
-      * > <b>Casas decimais:</b> 2\n
+      * > **Tipo:** Numérico\n
+      * > **Tamanho:** 3-15\n
+      * > **Casas decimais:** 2\n
       * Caso o grupo informado seja UM o valor considerado será para TAG qBCProd(R04).
       * > R04 : Quantidade Vendida\n
-      * > <b>Tipo:</b> Numérico\n
-      * > <b>Tamanho:</b> 3-16\n
-      * > <b>Casas decimais:</b> 4\n
+      * > **Tipo:** Numérico\n
+      * > **Tamanho:** 3-16\n
+      * > **Casas decimais:** 4\n
       *
       * \param pPIS_vAliqProd
       * Caso o grupo informado seja ZERO o valor considerado será para TAG pPIS (R03).
       * > R03 : Alíquota do PIS (em percentual)\n
-      * > <b>Tipo:</b> Numérico\n
-      * > <b>Tamanho:</b> 5\n
-      * > <b>Casas decimais:</b> 4\n
+      * > **Tipo:** Numérico\n
+      * > **Tamanho:** 5\n
+      * > **Casas decimais:** 4\n
       * caso o grupo informado seja UM o valor considerado será para a TAG vAliqProd(R05)
       * > R05 : Alíquota do PIS (em reais).\n
-      * > <b>Tipo:</b> Numérico\n
-      * > <b>Tamanho:</b> 3-15\n
-      * > <b>Casas decimais:</b> 4\n
+      * > **Tipo:** Numérico\n
+      * > **Tamanho:** 3-15\n
+      * > **Casas decimais:** 4\n
       *
       * \return
       * O retorno da função é do tipo numérico.\n
@@ -1990,34 +1990,34 @@ extern "C"{
       * \param nItem
       * Identificação do produto ao qual será acrecentado a tag COFINSAliq.
       * Este parametro é retornado da função #InformaProduto
-      * > <b>Parametro obrigatório</b>
+      * > **Parametro obrigatório**
       *
       * \param CST
       * Código de Situação Tributária da COFINS.\n
       * 01 – Operação Tributável (base de cálculo = valor da operação alíquota normal (cumulativo/não cumulativo));\n
       * 02 - Operação Tributável (base de cálculo = valor da operação (alíquota diferenciada));\n
       * 05 - Operação Tributável por Substituição Tributária;\n
-      * > <b>TAG:</b> S07\n
-      * > <b>Parametro obrigatório</b>\n
-      * > <b>Tipo:</b> Numérico\n
-      * > <b>Tamanho:</b> 2\n
+      * > **TAG:** S07\n
+      * > **Parametro obrigatório**\n
+      * > **Tipo:** Numérico\n
+      * > **Tamanho:** 2\n
       *
       * \param vBC
       * Valor da Base de Cálculo da COFINS.\n
-      * > <b>TAG:</b> S08\n
-      * > <b>Parametro obrigatório</b>\n
-      * > <b>Tipo:</b> Numérico\n
-      * > <b>Tamanho:</b> 3-15\n
-      * > <b>Casas decimais:</b> 2\n
+      * > **TAG:** S08\n
+      * > **Parametro obrigatório**\n
+      * > **Tipo:** Numérico\n
+      * > **Tamanho:** 3-15\n
+      * > **Casas decimais:** 2\n
       *
       * \param pCOFINS
       * Alíquota da COFINS (em percentual).\n
       * Ex. Se a alíquota for 0,65% informar 0,0065.\n
-      * > <b>TAG:</b> S09\n
-      * > <b>Parametro obrigatório</b>\n
-      * > <b>Tipo:</b> Numérico\n
-      * > <b>Tamanho:</b> 5\n
-      * > <b>Casas decimais:</b> 4\n
+      * > **TAG:** S09\n
+      * > **Parametro obrigatório**\n
+      * > **Tipo:** Numérico\n
+      * > **Tamanho:** 5\n
+      * > **Casas decimais:** 4\n
       *
       * \return
       * O retorno da função é do tipo numérico.\n
@@ -2045,31 +2045,31 @@ extern "C"{
       * \param nItem
       * Identificação do produto ao qual será acrecentado a tag COFINSQtde.
       * Este parametro é retornado da função #InformaProduto
-      * > <b>Parametro obrigatório</b>
+      * > **Parametro obrigatório**
       *
       * \param CST
       * Código de Situação Tributária da COFINS.\n
       * 03 - Operação Tributável (base de cálculo = quantidade vendida x alíquota por unidade de produto);
-      * > <b>TAG:</b> S07\n
-      * > <b>Parametro obrigatório</b>\n
-      * > <b>Tipo:</b> Numérico\n
-      * > <b>Tamanho:</b> 2\n
+      * > **TAG:** S07\n
+      * > **Parametro obrigatório**\n
+      * > **Tipo:** Numérico\n
+      * > **Tamanho:** 2\n
       *
       * \param qBCProd
       * Quantidade Vendida.\n
-      * > <b>TAG:</b> S11\n
-      * > <b>Parametro obrigatório</b>\n
-      * > <b>Tipo:</b> Numérico\n
-      * > <b>Tamanho:</b> 3-16\n
-      * > <b>Casas decimais:</b> 4\n
+      * > **TAG:** S11\n
+      * > **Parametro obrigatório**\n
+      * > **Tipo:** Numérico\n
+      * > **Tamanho:** 3-16\n
+      * > **Casas decimais:** 4\n
       *
       * \param vAliqProd
       * Alíquota da COFINS (em reais).
-      * > <b>TAG:</b> S12\n
-      * > <b>Parametro obrigatório</b>\n
-      * > <b>Tipo:</b> Numérico\n
-      * > <b>Tamanho:</b> 3-15\n
-      * > <b>Casas decimais:</b> 4\n
+      * > **TAG:** S12\n
+      * > **Parametro obrigatório**\n
+      * > **Tipo:** Numérico\n
+      * > **Tamanho:** 3-15\n
+      * > **Casas decimais:** 4\n
       *
       * \return
       * O retorno da função é do tipo numérico.\n
@@ -2097,7 +2097,7 @@ extern "C"{
       * \param nItem
       * Identificação do produto ao qual será acrecentado a tag COFINSNT.
       * Este parametro é retornado da função #InformaProduto
-      * > <b>Parametro obrigatório</b>
+      * > **Parametro obrigatório**
       *
       * \param CST
       * Código de Situação Tributária da COFINS.\n
@@ -2106,10 +2106,10 @@ extern "C"{
       * 07 - Operação Isenta da Contribuição;\n
       * 08 - Operação Sem Incidência da Contribuição;\n
       * 09 - Operação com Suspensão da Contribuição;\n
-      * > <b>TAG:</b> S07\n
-      * > <b>Parametro obrigatório</b>\n
-      * > <b>Tipo:</b> Numérico\n
-      * > <b>Tamanho:</b> 2\n
+      * > **TAG:** S07\n
+      * > **Parametro obrigatório**\n
+      * > **Tipo:** Numérico\n
+      * > **Tamanho:** 2\n
       *
       * \return
       * O retorno da função é do tipo numérico.\n
@@ -2136,15 +2136,15 @@ extern "C"{
       * \param nItem
       * Identificação do produto ao qual será acrecentado a tag COFINSSN.
       * Este parametro é retornado da função #InformaProduto
-      * > <b>Parametro obrigatório</b>
+      * > **Parametro obrigatório**
       *
       * \param CST
       * Código de Situação Tributária da COFINS.\n
       * 49 - Outras Operações de saída;
-      * > <b>TAG:</b> S07\n
-      * > <b>Parametro obrigatório</b>\n
-      * > <b>Tipo:</b> Numérico\n
-      * > <b>Tamanho:</b> 2\n
+      * > **TAG:** S07\n
+      * > **Parametro obrigatório**\n
+      * > **Tipo:** Numérico\n
+      * > **Tamanho:** 2\n
       *
       * \return
       * O retorno da função é do tipo numérico.\n
@@ -2173,45 +2173,45 @@ extern "C"{
       * \param nItem
       * Identificação do produto ao qual será acrecentado a tag obsFiscoDet.
       * Este parametro é retornado da função #InformaProduto
-      * > <b>Parametro obrigatório</b>
+      * > **Parametro obrigatório**
       *
       * \param grupo
       * Informar ZERO para campos do CONFINS com aliquota em percentual\n
       * ou UM para campos do CONFINS com aliquota em valor.
-      * > <b>Parametro obrigatório</b>
+      * > **Parametro obrigatório**
       *
       * \param CST
       * Código de Situação Tributária da COFINS.\n
       * 99 - Outras Operações;
-      * > <b>TAG:</b> S07\n
-      * > <b>Parametro obrigatório</b>\n
-      * > <b>Tipo:</b> Numérico\n
-      * > <b>Tamanho:</b> 2\n
+      * > **TAG:** S07\n
+      * > **Parametro obrigatório**\n
+      * > **Tipo:** Numérico\n
+      * > **Tamanho:** 2\n
       *
       * \param vBC_qBCProd
       * Caso o grupo informado seja ZERO o valor considerado será para TAG vBC(S08).
       * > S08 : Valor da Base de Cálculo da COFINS.\n
-      * > <b>Tipo:</b> Numérico\n
-      * > <b>Tamanho:</b> 3-15\n
-      * > <b>Casas decimais:</b> 2\n
+      * > **Tipo:** Numérico\n
+      * > **Tamanho:** 3-15\n
+      * > **Casas decimais:** 2\n
       * Caso o grupo informado seja UM o valor considerado será para TAG qBCProd(S11).
       * > S11 : Quantidade Vendida\n
-      * > <b>Tipo:</b> Numérico\n
-      * > <b>Tamanho:</b> 3-16\n
-      * > <b>Casas decimais:</b> 4\n
+      * > **Tipo:** Numérico\n
+      * > **Tamanho:** 3-16\n
+      * > **Casas decimais:** 4\n
       *
       * \param pCOFINS_vAliqProd
       * Caso o grupo informado seja ZERO o valor considerado será para TAG pCOFINS(S09).\n
       * Ex. Se a alíquota for 0,65% informar 0,0065.
       * > S09 : Alíquota do COFINS (em percentual).\n
-      * > <b>Tipo:</b> Numérico\n
-      * > <b>Tamanho:</b> 5\n
-      * > <b>Casas decimais:</b> 4\n
+      * > **Tipo:** Numérico\n
+      * > **Tamanho:** 5\n
+      * > **Casas decimais:** 4\n
       * Caso o grupo informado seja UM o valor considerado será para a TAG vAliqProd(S12)
       * > S12 : Alíquota do COFINS (em reais).\n
-      * > <b>Tipo:</b> Numérico\n
-      * > <b>Tamanho:</b> 3-15\n
-      * > <b>Casas decimais:</b> 4\n
+      * > **Tipo:** Numérico\n
+      * > **Tamanho:** 3-15\n
+      * > **Casas decimais:** 4\n
       *
       * \return
       * O retorno da função é do tipo numérico.\n
@@ -2238,36 +2238,36 @@ extern "C"{
       * \param nItem
       * Identificação do produto ao qual será acrecentado a tag obsFiscoDet.\n
       * Este parametro é retornado da função #InformaProduto
-      * > <b>Parametro obrigatório</b>
+      * > **Parametro obrigatório**
       *
       * \param grupo
       * Informar ZERO para campos do CONFINS com aliquota em percentual\n
       * ou UM para campos do CONFINS com aliquota em valor.
-      * > <b>Parametro obrigatório</b>
+      * > **Parametro obrigatório**
       *
       * \param vBC_qBCProd
       * Caso o grupo informado seja ZERO o valor considerado será para TAG vBC (T02).
       * > T02 : Valor da Base de Cálculo do COFINS\n
-      * > <b>Tipo:</b> Numérico\n
-      * > <b>Tamanho:</b> 3-15\n
-      * > <b>Casas decimais:</b> 2\n
+      * > **Tipo:** Numérico\n
+      * > **Tamanho:** 3-15\n
+      * > **Casas decimais:** 2\n
       * Caso o grupo informado seja UM o valor considerado será para TAG qBCProd(T04).
       * > T04 : Quantidade Vendida\n
-      * > <b>Tipo:</b> Numérico\n
-      * > <b>Tamanho:</b> 3-16\n
-      * > <b>Casas decimais:</b> 4\n
+      * > **Tipo:** Numérico\n
+      * > **Tamanho:** 3-16\n
+      * > **Casas decimais:** 4\n
       *
       * \param pCOFINS_vAliqProd
       * Caso o grupo informado seja ZERO o valor considerado será para TAG pCOFINS (T03).
       * > T03 : Alíquota do COFINS (em percentual)\n
-      * > <b>Tipo:</b> Numérico\n
-      * > <b>Tamanho:</b> 5\n
-      * > <b>Casas decimais:</b> 4\n
+      * > **Tipo:** Numérico\n
+      * > **Tamanho:** 5\n
+      * > **Casas decimais:** 4\n
       * Caso o grupo informado seja UM o valor considerado será para a TAG vAliqProd(T05)
       * > T05 : Alíquota do COFINS (em reais).\n
-      * > <b>Tipo:</b> Numérico\n
-      * > <b>Tamanho:</b> 3-15\n
-      * > <b>Casas decimais:</b> 4\n
+      * > **Tipo:** Numérico\n
+      * > **Tamanho:** 3-15\n
+      * > **Casas decimais:** 4\n
       *
       * \return
       * O retorno da função é do tipo numérico.\n
@@ -2295,46 +2295,46 @@ extern "C"{
       * \param nItem
       * Identificação do produto ao qual será acrecentado a tag obsFiscoDet.
       * Este parametro é retornado da função #InformaProduto
-      * > <b>Parametro obrigatório</b>
+      * > **Parametro obrigatório**
       *
       * \param vDeducISSQN
       * Valor das deduções para ISSQN.\n
       * Valor das deduções para Redução da Base de Cálculo em R$.\n
-      * > <b>TAG:</b> U02\n
-      * > <b>Parametro obrigatório</b>\n
-      * > <b>Tipo:</b> Numérico\n
-      * > <b>Tamanho:</b> 3-15\n
-      * > <b>Casas decimais:</b> 2\n
+      * > **TAG:** U02\n
+      * > **Parametro obrigatório**\n
+      * > **Tipo:** Numérico\n
+      * > **Tamanho:** 3-15\n
+      * > **Casas decimais:** 2\n
       *
       * \param vAliq
       * Alíquota do ISSQN.
-      * > <b>TAG:</b> U04\n
-      * > <b>Parametro obrigatório</b>\n
-      * > <b>Tipo:</b> Numérico\n
-      * > <b>Tamanho:</b> 5\n
-      * > <b>Casas decimais:</b> 4\n
+      * > **TAG:** U04\n
+      * > **Parametro obrigatório**\n
+      * > **Tipo:** Numérico\n
+      * > **Tamanho:** 5\n
+      * > **Casas decimais:** 4\n
       *
       * \param cMunFG
       * Informar o município de ocorrência do fato gerador do ISSQN. Utilizar a Tabela do
       * IBGE; se exterior utilizar 9999999.
-      * > <b>TAG:</b> U06\n
+      * > **TAG:** U06\n
       * > Essa TAG não é obrigatória e para que não seja incluida no XML deve-se passar parametro vazio.\n
-      * > <b>Tipo:</b> Numérico\n
-      * > <b>Tamanho:</b> 7\n
+      * > **Tipo:** Numérico\n
+      * > **Tamanho:** 7\n
       *
       * \param cListServ
       * Informar o Item da lista de serviços da LC 116/03 em que se classifica o serviço.
-      * > <b>TAG:</b> U07\n
+      * > **TAG:** U07\n
       * > Essa TAG não é obrigatória e para que não seja incluida no XML deve-se passar parametro vazio.\n
-      * > <b>Tipo:</b> Alfanumérico\n
-      * > <b>Tamanho:</b> 5\n
+      * > **Tipo:** Alfanumérico\n
+      * > **Tamanho:** 5\n
       *
       * \param cServTribMun
       * Codigo de tributação pelo ISSQN do municipio.
-      * > <b>TAG:</b> U08\n
+      * > **TAG:** U08\n
       * > Essa TAG não é obrigatória e para que não seja incluida no XML deve-se passar parametro vazio.\n
-      * > <b>Tipo:</b> Alfanumérico\n
-      * > <b>Tamanho:</b> 20\n
+      * > **Tipo:** Alfanumérico\n
+      * > **Tamanho:** 20\n
       *
       * \param cNatOp
       * Natureza da Operação de ISSQN.\n
@@ -2346,18 +2346,18 @@ extern "C"{
       * 06 - Exigibilidade suspensa por procedimento administrativo; \n
       * 07 - Não tributável ou não incidência;\n
       * 08 - Exportação de Serviço. \n
-      * > <b>TAG:</b> U09\n
-      * > <b>Parametro obrigatório</b>\n
-      * > <b>Tipo:</b> Numérico\n
-      * > <b>Tamanho:</b> 2\n
+      * > **TAG:** U09\n
+      * > **Parametro obrigatório**\n
+      * > **Tipo:** Numérico\n
+      * > **Tamanho:** 2\n
       *
       * \param indIncFisc
       * Indicador de Incentivo Fiscal do ISSQN.\n
       * 1 - Sim; 2 - Não.
-      * > <b>TAG:</b> U10\n
-      * > <b>Parametro obrigatório</b>\n
-      * > <b>Tipo:</b> Numérico\n
-      * > <b>Tamanho:</b> 1\n
+      * > **TAG:** U10\n
+      * > **Parametro obrigatório**\n
+      * > **Tipo:** Numérico\n
+      * > **Tamanho:** 1\n
       *
       * \return
       * O retorno da função é do tipo numérico.\n
@@ -2383,15 +2383,15 @@ extern "C"{
       * \param nItem
       * Identificação do produto ao qual será acrecentado a tag obsFiscoDet.
       * Este parametro é retornado da função #InformaProduto
-      * > <b>Parametro obrigatório</b>
+      * > **Parametro obrigatório**
       *
       * \param infAdProd
       * Informações Adicionais do Produto.\n
       * Norma referenciada, informações complementares,etc.
-      * > <b>TAG:</b> V01\n
+      * > **TAG:** V01\n
       * > Essa TAG não é obrigatória e para que não seja incluida no XML deve-se passar parametro vazio.\n
-      * > <b>Tipo:</b> Alfanumérico\n
-      * > <b>Tamanho:</b> 1-500\n
+      * > **Tipo:** Alfanumérico\n
+      * > **Tamanho:** 1-500\n
       *
       * \return
       * O retorno da função é do tipo numérico.\n
@@ -2420,11 +2420,11 @@ extern "C"{
       * Valor deverá ser distribuido pelo SAT proporcionalmen te ao valor de cada item, já considerado o\n
       * desconto ou acréscimo do item. Distribuição incidirá sobre os itens sujeitos ao ISSQN somente \n
       * se o campo indRatISSQN (id:C16) = 'S'.
-      * > <b>TAG:</b> W20\n
+      * > **TAG:** W20\n
       * > Essa TAG não é obrigatória e para que não seja incluida no XML deve-se passar parametro vazio.\n\n
-      * > <b>Tipo:</b> Numérico\n
-      * > <b>Tamanho:</b> 3-15\n
-      * > <b>Casas decimais:</b> 2\n
+      * > **Tipo:** Numérico\n
+      * > **Tamanho:** 3-15\n
+      * > **Casas decimais:** 2\n
       * * TAG mutuamente exclusiva com a TAG W21. Se informada, a TAG21 não será incluida e vice-versa.
       *
       *
@@ -2432,11 +2432,11 @@ extern "C"{
       * Valor de Entrada de Acréscimo sobre Subtotal.\n
       * Se informado, deve conter acréscimo sobre total dos itens, Valor deverá ser distribuido pelo\n
       * SAT proporcionalmente ao valor de cada item, já considerado o desconto ou acréscimo do item.
-      * > <b>TAG:</b> W21\n
+      * > **TAG:** W21\n
       * > Essa TAG não é obrigatória e para que não seja incluida no XML deve-se passar parametro vazio.\n
-      * > <b>Tipo:</b> Numérico\n
-      * > <b>Tamanho:</b> 3-15\n
-      * > <b>Casas decimais:</b> 2\n
+      * > **Tipo:** Numérico\n
+      * > **Tamanho:** 3-15\n
+      * > **Casas decimais:** 2\n
       * * TAG mutuamente exclusiva com a TAG W20. Se informada, a TAG20 não será incluida e vice-versa.
       *
       * \param vCFeLei12741
@@ -2447,11 +2447,11 @@ extern "C"{
       * conforme artigo 2º, §2º da referida lei.
       * - obrigatório, caso o contribuinte não opte por informar o valor em painel afixado no \n
       * estabelecimento, conforme artigo 2º, §2º da referida lei.
-      * > <b>TAG:</b> W22\n
+      * > **TAG:** W22\n
       * > Essa TAG não é obrigatória e para que não seja incluida no XML deve-se passar parametro vazio.\n
-      * > <b>Tipo:</b> Numérico\n
-      * > <b>Tamanho:</b> 3-15\n
-      * > <b>Casas decimais:</b> 2\n
+      * > **Tipo:** Numérico\n
+      * > **Tamanho:** 3-15\n
+      * > **Casas decimais:** 2\n
       *
       * \return
       * O retorno da função é do tipo numérico.\n
@@ -2486,28 +2486,28 @@ extern "C"{
       * 12 - Vale Presente\n
       * 13 - Vale Combustível\n
       * 99 - Outros \n
-      * > <b>TAG:</b> WA03\n
-      * > <b>Parametro obrigatório</b>\n
-      * > <b>Tipo:</b> Numérico\n
-      * > <b>Tamanho:</b> 2\n
+      * > **TAG:** WA03\n
+      * > **Parametro obrigatório**\n
+      * > **Tipo:** Numérico\n
+      * > **Tamanho:** 2\n
 
       * \param vMP
       * Valor do Meio de Pagamento empregado para quitação do CF-e.
-      * > <b>TAG:</b> WA04\n
-      * > <b>Parametro obrigatório</b>\n
-      * > <b>Tipo:</b> Numérico\n
-      * > <b>Tamanho:</b> 3-15\n
-      * > <b>Casas decimais:</b> 2\n
+      * > **TAG:** WA04\n
+      * > **Parametro obrigatório**\n
+      * > **Tipo:** Numérico\n
+      * > **Tamanho:** 3-15\n
+      * > **Casas decimais:** 2\n
       *
       * \param cAdmC
       * Credenciadora de cartão de débito ou crédito.\n
       * Código da Credenciadora de cartão de débito ou crédito conforme tabela disponível no
       * Anexo 3 - Tabela de credenciadoras de cartão de débito ou crédito Exemplos:
       * 001, 002, 003. .
-      * > <b>TAG:</b> WA05\n
+      * > **TAG:** WA05\n
       * > Essa TAG não é obrigatória e para que não seja incluida no XML deve-se passar parametro vazio.\n
-      * > <b>Tipo:</b> Numérico\n
-      * > <b>Tamanho:</b> 3\n
+      * > **Tipo:** Numérico\n
+      * > **Tamanho:** 3\n
       *
       * \return
       * O retorno da função é do tipo numérico.\n
@@ -2532,10 +2532,10 @@ extern "C"{
       *
       * \param infCpl
       * Informações Complementares de interesse do Contribuinte.
-      * > <b>TAG:</b> Z02\n
+      * > **TAG:** Z02\n
       * > Essa TAG não é obrigatória e para que não seja incluida no XML deve-se passar parametro vazio.\n
-      * > <b>Tipo:</b> Alfanumérico\n
-      * > <b>Tamanho:</b> 1-5000\n
+      * > **Tipo:** Alfanumérico\n
+      * > **Tamanho:** 1-5000\n
       *
       * \return
       * O retorno da função é do tipo numérico.\n
@@ -2554,7 +2554,7 @@ extern "C"{
       * Função de fechamento da venda. Usada para enviar o XML criado para o equipamento SAT .\n
       * Caso a função seja processada com sucesso o XML usado sera atualizado com os dados de processamento da venda no SAT.\n
       *
-      * Essa função depende do arquivo <b>e1_conf.ini</b> no diretório da aplicação com a chave <b>caminho_biblioteca_sat</b>\n
+      * Essa função depende do arquivo **e1_conf.ini** no diretório da aplicação com a chave **caminho_biblioteca_sat**\n
       * Ex.\n
       *  ~~~~~~~.ini
       *  [configuracao_sat]
@@ -2596,33 +2596,33 @@ extern "C"{
       * informar a chave de acesso do CF-e a ser cancelado, precedida do literal ‘CFe’,\n
       * acrescentada a validação do formato.
       * > TAG : A06\n
-      * > <b>Parametro obrigatório</b>\n
-      * > <b>Tipo:</b> Alfanumérico\n
-      * > <b>Tamanho:</b> 47\n
+      * > **Parametro obrigatório**\n
+      * > **Tipo:** Alfanumérico\n
+      * > **Tamanho:** 47\n
       *
       * \param CNPJ
       * Informar o CNPJ da empresa desenvolvedora do Aplicativo Comercial.\n
       * Deve ser informado apenas números. Caracteres (ponto, barra, hífen, etc.) serão removidos.\n
       * Caso o CNPJ tenha menos que 14 digitos a tag será preenchida com 0 não significativos.\n
       * zeros não significativos.
-      * > <b>TAG:</b> B10\n
-      * > <b>Parametro obrigatório</b>\n
-      * > <b>Tipo:</b> Numérico\n
-      * > <b>Tamanho:</b> 14\n
+      * > **TAG:** B10\n
+      * > **Parametro obrigatório**\n
+      * > **Tipo:** Numérico\n
+      * > **Tamanho:** 14\n
       *
       * \param signAC
       * Assinatura de (CNPJ Software House + CNPJ Emitente) que gerou o CF-e de cancelamento.
-      * > <b>TAG:</b> B11\n
-      * > <b>Parametro obrigatório</b>\n
-      * > <b>Tipo:</b> Alfanumérico\n
-      * > <b>Tamanho:</b> 1-344\n
+      * > **TAG:** B11\n
+      * > **Parametro obrigatório**\n
+      * > **Tipo:** Alfanumérico\n
+      * > **Tamanho:** 1-344\n
       *
       * \param numeroCaixa
       * Número de 0 a 999 referente ao caixa em que o SAT está conectado.
-      * > <b>TAG:</b> B13\n
-      * > <b>Parametro obrigatório</b>\n
-      * > <b>Tipo:</b> Numérico\n
-      * > <b>Tamanho:</b> 3\n
+      * > **TAG:** B13\n
+      * > **Parametro obrigatório**\n
+      * > **Tipo:** Numérico\n
+      * > **Tamanho:** 3\n
       *
       * \return
       * O retorno da função é do tipo numérico.\n
@@ -2657,33 +2657,33 @@ extern "C"{
       * informar a chave de acesso do CF-e a ser cancelado, precedida do literal ‘CFe’,\n
       * acrescentada a validação do formato.
       * > TAG : A06\n
-      * > <b>Parametro obrigatório</b>\n
-      * > <b>Tipo:</b> Alfanumérico\n
-      * > <b>Tamanho:</b> 47\n
+      * > **Parametro obrigatório**\n
+      * > **Tipo:** Alfanumérico\n
+      * > **Tamanho:** 47\n
       *
       * \param CNPJ
       * Informar o CNPJ da empresa desenvolvedora do Aplicativo Comercial.\n
       * Deve ser informado apenas números. Caracteres (ponto, barra, hífen, etc.) serão removidos.\n
       * Caso o CNPJ tenha menos que 14 digitos a tag será preenchida com 0 não significativos.\n
       * zeros não significativos.
-      * > <b>TAG:</b> B10\n
-      * > <b>Parametro obrigatório</b>\n
-      * > <b>Tipo:</b> Numérico\n
-      * > <b>Tamanho:</b> 14\n
+      * > **TAG:** B10\n
+      * > **Parametro obrigatório**\n
+      * > **Tipo:** Numérico\n
+      * > **Tamanho:** 14\n
       *
       * \param signAC
       * Assinatura de (CNPJ Software House + CNPJ Emitente) que gerou o CF-e de cancelamento.
-      * > <b>TAG:</b> B11\n
-      * > <b>Parametro obrigatório</b>\n
-      * > <b>Tipo:</b> Alfanumérico\n
-      * > <b>Tamanho:</b> 1-344\n
+      * > **TAG:** B11\n
+      * > **Parametro obrigatório**\n
+      * > **Tipo:** Alfanumérico\n
+      * > **Tamanho:** 1-344\n
       *
       * \param numeroCaixa
       * Número de 0 a 999 referente ao caixa em que o SAT está conectado.
-      * > <b>TAG:</b> B13\n
-      * > <b>Parametro obrigatório</b>\n
-      * > <b>Tipo:</b> Numérico\n
-      * > <b>Tamanho:</b> 3\n
+      * > **TAG:** B13\n
+      * > **Parametro obrigatório**\n
+      * > **Tipo:** Numérico\n
+      * > **Tamanho:** 3\n
       * 
       * \return
       * O retorno dessa função deve ser o caminho absoluto onde o arquivo foi gerado.
@@ -2700,7 +2700,7 @@ extern "C"{
       * Função de fechamento para cancelamento de venda. Usada para enviar o XML criado para o equipamento SAT.\n
       * Caso a função seja processada com sucesso o XML usado sera atualizado com os dados de processamento do cancelamento no SAT.\n
       *
-      * Essa função depende do arquivo <b>e1_conf.ini</b> no diretório da aplicação com a chave <b>caminho_biblioteca_sat</b>\n
+      * Essa função depende do arquivo **e1_conf.ini** no diretório da aplicação com a chave **caminho_biblioteca_sat**\n
       * Ex.\n
       *  ~~~~~~~.ini
       *  [configuracao_sat]
@@ -2733,7 +2733,7 @@ extern "C"{
       * Função para Tratamento de Timeout de Comunicação. Usada para recuperar um processamento que foi interrompido durante uma ocorrência de timeout no SAT.\n
       * Caso a função seja processada com sucesso o arquivo será atualizado com os dados do ultima operação processada pelo SAT.\n
       *
-      * Essa função depende do arquivo <b>e1_conf.ini</b> no diretório da aplicação com as chaves <b>caminho_biblioteca_sat</b> e <b>ultimo_cfe_processado</b>\n
+      * Essa função depende do arquivo **e1_conf.ini** no diretório da aplicação com as chaves **caminho_biblioteca_sat** e **ultimo_cfe_processado**\n
       *
       * Ex.\n
       *  ~~~~~~~.ini

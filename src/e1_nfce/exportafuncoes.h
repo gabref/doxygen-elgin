@@ -739,7 +739,7 @@ extern "C" {
     * > <b>Tipo:</b> Numérico\n
     * > <b>Tamanho:</b> 1-15\n
     *
-    * \param esp
+    * \param especie
     * Espécie dos volumes transportados.\n
     * > <b>TAG:</b> X28\n
     * > <b>Parâmetro opcional</b>\n
