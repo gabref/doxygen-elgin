@@ -1,0 +1,1131 @@
+ /*! \defgroup g3 Android
+  *
+  * Fornece funções para uso em ambiente Android, bem como as instruções
+  * necessárias para compatibilizar o projeto com os dispositivos Elgin suportados.
+  *
+  * Os seguintes dispositivos Elgin são suportados:
+  * > SmartPOS\n
+  * > Mini PDV M8\n
+  * \n
+  *
+  * <b>Códigos de exemplo:</b>
+  * > Módulo Termica: https://bitbucket.org/teamshelgin/exemplo_termica_e1_android/src/master/\n
+  * > Módulo Etiqueta: https://bitbucket.org/teamshelgin/exemplo_etiqueta_e1_android/src/master/\n
+  * > Módulo SAT: https://bitbucket.org/teamshelgin/exemplo_sat_e1_android/src/master/\n
+  * > Módulo Balanca: https://bitbucket.org/teamshelgin/exemplo_balanca_e1_android/src/master/\n
+  */
+
+/*! \ingroup g3
+  * \brief Função para captura do número de série do dispositivo Android.
+  * * OBS: Este método é exclusivo do ambiente Android e equivale a <i>GetDeviceInfo(1)</i>.
+  *
+  * Para utilizar a função, deve-se:\n
+  * \n
+  *
+  * #1. Importar a classe <i>Android</i> do pacote <i>com.elgin.e1.Impressora</i>:
+  * > import com.elgin.e1.Impressora.Android;\n
+  * \n
+  *
+  * #2. Chamar o método estático <i>GetNumeroSerie()</i>:
+  * > String numSerie = Android.GetNumeroSerie();\n
+  * \n
+  *
+  * \return
+  * O retorno da função é do tipo caractere.\n
+  * A função bem-sucedida deve retornar uma string que representa
+  * o número de série do dispositivo Android.\n
+  */
+ String GetNumeroSerie();
+
+/*! \ingroup g3
+  * \brief Função para captura da classe do dispositivo Android.
+  * * OBS: Este método é exclusivo do ambiente Android e equivale a <i>GetDeviceInfo(2)</i>.
+  *
+  * Para utilizar a função, deve-se:\n
+  * \n
+  *
+  * #1. Importar a classe <i>Android</i> do pacote <i>com.elgin.e1.Impressora</i>:
+  * > import com.elgin.e1.Impressora.Android;\n
+  * \n
+  *
+  * #2. Chamar o método estático <i>GetClasseDispositivo()</i>:
+  * > String classe = Android.GetClasseDispositivo();\n
+  * \n
+  *
+  * \return
+  * O retorno da função é do tipo caractere.\n
+  * A função bem-sucedida deve retornar uma string que representa
+  * a classe do dispositivo Android.\n
+  * Retornos possíveis: ['POSANDROID', 'PDVANDROID', 'SMARTERMINAL', 'INVALID']\n
+  */
+ String GetClasseDispositivo();
+
+/*! \ingroup g3
+  * \brief Função para captura do modelo do dispositivo Android.
+  * * OBS: Este método é exclusivo do ambiente Android e equivale a <i>GetDeviceInfo(3)</i>.
+  *
+  * Para utilizar a função, deve-se:\n
+  * \n
+  *
+  * #1. Importar a classe <i>Android</i> do pacote <i>com.elgin.e1.Impressora</i>:
+  * > import com.elgin.e1.Impressora.Android;\n
+  * \n
+  *
+  * #2. Chamar o método estático <i>GetModeloDispositivo()</i>:
+  * > String modelo = Android.GetModeloDispositivo();\n
+  * \n
+  *
+  * \return
+  * O retorno da função é do tipo caractere.\n
+  * A função bem-sucedida deve retornar uma string que representa
+  * o modelo do dispositivo Android.\n
+  */
+ String GetModeloDispositivo();
+
+/*! \ingroup g3
+  * \brief Função para captura da versão de firmware do dispositivo Android.
+  * * OBS: Este método é exclusivo do ambiente Android e equivale a <i>GetDeviceInfo(4)</i>.
+  *
+  * Para utilizar a função, deve-se:\n
+  * \n
+  *
+  * #1. Importar a classe <i>Android</i> do pacote <i>com.elgin.e1.Impressora</i>:
+  * > import com.elgin.e1.Impressora.Android;\n
+  * \n
+  *
+  * #2. Chamar o método estático <i>GetVersaoFirmware()</i>:
+  * > String verFirmware = Android.GetVersaoFirmware();\n
+  * \n
+  *
+  * \return
+  * O retorno da função é do tipo caractere.\n
+  * A função bem-sucedida deve retornar uma string que representa
+  * a versão de firmware do dispositivo Android.\n
+  */
+ String GetVersaoFirmware();
+
+/*! \ingroup g3
+  * \brief Função para captura de informações do dispositivo Android.
+  * * OBS: Este método é exclusivo do ambiente Android.
+  *
+  * Para utilizar a função, deve-se:\n
+  * \n
+  *
+  * #1. Importar a classe <i>Android</i> do pacote <i>com.elgin.e1.Impressora</i>:
+  * > import com.elgin.e1.Impressora.Android;\n
+  * \n
+  *
+  * #2. Chamar o método estático <i>GetDeviceInfo()</i>:
+  * > String info = Android.GetDeviceInfo(id);\n
+  * \n
+  *
+  * \param id - Parâmetro do tipo numérico que corresponde ao código da informação desejada, conforme tabela abaixo:
+  * Código | Informação
+  * ------ | ----------
+  * 1      | Número de série
+  * 2      | Classe do dispositivo
+  * 3      | Modelo do dispositivo
+  * 4      | Versão de firmware
+  * \n
+  *
+  * \return
+  * O retorno da função é do tipo caractere.\n
+  * A função bem-sucedida deve retornar uma string que representa
+  * a informação solicitada do dispositivo Android ou -402, caso
+  * o <i>id</i> seja diferente dos especificados.\n
+  */
+ String GetDeviceInfo(int id);
+
+ /*! \ingroup g3
+  * \brief Imprime bitmap enviado ao dispositivo Elgin suportado (vide lista).
+  * * OBS: Este método é exclusivo do ambiente Android.
+  *
+  * Para utilizar a função, deve-se:\n
+  * \n
+  *
+  * #1. Importar a classe <i>Termica</i> do pacote <i>com.elgin.e1.Impressora</i>:
+  * > import com.elgin.e1.Impressora.Termica;\n
+  * \n
+  *
+  * #2. Chamar o método estático <i>ImprimeBitmap()</i>:
+  * > int resultado = Termica.ImprimeBitmap(bitmap);\n
+  * \n
+  *
+  * \param bitmap - Parâmetro do tipo (classe) Bitmap que define a imagem a ser impressa.\n
+  * \n
+  * Esse parâmetro recebe como argumento uma instância da classe Bitmap, isto é, o bitmap que
+  * será impresso.\n
+  * \n
+  *
+  * \return
+  * O retorno da função é do tipo numérico.\n
+  * A função bem-sucedida deve retornar 0.\n
+  */
+ int ImprimeBitmap(Bitmap bitmap);
+ 
+ /*!
+  * \ingroup g3
+  * \brief Realiza a impressão do Cupom TEF.
+  *
+  * Essa função pode ser usada para imprimir os dados do cupom TEF enviados em uma string\n
+  * ou\n
+  * Um bitmap passando o conteúdo do mesmo em BASE64.
+  *
+  * \param dados - Conteúdo a ser impresso\n
+  * ou\n
+  * Conteúdo do BITMAP em BASE64
+  * \n
+  *
+  * \return
+  * O retorno da função é do tipo numérico.\n
+  * A função bem-sucedida deve retornar 0.\n
+  * Para mais informações vide seção códigos de erro.\n
+  */
+ int ImprimeCupomTEF(String dados);
+
+ /*! \defgroup g32 Módulos
+  * \ingroup g3
+  *
+  * \brief Módulos disponíveis para utilização no ambiente Android.
+  *
+  * Após a compatibilização do projeto, as funções dos módulos listados acima
+  * estarão disponíveis para uso em ambiente Android.\n
+  * \n
+  *
+  * De maneira geral, o uso e o funcionamento delas é idêntico àquelas apresentadas
+  * nos módulos @ref M1, @ref M0, @ref g2 e @ref g5, com exceção de algumas, cujas
+  * diferenças são comentadas ao longo da documentação.\n
+  * \n
+  */
+
+ /*! \defgroup ma0 Impressora Térmica
+  * \ingroup g32
+  *
+  * \brief Módulo para comunicação com as impressoras térmicas.
+  *
+  * Para utilizar essas funções em ambiente Android, é necessário importar
+  * a classe referente a este módulo:
+  * > import com.elgin.e1.Impressora.Termica;\n
+  * \n
+  *
+  * Após importar a classe, suas funções poderão ser acessadas diretamente
+  * via operador ponto ("."), uma vez que seus métodos são estáticos.\n
+  * \n
+  * 
+  * Para estabelecer uma comunicação com a impressora, será necessário abrir uma
+  * conexão através do método #AbreConexaoImpressora:
+  * > Termica.AbreConexaoImpressora(3, "i9", "192.168.0.1", 9100); // <i>Argumentos ilustrativos</i>\n
+  * \n
+  *
+  * Caso o tipo de conexão seja USB (<i>tipo</i> = 1), a comunicação somente será efetuada se o usuário
+  * permitir o acesso à impressora na solicitação que aparecer na tela; devido a isso, existem duas formas
+  * para chamar a função #AbreConexaoImpressora:\n
+  * \n
+  *
+  * <b>1ª:</b> Chamá-la nos métodos de Activity <i>onCreate</i> ou <i>onResume</i> - nesse caso,
+  * a Activity sempre terá uma conexão USB aberta enquanto estiver "ativa" / em uso.\n
+  * --> A função #FechaConexaoImpressora deverá ser chamada em <i>onDestroy</i> ou em <i>onStop</i>.\n
+  * \n
+  *
+  * <b>2ª:</b> Chamá-la através de um botão - nesse caso, a comunicação USB será estabelecida somente
+  * após um clique em tal botão.\n
+  * \n
+  *
+  * O exemplo abaixo ilustra como abrir uma conexão TCP/IP com a impressora Elgin i9 em
+  * ambiente Android, avançar 50 linhas de papel ("imprimir em branco") e fechar a conexão.
+  * @code
+  * import com.elgin.e1.Impressora.Termica;
+  *
+  * // ...
+  *
+  * Termica.AbreConexaoImpressora(3, "i9", "192.168.0.1", 9100);
+  * 
+  * Termica.AvancaPapel(50);
+  * 
+  * Termica.FechaConexaoImpressora();
+  *
+  * // ...
+  *
+  * @endcode
+  * \n
+  *
+  * O exemplo abaixo ilustra como abrir uma conexão USB com a impressora Elgin i9 em
+  * ambiente Android, avançar 50 linhas de papel ("imprimir em branco") e fechar a conexão.
+  * @code
+  * // ...
+  *
+  * import com.elgin.e1.Impressora.Termica;
+  *
+  * public class MainActivity extends AppCompatActivity { // AppCompatActivity e' um subtipo de Activity
+  *
+  *     @Override
+  *     protected void onCreate(Bundle savedInstanceState) {
+  *         super.onCreate(savedInstanceState);
+  *         setContentView(R.layout.activity_main);
+  *
+  *         //* SETUP INICIAL
+  *         Termica.setActivity(this);
+  *         Termica.AbreConexaoImpressora(5, "", "", 0);
+  *         Termica.FechaConexaoImpressora();
+  *         //*
+  *
+  *         Termica.AbreConexaoImpressora(1, "i9", "", 0);
+  *     }
+  *
+  *     @Override
+  *     protected void onDestroy() {
+  *         super.onDestroy();
+  *         Termica.FechaConexaoImpressora();
+  *     }
+  *
+  *     // Essa funcao pode ser chamada em um botao, por exemplo
+  *     private int avanca50linhas() {
+  *         int retorno = Termica.AvancaPapel(50);
+  *         return retorno;
+  *     }
+  * }
+  *
+  * // ...
+  *
+  * @endcode
+  * \n
+  *
+  * > <b>Conexão / desconexão automática</b>
+  * A biblioteca E1 Android inicia e encerra conexões USB automaticamente, dispensando
+  * o usuário de chamar os métodos #AbreConexaoImpressora e #FechaConexaoImpressora, nas
+  * seguintes situações:
+  * 1. Se, ao carregar a biblioteca E1, houver uma impressora Elgin conectada no dispositivo
+  * Android;
+  * 2. Se, ao conectar uma impressora Elgin no dispositivo Android, a biblioteca E1 estiver
+  * sem uma conexão ativa;
+  *  - Em ambos os casos, uma conexão USB é estabelecida automaticamente com a impressora
+  *  conectada, desde que o usuário aceite a permissão que aparecer na tela.
+  * 3. Se a biblioteca E1 tiver uma conexão USB ativa com uma impressora Elgin e esta,
+  * por sua vez, for desligada ou desconectada do dispositivo Android.
+  *  - A impressora desligada/desconectada terá sua conexão USB encerrada automaticamente.
+  *
+  * > <b>Funções impressora térmica</b>
+  * - #AbreConexaoImpressora\n
+  * - #AbreGaveta\n
+  * - #AbreGavetaElgin\n
+  * - #AvancaPapel\n
+  * - #Corte\n
+  * - #CorteTotal\n
+  * - #DefineAreaImpressao\n
+  * - #DefinePosicao\n
+  * - #DirecaoImpressao\n
+  * - DirectIO\n
+  * - #FechaConexaoImpressora\n
+  * - GetVersaoDLL\n
+  * - #ImpressaoCodigoBarras\n
+  * - #ImpressaoPDF417\n
+  * - #ImpressaoQRCode\n
+  * - #ImpressaoTexto\n
+  * - #ImprimeImagem\n
+  * - #ImprimeImagemMemoria\n
+  * - #ImprimeModoPagina\n
+  * - #ImprimeMPeRetornaPadrao\n
+  * - #ImprimeXMLCancelamentoSAT\n
+  * - #ImprimeXMLNFCe\n
+  * - #ImprimeXMLSAT\n
+  * - #InicializaImpressora\n
+  * - #LimpaBufferModoPagina\n
+  * - #ModoPadrao\n
+  * - #ModoPagina\n
+  * - #PosicaoImpressaoHorizontal\n
+  * - #PosicaoImpressaoVertical\n
+  * - #SinalSonoro\n
+  * - #StatusImpressora\n
+  */
+
+ /*! \ingroup ma0
+  * \brief Envia comandos ESCPOS direto para a porta de comunicação.
+  *
+  * Função de despejo de comandos na porta de comunicação. Essa função também recebe dados da porta de comunicação.
+  * * OBS: Este método não está disponível para uso com o @ref g8.
+  * * OBS: Se o <b>tipo</b> de conexão (definido na função #AbreConexaoImpressora) for o <b>5</b>, não será possível
+  * realizar a leitura da porta e os parâmetros <b>readData</b> e <b>readNum</b> podem ser definidos como <b>null</b>,
+  * pois não serão utilizados na função.
+  *
+  * \param writeData - Sequência de bytes que devem ser enviados para a porta de comunicação.\n
+  * \n
+  *
+  * \param writeNum - Quantidade de bytes enviados e que serão escritos.\n
+  * \n
+  *
+  * \param readData - Variável que receberá os dados de retorno caso seja necessário.\n
+  * \n
+  *
+  * \param readNum - Quantidade de dados que se espera ler. Após a execução
+  * da função, essa variável deve indicar a quantidade de dados lidos da porta.
+  * Para evitar a leitura da porta esse parâmetro deve valer 0 (ZERO).\n
+  * \n
+  *
+  * Perceba que este parâmetro recebe, como argumento, um <b>objeto da classe Inteiro</b>,
+  * inicializado com o valor que deseja-se passar ao parâmetro.\n
+  * \n
+  *
+  * Essa classe <b>representa um número inteiro</b> e, para utilizá-la, é necessário
+  * importá-la:
+  * > import com.elgin.e1.Impressora.Utilidades.Inteiro;\n
+  * \n
+  *
+  * Possui <b>dois construtores:</b> um construtor padrão (sem argumentos), que inicializa
+  * o objeto com valor 0; e um construtor com um argumento do tipo <b>int</b>, que inicializa
+  * o objeto com o valor passado nesse argumento.\n
+  * \n
+  *
+  * Apresenta <b>dois métodos:</b> o método <b>getValor</b> (<i>assinatura: int getValor()</i>),
+  * que retorna o valor atual da instância (<i>definido no construtor ou na função setValor</i>);
+  * e o método <b>setValor</b> (<i>assinatura: void setValor(int valor)</i>), que modifica o valor
+  * da instância pelo valor passado no argumento).\n
+  * \n
+  *
+  * Veja, abaixo, um exemplo de uso válido desta função, em Java, seguido de um comentário detalhado
+  * sobre os argumentos passados:
+  *
+  * @code
+  * byte[] esc = {29, 73, 67}; // Nome da impressora
+  * byte[] ler = new byte[1000]; // Armazena os dados retornados pela impressora (até 1000 bytes, nesse caso)
+  * Inteiro leu = new Inteiro(1); // Armazena a quantidade de bytes lidos; o valor 1 (ou qualquer outro maior do que 0) solicita a leitura da porta
+  *
+  * int ret = Termica.DirectIO(esc, 3, ler, leu);
+  *
+  * // Imprime o retorno de DirectIO e a resposta da impressora:
+  * System.out.printf("\n Ret: %d ; Leu: %d ; Dados lidos: %s \n", ret, leu.getValor(), new String(ler));
+  * @endcode
+  *
+  * \n
+  * > No exemplo acima, são passados a variável <b>esc</b> e o argumento <b>3</b> à função; a variável
+  * > <b>esc</b> contém o comando que o <i>DirectIO</i> enviará à impressora - um comando em ESCPOS que
+  * > solicita o nome da impressora - e o valor <b>3</b>, a quantidade de bytes que devem ser escritos -
+  * > no exemplo, todos os três bytes do comando armazenado na variável <b>esc</b>.\n
+  *
+  * > Em seguida, são passados à função as variáveis <b>ler</b> e <b>leu</b>; a variável <b>ler</b> armazenará
+  * > os dados retornados pela impressora, em resposta ao comando enviado, e a variável <b>leu</b>, armazenará
+  * > a quantidade de bytes efetivamente lidos.\n
+  *
+  * > O valor <b>1</b> (ou qualquer valor maior do que zero), inicialmente atribuido à variável <b>leu</b>,
+  * > solicita a leitura da porta. Após a leitura, o valor final dessa variável será a quantidade de dados
+  * > lidos.\n
+  * \n
+  *
+  * \return
+  * O retorno é numérico.\n
+  * A função bem-sucedida deve retornar 0.\n
+  *
+  * * Para mais informações sobre retorno consulte #Erro_ConexaoAndroid e #IMP_Erro_Leitura.
+  */
+ int DirectIO(byte[] writeData, int writeNum, byte[] readData, Inteiro readNum);
+
+ /*! \defgroup ma1 Impressora de Etiquetas
+  * \ingroup g32
+  *
+  * \brief Módulo para comunicação com as impressoras de etiqueta.
+  *
+  * Para utilizar essas funções em ambiente Android, é necessário importar
+  * a classe referente a este módulo:
+  * > import com.elgin.e1.Impressora.Etiqueta;\n
+  * \n
+  *
+  * Após importar a classe, suas funções poderão ser acessadas diretamente
+  * via operador ponto ("."), uma vez que seus métodos são estáticos.\n
+  * \n
+  *
+  * O exemplo abaixo ilustra como alterar a velocidade de impressão, gerar um
+  * texto na etiqueta e imprimi-la, em ambiente Android.
+  * @code
+  * import com.elgin.e1.Impressora.Etiqueta;
+  *
+  * // ...
+  *
+  * Etiqueta.SetVelImpressao(11);
+  * Etiqueta.Limpa(1);
+  * Etiqueta.GerarTexto(1, 4, 1, 1, 100, 100, "Texto demonstrativo...");
+  *
+  * Etiqueta.Imprime(3, "L42PRO", "192.168.0.1", 9100);
+  *
+  * // ...
+  *
+  * @endcode
+  * \n
+  *
+  * > <b>Funções impressora de etiquetas</b>
+  * - #DespejarArquivo\n
+  * - DirectIO\n
+  * - #EnviaImagem\n
+  * - #ExcluiImagem\n
+  * - #Feed\n
+  * - GetVersaoDLL\n
+  * - #Imprime\n
+  * - #Limpa\n
+  * - #LimpaMemoria\n
+  * - #LimpaModulo\n
+  * - #MemoryStatus\n
+  * - #Reset\n
+  * - #Status\n
+  * - #StatusEPL\n
+  * - #Teste\n
+  * \n
+  *
+  * > [1] Configuração de Sistema
+  * - #SetAlturaGap\n
+  * - #SetBaudrate\n
+  * - #SetSymbolASD\n
+  * - #SetTipoTransferencia\n
+  * \n
+  *
+  * > [2] Nível de Sistema
+  * - #SetBackfeed\n
+  * - #SetLength\n
+  * - #SetMedidas\n
+  * - #SetModoContinuo\n
+  * - #SetPrintStPos\n
+  * - #SetSensor\n
+  * \n
+  *
+  * > [3] Formatação de Label
+  * - #SetCalor\n
+  * - #SetCortarZero\n
+  * - #SetLogicImgMode\n
+  * - #SetMirror\n
+  * - #SetOffsetColuna\n
+  * - #SetOffsetLinha\n
+  * - #SetQtde\n
+  * - #SetTamPixel\n
+  * - #SetVelImpressao\n
+  * \n
+  *
+  * > [4] Campos da Etiqueta
+  * - #GerarBox\n
+  * - #GerarImagem\n
+  * - #GerarLinha\n
+  * \n
+  *
+  * > [4.1] Texto
+  * - #GerarTexto\n
+  * - #GerarTextoASD\n
+  * - #GerarTextoCourier\n
+  * \n
+  *
+  * > [4.2] Código de barras
+  * - #GerarBarCode1D\n
+  * - #GerarDataBar\n
+  * - #GerarDataBarExpanded\n
+  * - #GerarDataMatrix\n
+  * - #GerarMaxiCode\n
+  * - #GerarPDF417\n
+  * - #GerarQRCodeAuto\n
+  * - #GerarQRCodeManual\n
+  */
+
+ /*! \ingroup ma1
+  * \brief Envia comandos, em protocolo suportado pela impressora, direto para a porta de comunicação.
+  *
+  * Função de despejo de comandos na porta de comunicação. Essa função também recebe dados da porta.
+  * * OBS: Este método não está disponível para uso com o @ref g8.
+  *
+  * \param tipo - Parâmetro do tipo numérico que define o tipo de comunicação que será estabelecido.\n
+  * \n
+  * Conforme tabela a seguir:
+  * Valor | Referência
+  * ----- | ----------
+  * 1     | USB
+  * 2     | RS232
+  * 3     | TCP/IP
+  * \n
+  *
+  * \param modelo - Parâmetro do tipo caractere que especifica o modelo para conexão.\n
+  * \n
+  * Conforme lista:
+  * > <b>Valores</b>\n
+  * > L42\n
+  * > L42PRO\n
+  * > TT042-50\n
+  * \n
+  *
+  * \param conexao - Parâmetro do tipo caractere que define detalhes de conexão.\n
+  * \n
+  * Detalhes de conexão:
+  * Referência | Valor exemplo
+  * :--------- | -------------
+  * USB        | USB
+  * RS232      | COM2
+  * TCP/IP     | 192.168.0.20
+  * \n
+  *
+  * \param param - Parâmetro do tipo numérico auxiliar para a conexão com a impressora.\n
+  * \n
+  * Utilizado para especificar <b>baudrate</b> ou <b>porta de comunicação TCP/IP</b>.\n
+  *
+  * * OBS: Quando a conexão estabelecida for a USB esse parâmetro é desconsiderado, podendo ser definido com o valor 0.\n
+  * \n
+  *
+  * \param writeData - Sequência de bytes que devem ser enviados para a porta de comunicação.\n
+  * \n
+  *
+  * \param writeNum - Quantidade de bytes enviados e que serão escritos.\n
+  * \n
+  *
+  * \param readData - Variável que receberá os dados de retorno caso seja necessário.\n
+  * \n
+  *
+  * \param readNum - Quantidade de dados que se espera ler. Para
+  * evitar a leitura da porta esse parâmetro deve estar em ZERO (0).\n
+  * \n
+  *
+  * Veja, abaixo, um exemplo de uso válido desta função, em Java, seguido de um comentário detalhado
+  * sobre os argumentos passados:
+  *
+  * @code
+  * byte[] esc = {2, 70, 13, 13}; // Avanca papel
+  * byte[] ler = new byte[1000]; // Armazena os dados retornados pela impressora (até 1000 bytes, nesse caso)
+  *
+  * int[] ret = Etiqueta.DirectIO(3, "L42PRO", "192.168.10.98", 9100, esc, 4, ler, 0);
+  *
+  * // Imprime o retorno de DirectIO e a resposta da impressora:
+  * System.out.printf("\n Ret: %d ; Escreveu: %d ; Leu: %d ; Dados lidos: %s \n", ret[0], ret[1], ret[2], new String(ler));
+  * @endcode
+  *
+  * \n
+  * > No exemplo acima, os primeiros quatro argumentos permitem que a função envie o comando à impressora
+  * > <b>L42PRO</b> via <b>TCP/IP</b>, localizada em <b>192.168.10.98:9100</b>.\n
+  *
+  * > Em seguida, são passados a variável <b>esc</b> e o argumento <b>4</b> à função; a variável <b>esc</b>
+  * > contém o comando que o <i>DirectIO</i> enviará à impressora - um avanço de papel, em PPLA - e o valor
+  * > <b>4</b>, a quantidade de bytes que devem ser escritos - no exemplo, todos os quatro bytes do comando
+  * > armazenado na variável <b>esc</b>.\n
+  *
+  * > Note ainda o byte <i>13</i>, duplicado, no comando: os comandos PPLA devem terminar, por padrão, com
+  * > um byte 13 (caractere CR); a impressora L42PRO, no entanto, necessita de um CR adicional para que o
+  * > comando seja reconhecido, dai o motivo do byte 13 estar duplicado.\n
+  *
+  * > Por fim, são passados à função a variável <b>ler</b> e o argumento <b>0</b>; a variável <b>ler</b>
+  * > armazenará os dados retornados pela impressora, em resposta ao comando enviado, e o valor <b>0</b>,
+  * > a quantidade de bytes que deverão ser lidos - no exemplo, o comando de avanço de papel não retorna
+  * > nenhum dado, portanto, o argumento <b>0</b> passado faz com que o DirectIO não realize a leitura da
+  * > porta.\n
+  * \n
+  *
+  * \return
+  * O retorno da função é um vetor de int, com três posições, cujo conteúdo é descrito a seguir:
+  * > Posição 0: Código de retorno da função (=0: Sucesso, <0: Falha de comunicação/leitura).\n
+  * > Posição 1: Quantidade de bytes escritos na porta (<0: Falha de escrita).\n
+  * > Posição 2: Quantidade de bytes lidos na porta.\n
+  * \n
+  *
+  * * Para mais informações, consulte #Erro_ConexaoAndroid, #GER_Erro_Conexao, #GER_Erro_Conexao_Serial, #GER_Erro_Conexao_USB ou #GER_Erro_Conexao_TCP\n
+  * * OBS: Caso a biblioteca encontre um hardware diferente do esperado a conexão será negada e o valor -5 será retornado na posição 0 do vetor.
+  */
+ int[] DirectIO(int tipo, String modelo, String conexao, int param, byte[] writeData, int writeNum, byte[] readData, int readNum);
+
+ /*! \defgroup ma2 SAT
+  * \ingroup g32
+  *
+  * \brief Módulo para comunicação com o Smart SAT.
+  *
+  * Para utilizar essas funções em ambiente Android, siga os passos abaixo.
+  *
+  * -# Copie a biblioteca AAR <i>satelgin-x.x.x-release.aar</i> para o diretório <i>libs</i>,
+  * localizado no diretório do módulo que irá acessá-la.\n
+  * \n
+  *
+  * -# Adicione a seguinte linha na seção <i>dependencies</i>, do arquivo
+  * <i>build.gradle</i>, do módulo que usará a biblioteca (esse arquivo está no
+  * mesmo diretório da pasta <i>libs</i>):
+  * > implementation files('libs/satelgin-x.x.x-release.aar')\n
+  * > implementation 'androidx.startup:startup-runtime:1.0.0'
+  * \n
+  *
+  *
+  * -# Importe a classe referente a este módulo:
+  * > import import br.com.elgin.Sat;\n
+  * \n
+  *
+  * -# Após importar a classe, suas funções poderão ser acessadas diretamente
+  * via operador ponto ("."), uma vez que seus métodos são estáticos.\n
+  * \n
+  *
+  * > <b>Funções SAT</b>
+  * - #AssociarAssinatura\n
+  * - #AtivarSAT\n
+  * - #AtualizarSoftwareSAT\n
+  * - #BloquearSAT\n
+  * - #CancelarUltimaVenda\n
+  * - #ConfigurarInterfaceDeRede\n
+  * - #ConsultarNumeroSessao\n
+  * - #ConsultarSAT\n
+  * - #ConsultarStatusOperacional\n
+  * - #ConsultarUltimaSessaoFiscal\n
+  * - #DesbloquearSAT\n
+  * - #EnviarDadosVenda\n
+  * - #ExtrairLogs\n
+  * - #TesteFimAFim\n
+  * - #TrocarCodigoDeAtivacao\n
+  */
+
+ /*! \defgroup ma3 Balança
+  * \ingroup g32
+  *
+  * \brief Módulo para comunicação com as balanças.
+  *
+  * Para utilizar essas funções em ambiente Android, é necessário importar
+  * a classe referente a este módulo:
+  * > import com.elgin.e1.Balanca.BalancaE1;\n
+  * \n
+  *
+  * Após importar a classe, suas funções poderão ser acessadas diretamente
+  * via operador ponto ("."), uma vez que seus métodos são estáticos.\n
+  * \n
+  *
+  * O exemplo abaixo ilustra como configurar o ambiente da balança (modelo,
+  * protocolo e conexão), realizar a leitura de peso e imprimi-lo no <i>System.out</i>,
+  * em ambiente Android.
+  * @code
+  * import com.elgin.e1.Balanca.BalancaE1;
+  *
+  * // ...
+  *
+  * int modelo = BalancaE1.ConfigurarModeloBalanca(0); // Configura modelo para DP-3005
+  * int protocolo = BalancaE1.ConfigurarProtocoloComunicacao(0); // Configura protocolo como Protocolo 0
+  *
+  * int abrir = BalancaE1.AbrirSerial(9600, 8, 'n', 1); // Configuracao serial da balanca...
+  * String peso = BalancaE1.LerPeso(1);
+  * int fechar = BalancaE1.Fechar();
+  *
+  * // EXIBE RETORNOS
+  * System.out.println("Retorno das funções:");
+  * System.out.println(String.format("Modelo: %d\nProtocolo: %d\nAbrir: %d\nPeso: %s\nFechar: %d\n", modelo, protocolo, abrir, peso, fechar));
+  *
+  * // ...
+  *
+  * @endcode
+  * \n
+  *
+  * > <b>Funções Balança</b>
+  * - #AbrirSerial\n
+  * - #ConfigurarModeloBalanca\n
+  * - #ConfigurarProtocoloComunicacao\n
+  * - DirectIO\n
+  * - Fechar\n
+  * - #GetContinuousReadTime\n
+  * - #LerPeso\n
+  * - #LerPreco\n
+  * - #LerTara\n
+  * - #LerTotal\n
+  * - #LigarDesligarDisplay\n
+  * - #ObterModeloBalanca\n
+  * - #ObterProtocoloComunicacao\n
+  * - #ObterTipoConexao\n
+  * - #SetContinuousReadTime\n
+  * - #TararBalanca\n
+  * - #ZerarBalanca\n
+  */
+
+ /*! \defgroup ma4 Serviço
+  * \ingroup g32
+  *
+  * \brief Módulo para comunicação via serviço.
+  * 
+  * A classe <b>ServicoE1</b>, do pacote <b>com.elgin.e1.Servico</b>, permite estabelecer
+  * uma comunicação TCP/IP com o serviço Elgin que estiver executando em algum computador
+  * da rede. Essa classe suporta mensageria no formato JSON ou delimitado (pipeado).\n
+  * \n
+  *
+  * > <b>Uso do serviço para comunicação com impressoras térmicas</b>
+  * O exemplo abaixo ilustra, <b>por meio do serviço</b> em ambiente Android, como abrir uma
+  * conexão com a impressora, avançar 50 linhas de papel ("imprimir em branco") e fechar a conexão.
+  * @code
+  * import com.elgin.e1.Servico.ServicoE1;
+  *
+  * // ...
+  *
+  * ServicoE1.Abrir("192.168.10.35", 89); // Estabelece conexao com servico (rodando em Desktop)
+  *
+  * ServicoE1.Termica.AbreConexaoImpressora(3, "I9", "192.168.10.98", 9100); // Solicita abertura de conexao com a impressora
+  * byte[] RETORNO = ServicoE1.Termica.AvancaPapel(50); // Solicita avanco de papel e salva retorno em RETORNO
+  * ServicoE1.Termica.FechaConexaoImpressora(); // Solicita fechamento de conexao com a impressora
+  *
+  * ServicoE1.Fechar(); // Encerra conexao com servico
+  * System.out.println("Retorno: " + new String(RETORNO)); // Imprime resultado do comando AvancaPapel
+  *
+  * // ...
+  *
+  * @endcode
+  * \n
+  * 
+  * > <b>Uso do serviço para comunicação com impressoras de etiqueta</b>
+  * O exemplo abaixo ilustra, <b>por meio do serviço</b> em ambiente Android, como
+  * alterar a velocidade de impressão, gerar um texto na etiqueta e imprimi-la.
+  * @code
+  * import com.elgin.e1.Servico.ServicoE1;
+  *
+  * // ...
+  *
+  * ServicoE1.Abrir("192.168.10.35", 89); // Estabelece conexao com servico (rodando em Desktop)
+  *
+  * ServicoE1.Etiqueta.SetVelImpressao(11); // Solicita alteração na velocidade de impressao
+  * ServicoE1.Etiqueta.Limpa(1); // Solicita limpeza nos campos da etiqueta, mantendo as propriedades de impressao
+  * ServicoE1.Etiqueta.GerarTexto(1, 4, 1, 1, 100, 100, "Texto demonstrativo..."); // Solicita geracao de texto na etiqueta
+  * byte[] RETORNO = ServicoE1.Etiqueta.Imprime(1, "L42PRO", "USB", 0); // Solicita impressao da etiqueta e salva retorno em RETORNO
+  *
+  * ServicoE1.Fechar(); // Encerra conexao com servico
+  * System.out.println("Retorno: " + new String(RETORNO)); // Imprime resultado do comando Imprime
+  *
+  * // ...
+  *
+  * @endcode
+  * \n
+  *
+  * > <b>Uso do serviço para comunicação com o Smart SAT</b>
+  * O exemplo abaixo ilustra, <b>por meio do serviço</b> em ambiente Android, como
+  * consultar o SAT.
+  * @code
+  * import com.elgin.e1.Servico.ServicoE1;
+  *
+  * // ...
+  *
+  * ServicoE1.Abrir("192.168.10.35", 89); // Estabelece conexao com servico (rodando em Desktop)
+  *
+  * byte[] RETORNO = ServicoE1.SAT.ConsultarSat(123456); // Solicita consulta ao SAT e salva retorno em RETORNO
+  *
+  * ServicoE1.Fechar(); // Encerra conexao com servico
+  * System.out.println("Retorno: " + new String(RETORNO)); // Imprime resultado do comando ConsultarSat
+  *
+  * // ...
+  *
+  * @endcode
+  */
+
+ /*! \ingroup ma4
+  * \brief Método consultor que retorna o estado da conexão com o serviço.
+  *
+  * \return
+  * O retorno da função é do tipo <i>boolean</i>.\n
+  * * Se houver comunicação com o serviço, <i>i.e.</i> a conexão foi aberta, o retorno será <b>true</b>.\n
+  * * Caso contrário, o retorno será <b>false</b>.
+  */
+ boolean isAberto();
+
+ /*! \ingroup ma4
+  * \brief Método consultor que retorna o tipo de comando usado na comunicação, o formato
+  * da mensageria.
+  *
+  * \return
+  * O retorno da função é do tipo numérico.\n
+  * * Se o tipo de comando for o JSON, o retorno será <b>0</b>.\n
+  * * Se o tipo de comando for o delimitado (pipeado), o retorno será <b>1</b>.
+  */
+ int GetTipoComando();
+
+ /*! \ingroup ma4
+  * \brief Método mutante que define o tipo de comando a ser usado na comunicação, o
+  * formato da mensageria.
+  *
+  * \param tC - Tipo de comando que será usado na comunicação.\n
+  * Valores válidos:
+  * Valor | Formato
+  * ----- | -------
+  * 0     | JSON
+  * 1     | Delimitado (pipeado)
+  * \n
+  *
+  * * Valor padrão: <b>0</b>
+  * \n
+  *
+  * \return
+  * O retorno da função é do tipo numérico.\n
+  * A função bem-sucedida deve retornar 0.
+  */
+ int SetTipoComando(int tC);
+
+ /*! \ingroup ma4
+  * \brief Método consultor que retorna o separador de valores usado na comunicação.
+  *
+  * \return
+  * O retorno da função é do tipo cadeia de caracteres (String).\n
+  * A função deve retornar a sequência de caracteres usada como separador de valores.
+  */
+ String GetSepValores();
+
+ /*! \ingroup ma4
+  * \brief Método mutante que define o separador de valores usado na comunicação.
+  * 
+  * O separador de valores, utilizado quando o tipo de comando estiver definido como
+  * <b>1</b> (modo delimitado/pipeado), auxilia o serviço na interpretação da função,
+  * associando os valores dos argumentos aos seus respectivos parâmetros.
+  *
+  * \param sV - Separador de valores que será usado na comunicação.\n
+  * Valores válidos:
+  * > Qualquer sequência de caracteres que separe adequadamente os argumentos da função.
+  * \n
+  *
+  * Valor padrão: <b>:|</b>
+  * \n
+  *
+  * \return
+  * O retorno da função é do tipo numérico.\n
+  * A função bem-sucedida deve retornar 0.
+  */
+ int SetSepValores(String sV);
+
+ /*! \ingroup ma4
+  * \brief Método utilizado para estabelecer uma conexão TCP/IP com o serviço.
+  *
+  * \param enderecoIP - Parâmetro do tipo caractere que define o endereço IP
+  * do host em que o serviço está sendo executado. Valor de exemplo:
+  * > 192.168.0.20
+  * \n
+  *
+  * \param porta - Parâmetro do tipo numérico que informa a porta usada pelo serviço.
+  * A porta padrão é a 89, no entanto, ela pode ser modificada no monitor do serviço.
+  * \n
+  *
+  * \return
+  * O retorno da função é do tipo numérico.\n
+  * A função bem-sucedida deve retornar 0.
+  */
+ int Abrir(final String enderecoIP, final int porta);
+
+ /*! \ingroup ma4
+  * \brief Método utilizado para encerrar uma conexão TCP/IP com o serviço.
+  *
+  * Encerra a conexão previamente estabelecida pelo método #Abrir.
+  *
+  * \return
+  * O retorno da função é do tipo numérico.\n
+  * A função bem-sucedida deve retornar 0.
+  */
+ int Fechar();
+
+ /*! \ingroup ma4
+  * \brief Método utilizado para realizar uma leitura na porta de comunicação TCP/IP
+  * com o serviço.
+  *
+  * Útil para limpar o buffer de leitura caso alguma função executada anteriormente tenha
+  * sido malsucedida.\n
+  * Essa versão do método assume um timeout de três segundos.
+  *
+  * O método <i>ReceberDados(result)</i> tem o mesmo efeito que:
+  * > <i>ReceberDados(result, 3000)</i>\n
+  * \n
+  */
+ byte[] ReceberDados(Inteiro result);
+
+ /*! \ingroup ma4
+  * \brief Método utilizado para realizar uma leitura na porta de comunicação TCP/IP
+  * com o serviço.
+  *
+  * Útil para limpar o buffer de leitura caso alguma função executada anteriormente tenha
+  * sido malsucedida.\n
+  * Essa versão do método assume o timeout definido pelo usuário.
+  *
+  * \param result - Parâmetro que armazenará a quantidade de dados lidos do buffer de
+  * leitura.\n
+  *
+  * Se nenhum dado for lido, esse parâmetro armazenará o valor 0; em caso de erro, armazenará
+  * o código do erro correspondente.\n
+  * \n
+  *
+  * Perceba que este parâmetro recebe, como argumento, um <b>objeto da classe Inteiro</b>.\n
+  * Essa classe <b>representa um número inteiro</b> e precisa ser importada:
+  * > import com.elgin.e1.Impressora.Utilidades.Inteiro;\n
+  * \n
+  *
+  * Possui <u>dois construtores:</u> um construtor padrão (sem argumentos), que inicializa
+  * o objeto com valor 0; e um construtor com um argumento do tipo <b>int</b>, que inicializa
+  * o objeto com o valor passado nesse argumento. Para a função <i>ReceberDados</i>, sugere-se
+  * usar o construtor padrão (sem argumentos).\n
+  * \n
+  *
+  * Exemplo:
+  * > Inteiro result = new Inteiro(); // #1\n
+  * > byte[] dados = ServicoE1.ReceberDados(result, 3000);\n
+  * > int valor = result.getValor(); // #2\n
+  * \n
+  *
+  * - #1: Objeto que será passado ao parâmetro.
+  * - #2: Depois de executar a função <i>ReceberDados</i>, obtenha o valor armazenado em
+  * <i>result</i> através do método <i>getValor</i>, da classe <i>Inteiro</i>.
+  *
+  * \param timeout - Parâmetro do tipo numérico que define o timeout da função, isto é,
+  * o tempo máximo que este método deve aguardar para receber os dados.\n
+  * \n
+  *
+  * O timeout é dado em milissegundos e deve ser um valor positivo; o valor 0 é interpretado
+  * como infinito (sem timeout).\n
+  *
+  * Na ocorrência de timeout, este método retornará um array vazio e o valor do parâmetro
+  * <i>result</i> será 0.
+  *
+  * \return
+  * A função bem-sucedida deve retornar um array de bytes com os dados lidos do buffer
+  * de leitura.\n
+  * Se nenhum dado for lido, será retornado um array vazio; em caso de erro, a função
+  * retornará null.
+  */
+ byte[] ReceberDados(Inteiro result, int timeout);
+
+ /*! \defgroup ma40 Termica
+  * \ingroup ma4
+  *
+  * Subclasse de ServicoE1. Possibilita a mensageria das funções do módulo
+  * @ref M1, com o serviço conectado, nos formatos JSON ou delimitado (pipeado).
+  * \n\n
+  *
+  * Essas funções, quando chamadas via serviço, retornam uma <b>array de bytes</b>
+  * com o resultado da função recebida e processada pelo serviço, no formato especificado
+  * em #SetTipoComando.
+  * \n\n
+  * 
+  * > <b>Métodos disponíveis:</b>
+  * * <i>com.elgin.e1.Servico.ServicoE1.Termica.*</i>
+  * \n\n
+  *
+  * - #AbreConexaoImpressora\n
+  * - #AbreGaveta\n
+  * - #AbreGavetaElgin\n
+  * - #AvancaPapel\n
+  * - #Corte\n
+  * - #DefineAreaImpressao\n
+  * - #DefinePosicao\n
+  * - #DirecaoImpressao\n
+  * - #FechaConexaoImpressora\n
+  * - GetVersaoDLL\n
+  * - #ImpressaoCodigoBarras\n
+  * - #ImpressaoPDF417\n
+  * - #ImpressaoQRCode\n
+  * - #ImpressaoTexto\n
+  * - #ImprimeImagem\n
+  * - #ImprimeImagemMemoria\n
+  * - #ImprimeModoPagina\n
+  * - #ImprimeMPeRetornaPadrao\n
+  * - #ImprimeXMLCancelamentoSAT\n
+  * - #ImprimeXMLNFCe\n
+  * - #ImprimeXMLSAT\n
+  * - #InicializaImpressora\n
+  * - #LimpaBufferModoPagina\n
+  * - #ModoPadrao\n
+  * - #ModoPagina\n
+  * - #PosicaoImpressaoHorizontal\n
+  * - #PosicaoImpressaoVertical\n
+  * - #SinalSonoro\n
+  * - #StatusImpressora\n
+  */
+
+ /*! \defgroup ma41 Etiqueta
+  * \ingroup ma4
+  *
+  * Subclasse de ServicoE1. Possibilita a mensageria das funções do módulo
+  * @ref M0, com o serviço conectado, nos formatos JSON ou delimitado (pipeado).
+  * \n\n
+  *
+  * Essas funções, quando chamadas via serviço, retornam uma <b>array de bytes</b>
+  * com o resultado da função recebida e processada pelo serviço, no formato especificado
+  * em #SetTipoComando.
+  * \n\n
+  * 
+  * > <b>Métodos disponíveis:</b>
+  * * <i>com.elgin.e1.Servico.ServicoE1.Etiqueta.*</i>
+  * \n\n
+  *
+  * - #DespejarArquivo\n
+  * - #EnviaImagem\n
+  * - #ExcluiImagem\n
+  * - #Feed\n
+  * - GetVersaoDLL\n
+  * - #Imprime\n
+  * - #Limpa\n
+  * - #LimpaMemoria\n
+  * - #LimpaModulo\n
+  * - #MemoryStatus\n
+  * - #Reset\n
+  * - #Status\n
+  * - #StatusEPL\n
+  * - #Teste\n
+  * \n
+  *
+  * > [1] Configuração de Sistema
+  * - #SetAlturaGap\n
+  * - #SetBaudrate\n
+  * - #SetSymbolASD\n
+  * - #SetTipoTransferencia\n
+  * \n
+  *
+  * > [2] Nível de Sistema
+  * - #SetBackfeed\n
+  * - #SetLength\n
+  * - #SetMedidas\n
+  * - #SetModoContinuo\n
+  * - #SetPrintStPos\n
+  * - #SetSensor\n
+  * \n
+  *
+  * > [3] Formatação de Label
+  * - #SetCalor\n
+  * - #SetCortarZero\n
+  * - #SetLogicImgMode\n
+  * - #SetMirror\n
+  * - #SetOffsetColuna\n
+  * - #SetOffsetLinha\n
+  * - #SetQtde\n
+  * - #SetTamPixel\n
+  * - #SetVelImpressao\n
+  * \n
+  *
+  * > [4] Campos da Etiqueta
+  * - #GerarBox\n
+  * - #GerarImagem\n
+  * - #GerarLinha\n
+  * \n
+  *
+  * > [4.1] Texto
+  * - #GerarTexto\n
+  * - #GerarTextoASD\n
+  * - #GerarTextoCourier\n
+  * \n
+  *
+  * > [4.2] Código de barras
+  * - #GerarBarCode1D\n
+  * - #GerarDataBar\n
+  * - #GerarDataBarExpanded\n
+  * - #GerarDataMatrix\n
+  * - #GerarMaxiCode\n
+  * - #GerarPDF417\n
+  * - #GerarQRCodeAuto\n
+  * - #GerarQRCodeManual\n
+  */
+
+ /*! \defgroup ma42 SAT
+  * \ingroup ma4
+  *
+  * Subclasse de ServicoE1. Possibilita a mensageria das funções do módulo
+  * @ref g2, com o serviço conectado, nos formatos JSON ou delimitado (pipeado).
+  * \n\n
+  *
+  * Essas funções, quando chamadas via serviço, retornam uma <b>array de bytes</b>
+  * com o resultado da função recebida e processada pelo serviço, no formato especificado
+  * em #SetTipoComando.
+  * \n\n
+  * 
+  * > <b>Métodos disponíveis:</b>
+  * * <i>com.elgin.e1.Servico.ServicoE1.SAT.*</i>
+  * \n\n
+  *
+  * - #AssociarAssinatura\n
+  * - #AtivarSAT\n
+  * - #AtualizarSoftwareSAT\n
+  * - #BloquearSAT\n
+  * - #CancelarUltimaVenda\n
+  * - #ConfigurarInterfaceDeRede\n
+  * - #ConsultarNumeroSessao\n
+  * - #ConsultarSAT\n
+  * - #ConsultarStatusOperacional\n
+  * - #ConsultarUltimaSessaoFiscal\n
+  * - #DesbloquearSAT\n
+  * - #EnviarDadosVenda\n
+  * - #ExtrairLogs\n
+  * - #GetVersaoDLL\n
+  * - #TesteFimAFim\n
+  * - #TrocarCodigoDeAtivacao\n
+  */

@@ -1,0 +1,16 @@
+/*! @defgroup sp31 Funções
+  * @ingroup sp3
+  * @brief Descrição das funções de PIX
+  */
+  
+
+/*!
+  * @ingroup sp31
+  * @brief Inicia uma transação PIX no modo ativo.
+  * @param valor - Valor total da venda em centavos, ex: 100 para venda de R$1,00
+  * @param context - Activity atual utilizada para apresentação de Dialogos com o usuário
+  * @param handler - Objeto handler utilizado para receber a resposta da transação por meio do método
+  *                handleMessage. 
+  * *Retorno A resposta será enviada como String no formato JSON no Handler.
+  */
+ public void iniciarVendaPIX(String valor, Context context, Handler handler);

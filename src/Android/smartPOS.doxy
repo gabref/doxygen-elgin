@@ -1,0 +1,268 @@
+ /*! \defgroup g31 SmartPOS
+  * \ingroup g3
+  *
+  * \brief Instruções para compatibilidade com o dispositivo SmartPOS.
+  *
+  * Para utilizar a E1 no SmartPOS, as seguintes bibliotecas são necessárias
+  * e devem ser importadas ao seu projeto:
+  * > - e1-vx.y.z-release.aar
+  * > - cloudpossdk-s-1.0.2.aar // <i>necessário para comunicação com o SmartPOS</i>
+  * > - scanner.aar // <i>necessário se for usar o Scanner do SmartPOS</i>
+  * > - androidx.startup:startup-runtime // <i>dependência obrigatória</i>
+  * > - com.google.zxing/core // <i>dependência obrigatória</i>
+  * \n
+  *
+  * Para importar essas bibliotecas ao seu projeto, siga os passos abaixo.
+  *
+  * -# Copie as bibliotecas AAR listadas acima (<i>e1-vx.y.z-release.aar</i>,
+  * <i>cloudpossdk-s-1.0.2.aar</i>, <i>scanner.aar</i>) para o diretório
+  * <i>libs</i>, localizado no diretório do módulo que irá acessá-las.
+  * Se o diretório <i>libs</i> não existir, crie-o.\n
+  * \n
+  *
+  * -# Adicione as seguintes linhas na seção <i>dependencies</i>, no arquivo
+  * <i>build.gradle</i>, do módulo que usará as bibliotecas (esse arquivo está no
+  * mesmo diretório da pasta <i>libs</i>):
+  * > implementation files('libs/scanner.aar')\n
+  * > implementation files('libs/cloudpossdk-s-1.0.2.aar')\n
+  * > implementation files('libs/e1-vx.y.z-release.aar')\n
+  * > implementation "androidx.startup:startup-runtime:1.0.0"\n
+  * > \n
+  * > // https://mvnrepository.com/artifact/com.google.zxing/core\n
+  * > api group: 'com.google.zxing', name: 'core', version: '3.4.0'\n
+  */
+
+ /*! \defgroup sp0 Impressora do SmartPOS
+  * \ingroup g31
+  *
+  * \brief Impressora térmica acoplada do dispositivo Android SmartPOS.
+  *
+  * Para utilizar essas funções no SmartPOS, primeiro é necessário importar
+  * a classe referente a elas:
+  * > import com.elgin.e1.Impressora.Termica;\n
+  * \n
+  *
+  * Em seguida, será necessário fazer o setup inicial da comunicação,
+  * adicionando as três linhas abaixo no método <i>onCreate</i>:
+  * > Termica.setActivity(this);\n
+  * > Termica.AbreConexaoImpressora(5, "", "", 0);\n
+  * > Termica.FechaConexaoImpressora(); // Caso deseje iniciar uma conexão automática com a impressora do equipamento Android, não adicione esta linha\n
+  * \n
+  *
+  * Após importar a classe e fazer o setup, as funções poderão ser acessadas
+  * diretamente via operador ponto ("."), pois são métodos estáticos.\n
+  * Para estabelecer uma comunicação com a impressora, será necessário abrir uma
+  * conexão através do método #AbreConexaoImpressora:
+  * > Termica.AbreConexaoImpressora(5, "", "", 0);\n
+  * \n
+  *
+  * O exemplo a seguir ilustra como abrir uma conexão com a impressora acoplada,
+  * avançar 50 linhas de papel ("imprimir em branco") e fechar a conexão.
+  * @code
+  * // ...
+  *
+  * import com.elgin.e1.Impressora.Termica;
+  *
+  * public class MainActivity extends AppCompatActivity { // AppCompatActivity e' um subtipo de Activity
+  *
+  *     @Override
+  *     protected void onCreate(Bundle savedInstanceState) {
+  *         super.onCreate(savedInstanceState);
+  *         setContentView(R.layout.activity_main);
+  *
+  *         //* SETUP INICIAL
+  *         Termica.setActivity(this);
+  *         Termica.AbreConexaoImpressora(5, "", "", 0);
+  *         Termica.FechaConexaoImpressora();
+  *         //*
+  *     }
+  *
+  *     // Essa funcao pode ser chamada em um botao, por exemplo
+  *     private int abreAvancaFecha() {
+  *         int retorno = Termica.AbreConexaoImpressora(5, "", "", 0);
+  *         retorno += Termica.AvancaPapel(50);
+  *         retorno += Termica.FechaConexaoImpressora();
+  *         return retorno;
+  *     }
+  * }
+  *
+  * // ...
+  *
+  * @endcode
+  * \n
+  *
+  * > <b>Funções impressora térmica</b>
+  * - #AbreConexaoImpressora\n
+  * - #AvancaPapel\n
+  * - #DefinePosicao\n
+  * - DirectIO\n
+  * - #FechaConexaoImpressora\n
+  * - GetVersaoDLL\n
+  * - #ImpressaoCodigoBarras\n
+  * - #ImpressaoPDF417\n
+  * - #ImpressaoQRCode\n
+  * - #ImpressaoTexto\n
+  * - #ImprimeImagem\n
+  * - #ImprimeImagemMemoria\n
+  * - #ImprimeModoPagina\n
+  * - #ImprimeXMLCancelamentoSAT\n
+  * - #ImprimeXMLNFCe\n
+  * - #ImprimeXMLSAT\n
+  * - #InicializaImpressora\n
+  * - #ModoPagina\n
+  * - #PosicaoImpressaoHorizontal\n
+  * - #StatusImpressora\n
+  */
+
+ /*! \defgroup sp1 Scanner
+  * \ingroup g31
+  *
+  * \brief Scanner acoplado do dispositivo Android SmartPOS.
+  *
+  * Essa seção do documento explica como utilizar o Scanner do SmartPOS
+  * para ler códigos de barras (uma e duas dimensões) e obter o retorno da
+  * leitura.\n
+  */
+
+ /*! \defgroup sp10 Inicialização
+  * \ingroup sp1
+  *
+  * > <b>Inicialização do Scanner:</b>
+  *
+  * -# Para utilizar o Scanner do dispositivo, após a importação das bibliotecas
+  * necessárias, importe o pacote do Scanner no arquivo onde seu uso será implementado:
+  * > import com.elgin.e1.Scanner.*;
+  * \n
+  * <b>Nota:</b> O Scanner deve ser chamado a partir de uma classe que herda <i>Activity</i>
+  * ou alguma de suas classes herdeiras, como <i>AppCompatActivity</i>.\n
+  * \n
+  *
+  * -# Em seguida, crie uma <i>Intent</i> para receber o retorno da função <i>getScanner</i>
+  * da classe <i>Scanner</i>, do pacote importado, passando como parâmetro o <i>Context</i>
+  * da classe que chama a função:
+  * > Intent in = Scanner.getScanner(MainActivity.this);\n
+  * > // <i>MainActivity e' a classe que chama getScanner, neste exemplo</i>
+  * \n
+  * O retorno de <i>getScanner</i> é uma <i>Intent</i> responsável em chamar a tela do
+  * Scanner, que no exemplo acima é passado à <i>Intent</i> <i>in</i>.\n
+  * \n
+  *
+  * -# Depois, execute a <i>Intent</i> recebida de <i>getScanner</i>:
+  * > startActivityForResult(in, 1);
+  * \n
+  * A linha acima executa a <i>Intent</i> com o código de requisição #1.\n
+  * Esse código identifica a <i>Intent</i> inicializada, para que a classe/atividade que a
+  * executou possa recuperar os dados retornados (neste caso, os dados de leitura do Scanner)
+  * depois que a <i>Intent</i> for encerrada.\n
+  * \n
+  *
+  * -# Por fim, para obter os dados retornados, sobrescreva o método <i>onActivityResult</i>,
+  * que é chamado sempre que a classe/atividade implementada receber os dados das <i>Intents</i>
+  * que ela executou.\n
+  * \n
+  *
+  * Nesse método, verifique se o código de requisição da <i>Intent</i> que retornou os dados
+  * é 1 (ou o valor usado em <i>startActivityForResult</i>). Essa verificação é opcional se a
+  * classe/atividade implementada não receber dados de nenhuma outra <i>Intent</i>.\n
+  * \n
+  *
+  * Depois de verificar se a <i>Intent</i> que enviou os dados é aquela que chamou a tela
+  * do Scanner, verifique se o código de resultado vale #2. Se esse código valer 2, então
+  * a <i>Intent</i> foi executada com sucesso; caso contrário, os dados da leitura do Scanner
+  * não estarão disponíveis.\n
+  * \n
+  *
+  * Por fim, se a <i>Intent</i> retornou o valor 2, será possível fazer o tratamento sobre
+  * os dados lidos pelo Scanner:
+  * > String[] result = data.getStringArrayExtra("result");
+  * \n
+  * Consulte @ref sp11 para informações sobre os dados retornados.\n
+  */
+
+ /*! \defgroup sp11 Retorno
+  * \ingroup sp1
+  *
+  * > <b>Retorno do Scanner:</b>
+  *
+  * Se a <i>Intent</i> que chamar o Scanner for bem-sucedida, ela retornará uma Array de Strings,
+  * com quatro posições, cujo conteúdo é descrito a seguir:
+  * > Posição 0: Código de retorno da leitura (>=0: Sucesso, <0: Falha; veja mais detalhes abaixo).\n
+  * > Posição 1: Texto do código que foi lido, em UTF-8.\n
+  * > Posição 2: Buffer do código lido, originalmente uma Array de Bytes.\n
+  * > Posição 3: Tipo de código que foi lido pelo Scanner.\n
+  * \n
+  *
+  * <b>Nota:</b> A posição 0 da Array de Strings retornada (código de retorno) pode assumir os
+  * seguintes valores:
+  * > 1: Sucesso.\n
+  * > 0: Scan cancelado.\n
+  * > 2: A interface do Scanner ocupou a tela toda.\n
+  * > -1: Scanner ocupado.\n
+  * > -2: Erro ao abrir câmera.\n
+  * > -3: Scan timeout.\n
+  * > -4: Parâmetro ilegal.\n
+  * \n
+  *
+  * <b>Nota:</b> Se a posição 0 da Array de Strings retornada (código de retorno) for diferente
+  * de 1, as demais posições da Array (1, 2 e 3) valerão <i>null</i>.\n
+  */
+
+ /*! \defgroup sp12 Exemplo
+  * \ingroup sp1
+  *
+  * > <b>Exemplo de Classe/Atividade para utilização do Scanner:</b>
+  *
+  * @code
+  * package com.elgin.exemplo;
+  *
+  *
+  * import android.os.Bundle;
+  * import android.view.View;
+  * import android.widget.Toast;
+  * import android.content.Intent;
+  * import androidx.appcompat.app.AppCompatActivity;
+  *
+  * import com.elgin.e1.Scanner.*; // Importa o pacote Scanner
+  *
+  *
+  * public class MainActivity extends AppCompatActivity {
+  *
+  *     @Override
+  *     protected void onCreate(Bundle savedInstanceState) {
+  *         super.onCreate(savedInstanceState);
+  *         setContentView(R.layout.activity_main); // Tela do aplicativo
+  *     }
+  *
+  *     // Essa funcao pode ser chamada em onCreate() ou atraves de um botao, por exemplo
+  *     public void lerCodigo(View view) {
+  *         /*
+  *          * Intent in e' chamada com requestCode #1;
+  *          * se bem-sucedida, a Intent retorna resultCode #2
+  *          */
+  *         Intent in = Scanner.getScanner(MainActivity.this);
+  *         startActivityForResult(in, 1);
+  *     }
+  *
+  *     // Sobrescreve onActivityResult(), para manipulacao dos dados retornados...
+  *     @Override
+  *     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+  *         super.onActivityResult(requestCode, resultCode, data);
+  * 
+  *         if (requestCode == 1) { // Intent Scanner
+  *             if (resultCode == 2) {
+  *                 String[] result = data.getStringArrayExtra("result");
+  *
+  *                 CharSequence cs;
+  *                 if (result[0].equals("1")) {
+  *                     cs = "Codigo: " + result[1] + "\nTipo: " + result[3];
+  *                     Toast.makeText(MainActivity.this, cs, Toast.LENGTH_LONG).show();
+  *                 } else {
+  *                     cs = "Erro # " + result[0] + " na leitura do código.";
+  *                     Toast.makeText(MainActivity.this, cs, Toast.LENGTH_LONG).show();
+  *                 }
+  *             }
+  *         }
+  *     }
+  * }
+  * @endcode
+  */

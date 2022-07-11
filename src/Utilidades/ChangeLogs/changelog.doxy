@@ -1,0 +1,276 @@
+/*! \defgroup g4 ChangeLog
+ * 
+ * ChangeLog das modificações realizadas nos módulos de comunicação Elgin.
+ * \n
+ */
+
+
+/*! \defgroup g40 Térmica
+ * \ingroup g4
+ *
+ * ChangeLog das modificações realizadas no módulo Térmica.
+ * \n
+ *
+ * Data | Modificação | Autor
+ * ---- |------------ | -----
+ * 07/10/2019 | Correção na classe de XML do SAT | Rodrigo G.
+ * 10/10/2019 | Implementada função <i>GetVersaoDLL</i> | Rodrigo G.
+ * 24/10/2019 | Implementada função <i>ImprimeImagem</i> | Rodrigo G.
+ * 25/11/2019 | Captura de parâmetros para abertura de conexão via arquivo INI | Rodrigo G.
+ * 26/11/2019 | Correções na formatação do NFCe; impressão do Id Estrangeiro no cupom do NFCe, quando disponível/aplicável | Rodrigo G.
+ * 26/11/2019 | Opção para impressão detalhada do NFCe - exibe acréscimos/descontos por produto | Rodrigo G.
+ * 28/11/2019 | Opção para impressão detalhada do SAT - exibe acréscimos/descontos sobre produto e sobre total | Rodrigo G.
+ * 02/12/2019 | Implementada função <i>ImpressaoPDF417</i> | Rodrigo G.
+ * 04/12/2019 | Correção na formatação do CPF/CNPJ impresso no QR Code do SAT (removeu pontuação, para atender à especificação); impressão do endereço do destinatário no cupom do SAT, quando disponível | Rodrigo G.
+ * 09/12/2019 | Correção na impressão do SAT em ambiente de teste (número do CFE) | Rodrigo G.
+ * 09/12/2019 | Implementado novo layout do SAT | Rodrigo G.
+ * 10/12/2019 | Correção de problemas com separadores e codificação, nos layouts do SAT | Rodrigo G.
+ * 10/12/2019 | Implementado bit para ativar os separadores no layout novo do SAT | Rodrigo G.
+ * 11/12/2019 | Correção do CPF/CNPJ impresso no cabeçalho do SAT Cancelamento; impressão do CPF/CNPJ do adquirente no QR Code do SAT Cancelamento, quando disponível; correção na codificação | Rodrigo G.
+ * 11/12/2019 | Implementado novo layout do SAT Cancelamento | Rodrigo G.
+ * 12/02/2020 | Alteração para compilação estática | Bruno Cruz
+ * 12/02/2020 | Correções para compilação no GNU/Linux | Bruno Cruz
+ * 13/02/2020 | Correções no layout do SAT - remoção de linhas e separadores em excesso | Rodrigo G.
+ * 13/02/2020 | Informações sobre versão adicionadas na DLL compilada | Rodrigo G.
+ * 18/02/2020 | Correção de bugs nas funções <i>ImpressaoCodigoBarras</i> e <i>AbreConexaoImpressora</i> | Rodrigo G.
+ * 17/04/2020 | Função <i>AbreConexaoImpressora</i> suporta um novo <b>tipo</b> de conexão: agora é possível se conectar ao dispositivo Mini PDV M8 <strike>através dos valores <i>6</i> e <i>"M8"</i> passados aos parâmetros <i>tipo</i> e <i>modelo</i>, respectivamente</strike> | Rodrigo G.
+ * 10/02/2021 | Adicionado suporte a impressora Bematech MP-4200. Função <i>AbreConexaoImpressora</i> suporta parametro modelo = MP-4200 | Bruno Cruz
+ * 10/02/2021 | Adicionado suporte a impressora Daruma DR800. Função <i>AbreConexaoImpressora</i> suporta parametro modelo = DR800 | Bruno Cruz
+ * 26/03/2021 | Adicionado suporte a impressora Epson TM-T20. Função <i>AbreConexaoImpressora</i> suporta parametro modelo = TM_T20 | Bruno Cruz
+ * 20/04/2021 | Adicionado suporte a impressora ControlID ID Print Touch. Função <i>AbreConexaoImpressora</i> suporta parametro modelo = PRINT ID TOUCH | Bruno Cruz
+ * 20/04/2021 | Adicionado suporte a impressora Bematech MP-2800. Função <i>AbreConexaoImpressora</i> suporta parametro modelo = MP-2800 | Bruno Cruz
+ * 14/05/2021 | Adicionado suporte a impressora Elgin I8. Função <i>AbreConexaoImpressora</i> suporta parametro modelo = I8 | Bruno Cruz
+ * 10/06/2021 | Implementação de corte total. Função <i>CorteTotal</i> | Bruno Cruz
+ * 15/10/2021 | Implementação para impressão de danfe de cancelamento para nfce. Função <i>ImprimeXMLCancelamentoNFCe</i> | Bruno Cruz
+ * 26/11/2021 | Correção na função de impressão de código de barras. Corrige problema de configuração do HRI para impressora MP4200 <i>ImpressaoCodigoBarras</i> | Bruno Cruz
+ * \n
+ */
+
+
+/*! \defgroup g41 HPRT
+ * \ingroup g4
+ *
+ * ChangeLog das modificações realizadas no módulo HPRT.
+ * \n
+ *
+ * Data | Modificação | Autor
+ * ---- |------------ | -----
+ * - | - | -
+ * \n
+ */
+
+
+/*! \defgroup g42 Etiqueta
+ * \ingroup g4
+ *
+ * ChangeLog das modificações realizadas no módulo Etiqueta.
+ * \n
+ *
+ * Data | Modificação | Autor
+ * ---- |------------ | -----
+ * 10/10/2019 | Implementada função <i>GetVersaoDLL</i> | Rodrigo G.
+ * 22/11/2019 | Implementada função <i>DespejarArquivo</i> | Rodrigo G.
+ * 25/11/2019 | Captura de parâmetros para abertura de conexão via arquivo INI | Rodrigo G.
+ * 12/02/2020 | Alteração para compilação estática | Bruno Cruz
+ * 12/02/2020 | Correções para compilação no GNU/Linux | Bruno Cruz
+ * 13/02/2020 | Informações sobre versão adicionadas na DLL compilada | Rodrigo G.
+ * 02/03/2020 | Disponibilizada função <i>DirectIO</i> | Rodrigo G.
+ * 13/03/2020 | Adicionados subsets A, B e C do Code 128 ao parâmetro <i>tipo</i> da função <i>GerarBarCode1D</i> <br> Anteriormente, o subset do Code 128 era escolhido passando-se a respectiva letra no início da string do <i>codigo</i> | Rodrigo G.
+ * 31/03/2020 | Correções na função <i>DespejarArquivo</i> | Rodrigo G.
+ * \n
+ */
+
+
+/*! \defgroup g43 SAT
+ * \ingroup g4
+ *
+ * ChangeLog das modificações realizadas no módulo SAT.
+ * \n
+ *
+ * Data | Modificação | Autor
+ * ---- |------------ | -----
+ * 07/10/2019 | Atualização da DLL do SAT | Bruno Cruz
+ * 07/10/2019 | Correção na função <i>CancelaVendaImpressaSAT</i> | Rodrigo G.
+ * 07/10/2019 | Implementada validação adicional para o XML de cancelamento da função <i>CancelaVendaImpressaSAT</i> | Rodrigo G.
+ * 09/10/2019 | Implementada função <i>ConsultarUltimaSessaoFiscal</i> | Rodrigo G.
+ * 09/10/2019 | Implementada função <i>CancelarUltimaVenda</i> | Rodrigo G.
+ * 09/10/2019 | Mudança na instrução responsável em gerar o número de sessão aleatório no método <i>CancelaVendaImpressaSAT</i> | Rodrigo G.
+ * 10/10/2019 | Implementada função <i>GetVersaoDLL</i> | Rodrigo G.
+ * 12/02/2020 | Alteração para compilação estática | Bruno Cruz
+ * 12/02/2020 | Correções para compilação no GNU/Linux | Bruno Cruz
+ * 13/02/2020 | Informações sobre versão adicionadas na DLL compilada | Rodrigo G.
+ * 01/07/2020 | Implementação das funções de criação do XML SAT (V01.01.00) | Bruno Cruz
+ * 02/07/2020 | Atualização da documentação com adição dos códigos de erro | Bruno Cruz
+ * 09/02/2021 | Implementação da função de fechamento de venda para o processo de criação do XML SAT | Bruno Cruz
+ * 25/06/2021 | Implementadas funções <i>AbreCupomVenda2</i> e <i>AbreCupomCancelamento2</i> | Rodrigo G.
+ * 16/09/2021 | Implementação da função <i>outFile</i> para receber um ponteiro para caracteres e gravar em arquivo | Bruno Cruz
+ * \n
+ */
+
+
+ /*! \defgroup g44 Balança
+ * \ingroup g4
+ *
+ * ChangeLog das modificações realizadas no módulo Balança.
+ * \n
+ *
+ * Data | Modificação | Autor
+ * ---- |------------ | -----
+ * 16/10/2020 | Criação da biblioteca (<i>versão 01.00.01</i>) | Rodrigo G.
+ * 31/08/2021 | Novo modelo de balança cadastrado: DP30CK (3) | Rodrigo G.
+ * \n
+ */
+
+
+/*! \defgroup g45 Serviço
+ * \ingroup g4
+ *
+ * ChangeLog das modificações realizadas no módulo Serviço e seus <u>submódulos</u>.
+ * \n
+ *
+ * Data | Modificação | Autor
+ * ---- |------------ | -----
+ * 02/10/2019 | Correção na função <i>ImprimeXMLCancelamentoSAT</i> no módulo <u>Térmica</u> | Rodrigo G.
+ * 03/10/2019 | Correção na função <i>ValidaXMLSATCancelamentoSaida</i> no módulo <u>SAT</u> | Rodrigo G.
+ * 10/10/2019 | Implementadas funções <i>CancelarUltimaVenda</i> e <i>ConsultarUltimaSessaoFiscal</i> no módulo <u>SAT</u> | Rodrigo G.
+ * 10/10/2019 | Implementada função <i>GetVersaoDLL</i> nos módulos <u>Térmica</u>, <u>Etiqueta</u> e <u>SAT</u> | Rodrigo G.
+ * 16/12/2019 | Implementadas funções <i>ImprimeImagem</i> e <i>ImpressaoPDF417</i> no módulo <u>Térmica</u> | Rodrigo G.
+ * 16/12/2019 | Implementada função <i>DespejarArquivo</i> no módulo <u>Etiqueta</u> | Rodrigo G.
+ * 17/12/2019 | Correção de bug na verificação do caminho utilizado no modo diretório | Rodrigo G.
+ * 06/03/2020 | Correção na função <i>ImprimeXMLCancelamentoSAT</i> no módulo <u>Térmica</u> | Rodrigo G.
+ * 17/03/2020 | Implementadas funções <i>AbreGaveta</i> e <i>ModoPagina</i> no módulo <u>Térmica</u> | Rodrigo G.
+ * 24/03/2020 | Correções no módulo <u>Serviço</u> | Rodrigo G.
+ * \n
+ */
+
+
+/*! \defgroup g46 Android
+ * \ingroup g4
+ *
+ * ChangeLog das modificações realizadas no módulo Android.
+ * \n
+ *
+ * Data | Modificação | Autor
+ * ---- |------------ | -----
+ * 01/10/2019 | Implementada comunicação via serviço no AAR Android | Rodrigo G.
+ * 02/10/2019 | Mudança na codificação usada na comunicação do serviço cliente Android com o serviço implementado no Qt, para compatibilização | Rodrigo G.
+ * 04/10/2019 | Remoção do launcher duplicado do AAR | Rodrigo G.
+ * 07/10/2019 | Correção na classe de XML do SAT | Rodrigo G.
+ * 15/10/2019 | Adicionada impressora TT042 no módulo <u>Etiqueta</u> | Rodrigo G.
+ * 15/10/2019 | Implementada função <i>GetVersaoDLL</i> nos módulos <u>Térmica</u> e <u>Etiqueta</u> | Rodrigo G.
+ * 15/10/2019 | Implementada função <i>GetVersaoDLL</i> nos módulos <u>Térmica</u> e <u>Etiqueta</u> do Serviço | Rodrigo G.
+ * 18/02/2020 | Correção de bug na função <i>ImpressaoCodigoBarras</i> no módulo <u>Térmica</u> (impressora dos dispositivos Android) | Rodrigo G.
+ * 04/03/2020 | Ajustes diversos para suporte à impressão de caracteres especiais (impressora dos dispositivos Android) | Rodrigo G.
+ * 05/03/2020 | Impressão do código de barras do SAT Cancelamento em duas partes (impressora dos dispositivos Android) | Rodrigo G.
+ * 06/03/2020 | Correções: <br> <ul> <li>Formatação do NFCe<br> <li>Impressão do Id Estrangeiro no cupom do NFCe, quando disponível/aplicável<br> <li>Formatação do CPF/CNPJ impresso no QR Code do SAT (removeu pontuação, para atender à especificação)<br> <li>Impressão do endereço do destinatário no cupom do SAT, quando disponível<br> <li>Número do CFE do SAT impresso em ambiente de teste<br> <li>CPF/CNPJ impresso no cabeçalho do SAT Cancelamento<br> <li>Impressão do CPF/CNPJ do adquirente no QR Code do SAT Cancelamento, quando disponível<br> </ul> | Rodrigo G.
+ * 26/03/2020 | Implementada função <i>DirectIO</i> no módulo <u>Etiqueta</u> | Rodrigo G.
+ * 31/03/2020 | Implementada função <i>DespejarArquivo</i> no módulo <u>Etiqueta</u> | Rodrigo G.
+ * 01/04/2020 | Implementada função <i>DespejarArquivo</i> no módulo <u>Etiqueta</u> do Serviço | Rodrigo G.
+ * 02/04/2020 | Implementada função <i>ImpressaoPDF417</i> no módulo <u>Térmica</u> | Rodrigo G.
+ * 02/04/2020 | Implementada função <i>ImpressaoPDF417</i> no módulo <u>Térmica</u> do Serviço | Rodrigo G.
+ * 06/04/2020 | Atualizada versão do ZXing (dependência) utilizada no AAR: 3.3.0 --> 3.4.0 | Rodrigo G.
+ * 08/04/2020 | Implementada função <i>DirectIO</i> no módulo <u>Térmica</u> | Rodrigo G.
+ * 13/04/2020 | Correção no <u>Serviço</u> | Rodrigo G.
+ * 08/05/2020 | Tempo de geração dos códigos de barras otimizado (dispositivos Android) | Rodrigo G.
+ * 26/05/2020 | A função <i>GetNumeroSerie</i>, das classes <u>Smart</u> e <u>MiniPDVM8</u>, foi deprecada. <br> Em seu lugar, foi implementada uma chamada dessa função na classe <u>Android</u> - veja #GetNumeroSerie. <br> As chamadas deprecadas continuaram disponíveis, para manter a compatibilidade | Rodrigo G.
+ * 17/06/2020 | Dispositivo Elgin Smart SAT integrado à biblioteca E1 Android (<i>alpha</i>) | Rodrigo G.
+ * 18/06/2020 | Dispositivo Elgin Smart SAT integrado à biblioteca E1 Android (<i>beta</i>) | Rodrigo G.
+ * 26/06/2020 | Implementadas funções <i>DecodificaBase64</i>, <i>CriaXMLCancelamentoSAT</i> e <i>ConsultarStatusEspecifico</i> no módulo <u>SAT</u> | Rodrigo G.
+ * 01/07/2020 | Implementadas funções <i>VendaImpressaSAT</i> e <i>CancelaVendaImpressaSAT</i> no módulo <u>SAT</u> | Rodrigo G.
+ * 24/08/2020 | Adicionados subsets A, B e C do Code 128 ao parâmetro <i>tipo</i> da função <i>GerarBarCode1D</i> no módulo <u>Etiqueta</u> <br> Anteriormente, o subset do Code 128 era escolhido passando-se a respectiva letra no início da string do <i>codigo</i> | Rodrigo G.
+ * 31/08/2020 | Adicionado módulo <u>SAT</u> ao Serviço <i>(beta)</i> | Rodrigo G.
+ * 04/09/2020 | Atualização do AAR do SAT | Rodrigo G.
+ * 26/10/2020 | Módulo <u>Balança</u> integrado à biblioteca E1 Android (<i>beta</i>) | Rodrigo G.
+ * 17/11/2020 | Melhorias diversas no <u>Serviço</u> <br> Implementada função <i>ReceberDados</i> no módulo <u>Serviço</u> | Rodrigo G.
+ * 08/04/2021 | Atualização do AAR do SAT | Rodrigo G.
+ * 27/05/2021 | Implementação da função de impressão de Cupom TEF, no módulo <u>Termica</u> | Bruno Cruz
+ * 09/06/2021 | Implementada função <i>ImprimeImagem</i> no módulo <u>Térmica</u> | Rodrigo G.
+ * 09/06/2021 | Implementada função <i>ImprimeImagem</i> no módulo <u>Térmica</u> do Serviço | Rodrigo G.
+ * 11/06/2021 | Implementada função <i>CorteTotal</i> no módulo <u>Térmica</u> | Rodrigo G.
+ * 30/07/2021 | Comunicação USB compatibilizada no módulo <u>Térmica</u>. Função <i>AbreConexaoImpressora</i> suporta parâmetro <i>tipo</i> = 1 | Rodrigo G.
+ * 31/08/2021 | Novo modelo de balança cadastrado no módulo <u>Balança</u>: DP30CK (3) | Rodrigo G.
+ * 14/09/2021 | Implementadas funções <i>GetClasseDispositivo</i>, <i>GetModeloDispositivo</i>, <i>GetVersaoFirmware</i> e <i>GetDeviceInfo</i> | Rodrigo G.
+ * 23/09/2021 | Implementado suporte a regra do Estado MS para impressão de TAG xMsg | Bruno Cruz
+ * 23/09/2021 | Comunicação com impressoras acopladas foi aprimorada | Rodrigo G.
+ * 15/10/2021 | Adicionado pacote de pagamento para implementação de funções para facilitar o uso da biblioteca Interface Automação | Edilson Julio 
+ * \n
+ */
+
+
+/*! \defgroup g460 SmartPOS
+ * \ingroup g46
+ *
+ * ChangeLog das modificações realizadas no dispositivo SmartPOS.
+ * \n
+ *
+ * Data | Modificação | Autor
+ * ---- |------------ | -----
+ * 05/12/2019 | <strike>Implementada função <i>GetNumeroSerie</i></strike> (deprecada em 26/05/2020) | Rodrigo G.
+ * 28/01/2020 | Implementada função <i>ImprimeBitmap</i> no módulo <u>Térmica</u> | Rodrigo G.
+ * 28/01/2020 | Implementado suporte à impressão de caracteres especiais | Rodrigo G.
+ * \n
+ */
+
+
+/*! \defgroup g461 Mini PDV M8
+ * \ingroup g46
+ *
+ * ChangeLog das modificações realizadas no dispositivo Mini PDV M8.
+ * \n
+ *
+ * Data | Modificação | Autor
+ * ---- |------------ | -----
+ * 17/04/2020 | Biblioteca E1 compatibilizada com dispositivo Mini PDV M8 (<i>alpha</i>) | Rodrigo G.
+ * 27/04/2020 | Implementada função <i>ImprimeBitmap</i> no módulo <u>Térmica</u> | Rodrigo G.
+ * 28/04/2020 | <strike>Implementada função <i>GetNumeroSerie</i></strike> (deprecada em 26/05/2020) | Rodrigo G.
+ * 29/04/2020 | Biblioteca E1 compatibilizada com dispositivo Mini PDV M8 (<i>beta</i>) | Rodrigo G.
+ * 14/05/2020 | Correções na função <i>ImpressaoTexto</i> | Rodrigo G.
+ * 15/05/2020 | Correções no layout do SAT | Rodrigo G.
+ * 18/05/2020 | Implementado suporte à impressão de caracteres especiais | Rodrigo G.
+ * 19/05/2020 | Correções no layout do SAT Cancelamento | Rodrigo G.
+ * 21/05/2020 | Correções no layout do NFCe | Rodrigo G.
+ * 29/07/2020 | Adicionado status da gaveta na função <i>StatusImpressora</i> | Rodrigo G.
+ * 27/04/2021 | Correção BUG encontrado na função de impressão de XMF NFCe ocasionando impressão de valores totalizadores com varias casas decimais | Rodrigo G.
+ * \n
+ */
+
+
+/*! \defgroup g47 Gerador de PDF
+ * \ingroup g4
+ *
+ * ChangeLog das modificações realizadas na biblioteca de geração de PDF Elgin.
+ * \n
+ *
+ * Data | Modificação | Autor
+ * ---- |------------ | -----
+ * 24/04/2021 | Criação da biblioteca (<i>versão 01.00.02</i>) | Edilson Julio
+ * 28/07/2021 | Adição das funções ConfiguraDiretorioSaida, ObtemUltimoArquivo e ImprimePDF (<i>versão 02.00.00</i>)|  Edilson Julio
+ * \n
+ */
+
+
+/*! \defgroup g48 Poste sinalizador
+ * \ingroup g4
+ *
+ * ChangeLog das modificações realizadas na biblioteca de integração com poste sinalizador.
+ * \n
+ *
+ * Data | Modificação | Autor
+ * ---- |------------ | -----
+ * 10/06/2020 | Criação da biblioteca (<i>versão 01.00.02</i>) | Edilson Julio
+ * 15/06/2020 | Correção para funções de abertura e fechamento de porta (<i>versão 01.00.03</i>) | Bruno Cruz
+ * \n
+ */
+
+/*! \defgroup g49 Bridge
+ * \ingroup g4
+ *
+ * ChangeLog das modificações realizadas no módulo Bridge.
+ * \n
+ *
+ * Data | Modificação | Autor
+ * ---- |------------ | -----
+ * 07/10/2021 | Criação do módulo Servidor (Android, <i>versão 1.0</i>) | Rodrigo G.
+ * 21/10/2021 | Criação do módulo Cliente (Desktop, <i>versão 01.00.01</i>) | Rodrigo G.
+ * \n
+ */

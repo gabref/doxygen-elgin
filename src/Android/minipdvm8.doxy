@@ -1,0 +1,113 @@
+ /*! \defgroup g30 Mini PDV M10
+  * \ingroup g3
+  *
+  * \brief Instruções para compatibilidade com o dispositivo Mini PDV M10.
+  *
+  * Para utilizar a E1 no Mini PDV M10, as seguintes bibliotecas são necessárias
+  * e devem ser importadas ao seu projeto:
+  * > - e1-vx.y.z-release.aar
+  * > - minipdvm8.aar // <i>necessário para comunicação com o Mini PDV M8/M10</i>
+  * > - androidx.startup:startup-runtime // <i>dependência obrigatória</i>
+  * > - com.google.zxing/core // <i>dependência obrigatória</i>
+  * \n
+  *
+  * Para importar essas bibliotecas ao seu projeto, siga os passos abaixo.
+  *
+  * -# Copie as bibliotecas AAR listadas acima (<i>e1-vx.y.z-release.aar</i>,
+  * <i>minipdvm8.aar</i>) para o diretório <i>libs</i>, localizado no diretório
+  * do módulo que irá acessá-las.
+  * Se o diretório <i>libs</i> não existir, crie-o.\n
+  * \n
+  *
+  * -# Adicione as seguintes linhas na seção <i>dependencies</i>, no arquivo
+  * <i>build.gradle</i>, do módulo que usará as bibliotecas (esse arquivo está no
+  * mesmo diretório da pasta <i>libs</i>):
+  * > implementation files('libs/minipdvm8.aar')\n
+  * > implementation files('libs/e1-vx.y.z-release.aar')\n
+  * > implementation "androidx.startup:startup-runtime:1.0.0"\n
+  * > \n
+  * > // https://mvnrepository.com/artifact/com.google.zxing/core\n
+  * > api group: 'com.google.zxing', name: 'core', version: '3.4.0'\n
+  */
+
+ /*! \defgroup m80 Impressora do Mini PDV M10
+  * \ingroup g30
+  *
+  * \brief Impressora térmica acoplada do dispositivo Android Mini PDV M10.
+  *
+  * Para utilizar essas funções no Mini PDV M10, primeiro é necessário importar
+  * a classe referente a elas:
+  * > import com.elgin.e1.Impressora.Termica;\n
+  * \n
+  *
+  * Em seguida, será necessário fazer o setup inicial da comunicação,
+  * adicionando as três linhas abaixo no método <i>onCreate</i>:
+  * > Termica.setActivity(this);\n
+  * > Termica.AbreConexaoImpressora(5, "", "", 0);\n
+  * > Termica.FechaConexaoImpressora(); // Caso deseje iniciar uma conexão automática com a impressora do equipamento Android, não adicione esta linha\n
+  * \n
+  *
+  * Após importar a classe e fazer o setup, as funções poderão ser acessadas
+  * diretamente via operador ponto ("."), pois são métodos estáticos.\n
+  * Para estabelecer uma comunicação com a impressora, será necessário abrir uma
+  * conexão através do método #AbreConexaoImpressora:
+  * > Termica.AbreConexaoImpressora(5, "", "", 0);\n
+  * \n
+  *
+  * O exemplo a seguir ilustra como abrir uma conexão com a impressora acoplada,
+  * avançar 50 linhas de papel ("imprimir em branco") e fechar a conexão.
+  * @code
+  * // ...
+  *
+  * import com.elgin.e1.Impressora.Termica;
+  *
+  * public class MainActivity extends AppCompatActivity { // AppCompatActivity e' um subtipo de Activity
+  *
+  *     @Override
+  *     protected void onCreate(Bundle savedInstanceState) {
+  *         super.onCreate(savedInstanceState);
+  *         setContentView(R.layout.activity_main);
+  *
+  *         //* SETUP INICIAL
+  *         Termica.setActivity(this);
+  *         Termica.AbreConexaoImpressora(5, "", "", 0);
+  *         Termica.FechaConexaoImpressora();
+  *         //*
+  *     }
+  *
+  *     // Essa funcao pode ser chamada em um botao, por exemplo
+  *     private int abreAvancaFecha() {
+  *         int retorno = Termica.AbreConexaoImpressora(5, "", "", 0);
+  *         retorno += Termica.AvancaPapel(50);
+  *         retorno += Termica.FechaConexaoImpressora();
+  *         return retorno;
+  *     }
+  * }
+  *
+  * // ...
+  *
+  * @endcode
+  * \n
+  *
+  * > <b>Funções impressora térmica</b>\n
+  * - #AbreConexaoImpressora\n
+  * - #AbreGaveta\n
+  * - #AbreGavetaElgin\n
+  * - #AvancaPapel\n
+  * - #Corte\n
+  * - #DefinePosicao\n
+  * - DirectIO\n
+  * - #FechaConexaoImpressora\n
+  * - GetVersaoDLL\n
+  * - #ImpressaoCodigoBarras\n
+  * - #ImpressaoPDF417\n
+  * - #ImpressaoQRCode\n
+  * - #ImpressaoTexto\n
+  * - #ImprimeImagem\n
+  * - #ImprimeImagemMemoria\n
+  * - #ImprimeXMLCancelamentoSAT\n
+  * - #ImprimeXMLNFCe\n
+  * - #ImprimeXMLSAT\n
+  * - #InicializaImpressora\n
+  * - #StatusImpressora\n
+  */
