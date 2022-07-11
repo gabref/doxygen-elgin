@@ -1548,7 +1548,7 @@ extern "C"{
      *
      * \param data - Parametro do tipo caractere que deve receber as informações que compõe o código.\n
      *
-     * \param nivelCorrecao - Define o nível de correção a ser configurado para o QRCode.\n
+     * \param errLevel - Define o nível de correção a ser configurado para o QRCode.\n
      * Conforme tabela a seguir:
      * Valor  | Nivel de correção
      * ------ | --------------------
@@ -1765,7 +1765,7 @@ extern "C"{
      *
      * \param handle - Parâmetro do tipo ponteiro que apontará o espaço na memória referente a impressora.\n
      *
-     * \param posicao - Parâmetro tipo numérico para indica a posição.\n
+     * \param align - Parâmetro tipo numérico para indica a posição.\n
      * Os valores possiveis são:
      * Valor | Descrição
      * ----- | ------------
@@ -2080,6 +2080,8 @@ extern "C"{
     /*! \ingroup M2
      * \brief Prt Print Text - Função para impressão de texto com atributos.\n
      *
+     * \param handle - Parâmetro do tipo ponteiro que apontará o espaço na memória referente a impressora.\n
+     * 
      * \param data - Parametro do tipo caracter com a informação que será enviada ao buffer para impressão.\n
      *
      * \param alignment - Parametro do tipo inteiro que defini a posição do texto a ser impresso.\n
@@ -2143,7 +2145,7 @@ extern "C"{
      *
      * \param handle - Parametro do tipo ponteiro que apontará o espaço na memória referente a impressora.\n
      *
-     * \param  - Parametro do tipo inteiro que define o modelo do código de barras a ser impresso.\n
+     * \param bcType - Parametro do tipo inteiro que define o modelo do código de barras a ser impresso.\n
      * Segue tabela de tipos disponíveis:
      * | Valor | Modelo           | Quantidade de dados       | Caracteres                                   | Regras
      * | ----- | :--------------: | :-----------------------: | :------------------------------------------: | :----------------------------------: |
@@ -2307,7 +2309,7 @@ extern "C"{
      *
      * \param handle - Parametro do tipo ponteiro que apontará o espaço na memória referente a impressora.\n
      *
-     * \param posicao - Parametro tipo numérico para indica a posição.\n
+     * \param position - Parametro tipo numérico para indica a posição.\n
      * Os valores possiveis são:
      * Valor | Descrição
      * ----- | ------------
