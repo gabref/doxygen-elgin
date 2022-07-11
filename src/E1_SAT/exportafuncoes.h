@@ -134,8 +134,8 @@ extern "C"{
      *
      *
      * \n\n
-     * > <b><i> Exemplo json para uso com Serviço.</b></i>
-     * ~~~~~~~.json
+     * > <b><i> Exemplo json para uso com Serviço.</i></b>
+     * @code{.json}
      *  {
      *      "Modulo": "SAT",
      *      "Comando": "EnviarDadosVenda",
@@ -145,10 +145,10 @@ extern "C"{
      * 			"dadosVenda": "<?xml version=\"1.0\"?> <CFe> <infCFe versaoDadosEnt=\"0.07\"> <ide><CNPJ>16716114000172</CNPJ><signAC>SGR-SAT SISTEMA DE GESTAO E RETAGUARDA DO SAT</signAC><numeroCaixa>001</numeroCaixa> </ide><emit><CNPJ>14200166000166</CNPJ><IE>111111111111</IE><indRatISSQN>N</indRatISSQN></emit><dest></dest><det nItem=\"1\"> <prod> <cProd>00000000000001</cProd> <xProd>PRODUTO NFCE 1</xProd> <NCM>94034000</NCM> <CFOP>5102</CFOP> <uCom>UN</uCom> <qCom>1.0000</qCom> <vUnCom>3.51</vUnCom> <indRegra>T</indRegra> </prod> <imposto> <ICMS><ICMS00><Orig>0</Orig><CST>00</CST><pICMS>7.00</pICMS></ICMS00> </ICMS><PIS><PISAliq><CST>01</CST><vBC>6.51</vBC><pPIS>0.0165</pPIS></PISAliq> </PIS> <COFINS><COFINSAliq><CST>01</CST><vBC>6.51</vBC><pCOFINS>0.0760</pCOFINS></COFINSAliq> </COFINS> </imposto> </det> <total><DescAcrEntr><vDescSubtot>0.51</vDescSubtot></DescAcrEntr><vCFeLei12741>0.56</vCFeLei12741></total><pgto> <MP> <cMP>01</cMP> <vMP>6.51</vMP> </MP></pgto><infAdic> <infCpl>Trib aprox R$ 0,36 federal, R$ 1,24 estadual e R$ 0,00 municipal&lt;br&gt;CAIXA: 001 OPERADOR: ROOT</infCpl></infAdic></infCFe></CFe>"
      *       }]
      *  }
-     * ~~~~~~~
+     * @endcode
      *
      * \n
-     * > <b><i> Exemplo de comando com separadores para uso do Serviço no modo troca de arquivos.</b></i>
+     * > <b><i> Exemplo de comando com separadores para uso do Serviço no modo troca de arquivos.</i></b>
      * ~~~~~~~.json
      * SAT:|EnviarDadosVenda:|00009:|123456789:|<?xml version=\"1.0\"?> <CFe> <infCFe versaoDadosEnt=\"0.07\"> <ide><CNPJ>16716114000172</CNPJ><signAC>SGR-SAT SISTEMA DE GESTAO E RETAGUARDA DO SAT</signAC><numeroCaixa>001</numeroCaixa> </ide><emit><CNPJ>14200166000166</CNPJ><IE>111111111111</IE><indRatISSQN>N</indRatISSQN></emit><dest></dest><det nItem=\"1\"> <prod> <cProd>00000000000001</cProd> <xProd>PRODUTO NFCE 1</xProd> <NCM>94034000</NCM> <CFOP>5102</CFOP> <uCom>UN</uCom> <qCom>1.0000</qCom> <vUnCom>3.51</vUnCom> <indRegra>T</indRegra> </prod> <imposto> <ICMS><ICMS00><Orig>0</Orig><CST>00</CST><pICMS>7.00</pICMS></ICMS00> </ICMS><PIS><PISAliq><CST>01</CST><vBC>6.51</vBC><pPIS>0.0165</pPIS></PISAliq> </PIS> <COFINS><COFINSAliq><CST>01</CST><vBC>6.51</vBC><pCOFINS>0.0760</pCOFINS></COFINSAliq> </COFINS> </imposto> </det> <total><DescAcrEntr><vDescSubtot>0.51</vDescSubtot></DescAcrEntr><vCFeLei12741>0.56</vCFeLei12741></total><pgto> <MP> <cMP>01</cMP> <vMP>6.51</vMP> </MP></pgto><infAdic> <infCpl>Trib aprox R$ 0,36 federal, R$ 1,24 estadual e R$ 0,00 municipal&lt;br&gt;CAIXA: 001 OPERADOR: ROOT</infCpl></infAdic></infCFe></CFe>
      * ~~~~~~~
@@ -176,7 +176,7 @@ extern "C"{
       * O retorno, em caso de sucesso, será uma string informando o resultado da operação.
       * \n
       *
-      * > <b><i> Exemplo JSON para uso com Serviço. </b></i>
+      * > <b><i> Exemplo JSON para uso com Serviço. </i></b>
       * ~~~~~~~.json
       *  {
       *      "Modulo": "SAT",
@@ -194,7 +194,7 @@ extern "C"{
       * ~~~~~~~
       * \n
       *
-      * > <b><i> Exemplo de comando com separadores para uso com Serviço. </b></i>
+      * > <b><i> Exemplo de comando com separadores para uso com Serviço. </i></b>
       * ~~~~~~~.json
       * SAT:|CancelarUltimaVenda:|00001:|123456789:|CFe13181114200166000166599000162500104927318337:|<CFeCanc><infCFe chCanc=\"CFe13181114200166000166599000162500104927318337\"><ide><CNPJ>16716114000172</CNPJ><signAC>MD2Nof/O0tQMPKiYeeAydSjYt7YV9kU0nWKZGXHVdYIzR2W9Z6tgXni/Y5bnjmUAk8MkqlBJIiOOIskKCjJ086k7vAP0EU5cBRYj/nzHUiRdu9AVD7WRfVs00BDyb5fsnnKg7gAXXH6SBgCxG9yjAkxJ0l2E2idsWBAJ5peQEBZqtHytRUC+FLaSfd3+66QNxIBlDwQIRzUGPaU6fvErVDSfMUf8WpkwnPz36fCQnyLypqe/5mbox9pt3RCbbXcYqnR/4poYGr9M9Kymj4/PyX9xGeiXwbgzOOHNIU5M/aAs0rulXz948bZla0eXABgEcp6mDkTzweLPZTbmOhX+eA==</signAC><numeroCaixa>001</numeroCaixa></ide><emit/><dest></dest><total/></infCFe></CFeCanc>
       * ~~~~~~~
@@ -216,7 +216,7 @@ extern "C"{
      *
      *
      * \n\n
-     * > <b><i> Exemplo json para uso com Serviço.</b></i>
+     * > <b><i> Exemplo json para uso com Serviço.</i></b>
      * ~~~~~~~.json
      *  {
      *      "Modulo": "SAT",
@@ -228,7 +228,7 @@ extern "C"{
      * ~~~~~~~
      *
      * \n
-     * > <b><i> Exemplo de comando com separadores para uso do Serviço no modo troca de arquivos.</b></i>
+     * > <b><i> Exemplo de comando com separadores para uso do Serviço no modo troca de arquivos.</i></b>
      * ~~~~~~~.json
      * SAT:|ConsultarSat:|00004
      * ~~~~~~~
@@ -256,7 +256,7 @@ extern "C"{
      *
      *
      * \n\n
-     * > <b><i> Exemplo json para uso com Serviço.</b></i>
+     * > <b><i> Exemplo json para uso com Serviço.</i></b>
      * ~~~~~~~.json
      *  {
      *      "Modulo": "SAT",
@@ -268,7 +268,7 @@ extern "C"{
      * ~~~~~~~
      *
      * \n
-     * > <b><i> Exemplo de comando com separadores para uso do Serviço no modo troca de arquivos.</b></i>
+     * > <b><i> Exemplo de comando com separadores para uso do Serviço no modo troca de arquivos.</i></b>
      * ~~~~~~~.json
      * SAT:|TesteFimAFim:|00002
      * ~~~~~~~
@@ -641,6 +641,11 @@ extern "C"{
      *
      * \param opcao - Parâmetro do tipo inteiro que especifica qual opcao da troca : (1) Troca de Código tradicional \n
      *                                                                               (2) Troca usando Código de Emergência.
+     * 
+     * \param novoCodigo
+     * 
+     * \param confNovoCodigo
+     * 
      * \return
      *
      *
@@ -978,6 +983,116 @@ extern "C"{
       * Caminho raiz onde a estrutura de pasta e o arquivo será gerado.
       * \note
       * Os demais parametros são identicos aos da função #AbreCupomVenda
+      * 
+      * 
+      * \param versaoDadosEnt
+      * Versão do leiautedo arquivo dedados do AC. (Ex: 0.07 ou 0.08).\n
+      * > <b>TAG:</b> A03\n
+      * > <b>Parametro obrigatório</b>\n
+      * > <b>Tipo:</b> Alfanumérico\n
+      * > <b>Tamanho:</b> 1-4 \n
+      * > <b>Casas decimais:</b> 2\n
+      *
+      * \param CNPJ_SH
+      * CNPJ Software House.\n
+      * Deve ser informado apenas números. Caracteres (ponto, barra, hífen, etc.) serão removidos.\n
+      * Caso o CNPJ tenha menos que 14 digitos a tag será preenchida com 0 não significativos.\n
+      * Nos casos de teste fim-a-fim de ativação, completar com 14 dígitos “0”(zero).\n
+      * > <b>TAG:</b> B11\n
+      * > <b>Parametro obrigatório</b>\n
+      * > <b>Tipo:</b> Numérico\n
+      * > <b>Tamanho:</b> 14\n
+      *
+      * \param signAC
+      * Assinatura do Aplicativo Comercial\n
+      * Assinatura de (CNPJ Software House + CNPJ Emitente) que gerou o CF-e.\n
+      * Nos casos de teste fim-a-fim de ativação, completar com 344 dígitos “0”(zero).\n
+      * > <b>TAG:</b> B12\n
+      * > <b>Parametro obrigatório</b>\n
+      * > <b>Tipo:</b> Alfanumérico\n
+      * > <b>Tamanho:</b> 1-344 \n
+      *
+      * \param numeroCaixa
+      * Número de 0 a 999 referente ao Caixa em que o SAT está conectado.\n
+      * > <b>TAG:</b> B14\n
+      * > <b>Parametro obrigatório</b>\n
+      * > <b>Tipo:</b> Numérico\n
+      * > <b>Tamanho:</b> 3 \n
+      *
+      * \param CNPJ_emit
+      * CNPJ do emitente.\n
+      * Deve ser informado apenas números. Caracteres (ponto, barra, hífen, etc.) serão removidos.\n
+      * Caso o CNPJ tenha menos que 14 digitos a tag será preenchida com 0 não significativos.\n
+      * > <b>TAG:</b> C02\n
+      * > <b>Parametro obrigatório</b>\n
+      * > <b>Tipo:</b> Numérico\n
+      * > <b>Tamanho:</b> 14 \n
+      *
+      * \param IE
+      * Deve ser informado apenas caracteres alfanumérico. Caracteres (ponto, barra, hífen, etc.) serão removidos.\n
+      * Caso IE tenha menos que 12 digitos a tag será preenchida com espaços a direita.\n
+      * > <b>TAG:</b> C12\n
+      * > <b>Parametro obrigatório</b>\n
+      * > <b>Tipo:</b> Numérico\n
+      * > <b>Tamanho:</b> 2-14 \n
+      *
+      * \param IM
+      * Inscrição Municipal.\n
+      * Este campo deve ser informado, quando ocorrer a emissão de CF-e conjugada, com prestação
+      * de serviços sujeitos ao ISSQN e fornecimento de peças sujeitos ao ICMS.\n
+      * > <b>TAG:</b> C13\n
+      * > Essa TAG não é obrigatória e para que não seja incluida no XML deve-se passar parametro vazio.\n
+      * > <b>Tipo:</b> Numérico\n
+      * > <b>Tamanho:</b> 1-15 \n
+      *
+      * \param cRegTribISSQN
+      * Regime Especial de Tributação do ISSQN\n
+      * 1 - Microempresa Municipal;\n
+      * 2 - Estimativa;\n
+      * 3 - Sociedade de Profissionais;\n
+      * 4 - Cooperativa;\n
+      * 5 - Microempresário Individual(MEI);\n
+      * > <b>TAG:</b> C15\n
+      * > Essa TAG não é obrigatória e para que não seja incluida no XML deve-se passar parametro vazio.\n
+      * > <b>Tipo:</b> Numérico\n
+      * > <b>Tamanho:</b> 1 \n
+      *
+      * \param indRatISSQN
+      * Indicador de rateio do Desconto sobre subtotal entre itens sujeitos à tributação pelo ISSQN.
+      * Informa se o Desconto sobre subtotal deve ser rateado entre os itens sujeitos à tributação pelo ISSQN.\n
+      * 'S' - Desconto sobre subtotal será rateado entre os itens sujeitos ao ISSQN.\n
+      * 'N' - Desconto sobre subtotal não será rateado entre os itens sujeitos ao ISSQN.\n
+      * > <b>TAG:</b> C16\n
+      * > <b>Parametro obrigatório</b>\n
+      * > <b>Tipo:</b> Alfanumérico\n
+      * > <b>Tamanho:</b> 1 \n
+      *
+      * \param CNPJ_dest
+      * CNPJ do destinatário.\n
+      * Deve ser informado apenas números. Caracteres (ponto, barra, hífen, etc.) serão removidos.\n
+      * Caso o CNPJ tenha menos que 14 digitos a tag será preenchida com 0 não significativos.\n
+      * > <b>TAG:</b> E02\n
+      * > Essa TAG não é obrigatória e para que não seja incluida no XML deve-se passar parametro vazio.\n
+      * > <b>Tipo:</b> Numérico\n
+      * > <b>Tamanho:</b> 14 \n
+      *
+      * \param CPF_dest
+      * CPF do destinatário.\n
+      * Deve ser informado apenas números. Caracteres (ponto, barra, etc.) serão removidos.\n
+      * Caso o CPF tenha menos que 11 digitos a tag será preenchida com 0 não significativos.\n
+      * > <b>TAG:</b> E03\n
+      * > Essa TAG não é obrigatória e para que não seja incluida no XML deve-se passar parametro vazio.\n
+      * > <b>Tipo:</b> Numérico\n
+      * > <b>Tamanho:</b> 11 \n
+      * * Caso o CNPJ do destinatário tenha sido informado, a tag CPF não será incluida.\n
+      *
+      * \param xNome_dest
+      * Razão Social ou Nome do destinatário
+      * > <b>TAG:</b> E04\n
+      * > Essa TAG não é obrigatória e para que não seja incluida no XML deve-se passar parametro vazio.\n
+      * > <b>Tipo:</b> Alfanumérico\n
+      * > <b>Tamanho:</b> 2-60 \n
+      *
       *
       * \return
       * O retorno dessa função deve ser o caminho absoluto onde o arquivo foi gerado.
@@ -1211,7 +1326,7 @@ extern "C"{
       *
       * \param nItem
       * Identificação do produto ao qual será acrecentado a tag obsFiscoDet.
-      * Este parametro é retornado da função #informaProduto
+      * Este parametro é retornado da função #InformaProduto
       * > <b>Parametro obrigatório</b>
       *
       * \param xCampoDet
@@ -1264,7 +1379,7 @@ extern "C"{
       *
       * \param nItem
       * Identificação do produto ao qual será acrecentado a tag imposto.
-      * Este parametro é retornado da função #informaProduto
+      * Este parametro é retornado da função #InformaProduto
       * > <b>Parametro obrigatório</b>
       *
       * \param vItem12741
@@ -1311,7 +1426,7 @@ extern "C"{
       *
       * \param nItem
       * Identificação do produto ao qual será acrecentado a tag ICMS00.
-      * Este parametro é retornado da função #informaProduto
+      * Este parametro é retornado da função #InformaProduto
       * > <b>Parametro obrigatório</b>
       *
       * \param Orig
@@ -1383,7 +1498,7 @@ extern "C"{
       *
       * \param nItem
       * Identificação do produto ao qual será acrecentado a tag ICMS40.
-      * Este parametro é retornado da função #informaProduto
+      * Este parametro é retornado da função #InformaProduto
       * > <b>Parametro obrigatório</b>
       *
       * \param Orig
@@ -1444,7 +1559,7 @@ extern "C"{
       *
       * \param nItem
       * Identificação do produto ao qual será acrecentado a tag ICMSSN102.
-      * Este parametro é retornado da função #informaProduto
+      * Este parametro é retornado da função #InformaProduto
       * > <b>Parametro obrigatório</b>
       *
       * \param Orig
@@ -1504,7 +1619,7 @@ extern "C"{
       *
       * \param nItem
       * Identificação do produto ao qual será acrecentado a tag ICMSSN900.\n
-      * Este parametro é retornado da função #informaProduto
+      * Este parametro é retornado da função #InformaProduto
       * > <b>Parametro obrigatório</b>
       *
       * \param Orig
@@ -1568,7 +1683,7 @@ extern "C"{
 
       * \param nItem
       * Identificação do produto ao qual será acrecentado a tag PISAliq.
-      * Este parametro é retornado da função #informaProduto
+      * Este parametro é retornado da função #InformaProduto
       * > <b>Parametro obrigatório</b>
       *
       * \param CST
@@ -1622,7 +1737,7 @@ extern "C"{
       *
       * \param nItem
       * Identificação do produto ao qual será acrecentado a tag PISQtde.\n
-      * Este parametro é retornado da função #informaProduto
+      * Este parametro é retornado da função #InformaProduto
       * > <b>Parametro obrigatório</b>
       *
       * \param CST
@@ -1674,7 +1789,7 @@ extern "C"{
       *
       * \param nItem
       * Identificação do produto ao qual será acrecentado a tag PISNT.\n
-      * Este parametro é retornado da função #informaProduto
+      * Este parametro é retornado da função #InformaProduto
       * > <b>Parametro obrigatório</b>
       *
       * \param CST
@@ -1713,7 +1828,7 @@ extern "C"{
       *
       * \param nItem
       * Identificação do produto ao qual será acrecentado a tag PISSN.
-      * Este parametro é retornado da função #informaProduto
+      * Este parametro é retornado da função #InformaProduto
       * > <b>Parametro obrigatório</b>
       *
       * \param CST
@@ -1751,7 +1866,7 @@ extern "C"{
       *
       * \param nItem
       * Identificação do produto ao qual será acrecentado a tag PISOutr.\n
-      * Este parametro é retornado da função #informaProduto
+      * Este parametro é retornado da função #InformaProduto
       * > <b>Parametro obrigatório</b>
       *
       * \param grupo
@@ -1817,7 +1932,7 @@ extern "C"{
       *
       * \param nItem
       * Identificação do produto ao qual será acrecentado a tag PISST.\n
-      * Este parametro é retornado da função #informaProduto
+      * Este parametro é retornado da função #InformaProduto
       * > <b>Parametro obrigatório</b>
       *
       * \param grupo
@@ -1874,7 +1989,7 @@ extern "C"{
 
       * \param nItem
       * Identificação do produto ao qual será acrecentado a tag COFINSAliq.
-      * Este parametro é retornado da função #informaProduto
+      * Este parametro é retornado da função #InformaProduto
       * > <b>Parametro obrigatório</b>
       *
       * \param CST
@@ -1929,7 +2044,7 @@ extern "C"{
       *
       * \param nItem
       * Identificação do produto ao qual será acrecentado a tag COFINSQtde.
-      * Este parametro é retornado da função #informaProduto
+      * Este parametro é retornado da função #InformaProduto
       * > <b>Parametro obrigatório</b>
       *
       * \param CST
@@ -1981,7 +2096,7 @@ extern "C"{
       *
       * \param nItem
       * Identificação do produto ao qual será acrecentado a tag COFINSNT.
-      * Este parametro é retornado da função #informaProduto
+      * Este parametro é retornado da função #InformaProduto
       * > <b>Parametro obrigatório</b>
       *
       * \param CST
@@ -2020,7 +2135,7 @@ extern "C"{
       *
       * \param nItem
       * Identificação do produto ao qual será acrecentado a tag COFINSSN.
-      * Este parametro é retornado da função #informaProduto
+      * Este parametro é retornado da função #InformaProduto
       * > <b>Parametro obrigatório</b>
       *
       * \param CST
@@ -2057,7 +2172,7 @@ extern "C"{
       *
       * \param nItem
       * Identificação do produto ao qual será acrecentado a tag obsFiscoDet.
-      * Este parametro é retornado da função #informaProduto
+      * Este parametro é retornado da função #InformaProduto
       * > <b>Parametro obrigatório</b>
       *
       * \param grupo
@@ -2122,7 +2237,7 @@ extern "C"{
       *
       * \param nItem
       * Identificação do produto ao qual será acrecentado a tag obsFiscoDet.\n
-      * Este parametro é retornado da função #informaProduto
+      * Este parametro é retornado da função #InformaProduto
       * > <b>Parametro obrigatório</b>
       *
       * \param grupo
@@ -2179,7 +2294,7 @@ extern "C"{
 
       * \param nItem
       * Identificação do produto ao qual será acrecentado a tag obsFiscoDet.
-      * Este parametro é retornado da função #informaProduto
+      * Este parametro é retornado da função #InformaProduto
       * > <b>Parametro obrigatório</b>
       *
       * \param vDeducISSQN
@@ -2267,7 +2382,7 @@ extern "C"{
       *
       * \param nItem
       * Identificação do produto ao qual será acrecentado a tag obsFiscoDet.
-      * Este parametro é retornado da função #informaProduto
+      * Este parametro é retornado da função #InformaProduto
       * > <b>Parametro obrigatório</b>
       *
       * \param infAdProd
