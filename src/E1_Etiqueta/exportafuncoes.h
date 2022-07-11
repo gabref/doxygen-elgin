@@ -2546,7 +2546,7 @@ extern "C"{
      *
      * \return
      * O retorno da função é do tipo caractere.\n
-     * A função bem-sucedida deve retornar XX<CR><LF>, em que XX representa o status imediato da impressora, conforme relação abaixo,
+     * A função bem-sucedida deve retornar XX<CR>\<LF>, em que XX representa o status imediato da impressora, conforme relação abaixo,
      * e CR e LF são os caracteres <i>Carriage Return</i> e <i>Label Feed</i>, respectivamente.\n
      * \n
      * Retorno | Significado
@@ -2962,7 +2962,7 @@ extern "C"{
      * > <b>EnviaImagem(1, "L42", "USB", 0, 1, 0, "LOGOTIPO", "C:\\Imagens\\LogoTipoEmpresa.bmp");</b>\n
      * \n
      * No exemplo acima a função enviará, ao módulo <b>Flash</b> da impressora, a imagem <b>LogoTipoEmpresa.bmp</b>,
-     * localizada no diretório <b>C:\Imagens</b>, com o nome <b>LOGOTIPO</b>. O argumento <b>0</b>, imediatamente
+     * localizada no diretório <b>C:\\Imagens</b>, com o nome <b>LOGOTIPO</b>. O argumento <b>0</b>, imediatamente
      * antes de <b>LOGOTIPO</b>, informa à impressora que o arquivo enviado é uma imagem <b>BMP Flipped</b>.\n
      * \n
      * Os primeiros quatro argumentos permitem que a função envie o comando à impressora <b>L42</b> via <b>USB</b>.\n
