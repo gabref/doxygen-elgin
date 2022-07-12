@@ -282,7 +282,9 @@ TAB_SIZE               = 4
 # with the commands \{ and \} for these it is advised to use the version @{ and
 # @} or use a double escape (\\{ and \\})
 
-ALIASES                =
+ALIASES = mermaidl{1}="@htmlonly <div class=\"mermaid\"> ^^ @endhtmlonly @htmlinclude \"\1.mmd\" @htmlonly ^^ </div> @endhtmlonly" \
+          mermaidc{1}="@htmlonly <div class=\"mermaid mermaid-center\"> ^^ @endhtmlonly @htmlinclude \"\1.mmd\" @htmlonly ^^ </div> @endhtmlonly",
+
 
 # Set the OPTIMIZE_OUTPUT_FOR_C tag to YES if your project consists of C sources
 # only. Doxygen will then generate output that is more tailored for C. For
@@ -793,7 +795,7 @@ FILE_VERSION_FILTER    =
 # DoxygenLayout.xml, doxygen will parse it automatically even if the LAYOUT_FILE
 # tag is left empty.
 
-LAYOUT_FILE            =
+LAYOUT_FILE            = DoxygenLayout.xml
 
 # The CITE_BIB_FILES tag can be used to specify one or more bib files containing
 # the reference definitions. This must be a list of .bib files. The .bib
@@ -1048,7 +1050,7 @@ EXCLUDE_SYMBOLS        =
 # that contain example code fragments that are included (see the \include
 # command).
 
-EXAMPLE_PATH           =
+EXAMPLE_PATH           = graphs
 
 # If the value of the EXAMPLE_PATH tag contains directories, you can use the
 # EXAMPLE_PATTERNS tag to specify one or more wildcard pattern (like *.cpp and
@@ -1314,7 +1316,7 @@ HTML_FILE_EXTENSION    = .html
 # This tag requires that the tag GENERATE_HTML is set to YES.
 
 # DESFAZER
-HTML_HEADER            = header.html
+HTML_HEADER            = header-css.html
 
 # The HTML_FOOTER tag can be used to specify a user-defined HTML footer for each
 # generated HTML page. If the tag is left blank doxygen will generate a standard
@@ -1325,7 +1327,7 @@ HTML_HEADER            = header.html
 # This tag requires that the tag GENERATE_HTML is set to YES.
 
 # DESFAZER
-HTML_FOOTER            = footer.html
+HTML_FOOTER            = footer-css.html
 
 # The HTML_STYLESHEET tag can be used to specify a user-defined cascading style
 # sheet that is used by each HTML page. It can be used to fine-tune the look of
@@ -1351,7 +1353,8 @@ HTML_STYLESHEET        =
 # This tag requires that the tag GENERATE_HTML is set to YES.
 
 # DESFAZER
-HTML_EXTRA_STYLESHEET  = doxygen-awesome-css/doxygen-awesome.css custom.css \
+HTML_EXTRA_STYLESHEET  = doxygen-awesome-css/doxygen-awesome.css custom-awesome.css \
+                         custom-mermaid.css \
                         #  doxygen-awesome-css/doxygen-awesome-sidebar-only-darkmode-toggle.css
 
 # The HTML_EXTRA_FILES tag can be used to specify one or more extra images or
