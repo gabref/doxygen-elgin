@@ -642,35 +642,13 @@ extern "C"{
      * \param opcao - Parâmetro do tipo inteiro que especifica qual opcao da troca : (1) Troca de Código tradicional \n
      *                                                                               (2) Troca usando Código de Emergência.
      * 
-     * \param novoCodigo
+     * \param novoCodigo - Novo código de ativação a ser salvo no equipamento.
      * 
-     * \param confNovoCodigo
+     * \param confNovoCodigo - Confirmação do novo código de ativação.
      * 
-     * \return
-     *
-     *
-     * \n\n
-     * > **<i> Exemplo json para uso com Serviço.**</i>
-     * ~~~~~~~.json
-     *  {
-     *      "Modulo": "SAT",
-     *      "Comando": "TrocarCodigoDeAtivacao",
-     *      "Parametros": [{
-     *          "numSessao": 00009,
-     *          "codAtivacao": "123456789",
-     *          "opcao": 1,
-     *          "novoCodigo": "1234567890",
-     *          "confNovoCodigo": "1234567890"
-     *       }]
-     *  }
-     * ~~~~~~~
-     *
-     *
-     * \n
-     * > **<i> Exemplo de comando com separadores para uso do Serviço no modo troca de arquivos.**</i>
-     * ~~~~~~~.json
-     * SAT:|TrocarCodigoDeAtivacao:|00009:|123456789:|1:|1234567890:|1234567890
-     * ~~~~~~~
+     * \return A função deverá retornar um valor do tipo string contendo os dados separados por pipe “|”. Segue
+     * a estrutura do retorno de dados
+     * Retorno: “numeroSessao|EEEEE|mensagem|cod|mensagemSEFAZ”
      *
      */
 
