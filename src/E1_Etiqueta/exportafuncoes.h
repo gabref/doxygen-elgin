@@ -3071,8 +3071,7 @@ extern "C"{
 
     /*! \ingroup M0
      * \brief Envia comandos, em protocolo suportado pela impressora, direto para a porta de comunicação.
-	 * * OBS: Este método não está disponível para uso com o @ref g8.
-     * * OBS: Este método apresenta algumas diferenças no ambiente Android - consulte sua documentação em
+     * @note OBS: Este método apresenta algumas diferenças no ambiente Android - consulte sua documentação em
 	 * Módulos > Android > Módulos > Impressora de Etiquetas > DirectIO.
      *
      * Função de despejo de comandos na porta de comunicação. Essa função também recebe dados da porta.
