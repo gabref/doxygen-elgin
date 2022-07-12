@@ -5,14 +5,12 @@
   *
   * Os seguintes dispositivos Elgin são suportados:
   * > SmartPOS\n
-  * > Mini PDV M8\n
+  * > Mini PDV M10\n
   * \n
   *
   * <b>Códigos de exemplo:</b>
-  * > Módulo Termica: https://bitbucket.org/teamshelgin/exemplo_termica_e1_android/src/master/\n
-  * > Módulo Etiqueta: https://bitbucket.org/teamshelgin/exemplo_etiqueta_e1_android/src/master/\n
-  * > Módulo SAT: https://bitbucket.org/teamshelgin/exemplo_sat_e1_android/src/master/\n
-  * > Módulo Balanca: https://bitbucket.org/teamshelgin/exemplo_balanca_e1_android/src/master/\n
+  * > Exemplos M10: https://github.com/ElginDeveloperCommunity/PDV_Android_M8_M10/tree/master/Exemplos\n
+  * > Exemplos SmartPOS: https://github.com/ElginDeveloperCommunity/POS_Android_ElginPAY/tree/master/Exemplo\n
   */
 
 /*! \ingroup g3
@@ -342,8 +340,7 @@
   * \brief Envia comandos ESCPOS direto para a porta de comunicação.
   *
   * Função de despejo de comandos na porta de comunicação. Essa função também recebe dados da porta de comunicação.
-  * * OBS: Este método não está disponível para uso com o @ref g8.
-  * * OBS: Se o <b>tipo</b> de conexão (definido na função #AbreConexaoImpressora) for o <b>5</b>, não será possível
+  * @note OBS: Se o <b>tipo</b> de conexão (definido na função #AbreConexaoImpressora) for o <b>5</b>, não será possível
   * realizar a leitura da porta e os parâmetros <b>readData</b> e <b>readNum</b> podem ser definidos como <b>null</b>,
   * pois não serão utilizados na função.
   *
@@ -523,7 +520,6 @@
   * \brief Envia comandos, em protocolo suportado pela impressora, direto para a porta de comunicação.
   *
   * Função de despejo de comandos na porta de comunicação. Essa função também recebe dados da porta.
-  * * OBS: Este método não está disponível para uso com o @ref g8.
   *
   * \param tipo - Parâmetro do tipo numérico que define o tipo de comunicação que será estabelecido.\n
   * \n
