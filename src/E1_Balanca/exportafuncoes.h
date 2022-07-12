@@ -262,11 +262,6 @@ extern "C"{
      * Para evitar a leitura da porta esse parâmetro deve estar em ZERO (0).\n
      * O valor passado nesse parâmetro não pode ser maior do que a memória alocada em rdbuffer.\n
      *
-     * \param leituraContinua - Parâmetro do tipo booleano que define o tipo de leitura a ser realizada.\n
-     * Passe <b>true</b> caso esteja trabalhando com protocolo contínuo; passe <b>false</b> caso esteja
-     * trabalhando com protocolo demanda.\n
-     * @note <b>Parâmetro utilizado/disponível somente na versão Android desta biblioteca.</b>\n
-     *
      * \return
      * O retorno da função é do tipo numérico.\n
      * A função bem-sucedida deve retornar a quantidade de bytes lidos (se rdlen > 0) ou a quantidade de bytes
