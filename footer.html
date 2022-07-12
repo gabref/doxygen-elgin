@@ -4,14 +4,25 @@
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     $navpath
-    <li class="footer"><a href="https://github.com/ElginDeveloperCommunity"><img class="footer" src="https://avatars.githubusercontent.com/u/78883867?s=400&u=9b127079a21ee35fed37a704c5a0204fd5c7b1c3&v=4" width="200" height="31" alt="ElginDeveloperCommunity"/></a>  </li>
+    <li class="footer">$generatedby <a href="https://www.doxygen.org/index.html"><img class="footer" src="$relpath^doxygen.svg" width="104" height="31" alt="doxygen"/></a> $doxygenversion </li>
   </ul>
 </div>
 <!--END GENERATE_TREEVIEW-->
 <!--BEGIN !GENERATE_TREEVIEW-->
 <hr class="footer"/><address class="footer"><small>
-<a href="https://github.com/ElginDeveloperCommunity"><img class="footer" src="https://avatars.githubusercontent.com/u/78883867?s=400&u=9b127079a21ee35fed37a704c5a0204fd5c7b1c3&v=4" width="200" height="31" alt="ElginDeveloperCommunity"/></a>
+$generatedby&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="$relpath^doxygen.svg" width="104" height="31" alt="doxygen"/></a> $doxygenversion
 </small></address>
 <!--END !GENERATE_TREEVIEW-->
+<script>
+  mermaid.initialize({
+    startOnLoad: true,
+    theme: 'base', 
+    themeVariables: {
+      primaryColor: '#f4f4ff',
+      secondaryColor: 'rgba(244,244,255,0.9)',
+      tertiaryColor: '#F9FAFC',
+    },
+  });
+</script>
 </body>
 </html>
