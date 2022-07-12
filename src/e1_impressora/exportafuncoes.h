@@ -658,8 +658,7 @@ extern "C"{
 
     /*! \ingroup M1
      * \brief Envia comandos ESCPOS direto para a porta de comunicação.
-	 * * OBS: Este método não está disponível para uso com o @ref g8.
-     * * OBS: Este método apresenta algumas diferenças no ambiente Android - consulte
+     * @note OBS: Este método apresenta algumas diferenças no ambiente Android - consulte
 	 * sua documentação em Módulos > Android > Módulos > Impressora Térmica > DirectIO.
      *
      * Função de despejo de comandos na porta de comunicação. Essa função também recebe dados da porta de comunicação.
