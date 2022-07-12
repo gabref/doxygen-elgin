@@ -1,0 +1,11 @@
+flowchart TB
+    inicio((Início)) --- inOp(Iniciar Operação TEF)
+    inOp --- req[/Requisitar Comando TEF\]
+    req --- exCom(Executar Comando)
+    exCom --- fin{É comando final?}
+    fin ---|Não| req
+    fin ---|Sim| finaliza(Finalizar Operação TEF)
+    finaliza --- fim([Fim])
+    class fin mDecision
+    class inOp,exCom,finaliza,req mOp
+    class inicio,fim mInFim
