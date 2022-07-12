@@ -31,7 +31,7 @@ extern "C"{
     *
     * ###Componentes
     * \b E1_Bridge \b (DLL/SO/AAR) \b - Extensão do aplicativo (DLL/SO/AAR) onde estão exportadas todas as funções para Iniciar uma venda ou operação administrativa no terminal de pagamento SmartPOS.\n
-    * \b E1_DigitalHub (antigo E1_bridge) \b (APK) \b - Aplicativo android a ser instalado no SmartPOS para configurações de porta e ativação do serviço para comunicação com Windows.\n
+    * \b E1_Bridge \b (APK) \b - Aplicativo android a ser instalado no SmartPOS para configurações de porta e ativação do serviço para comunicação com Windows.\n
     * Este componente está disponível na loja Elgin. Você pode habilitá-lo na loja Elgin, na seção Token.\n
     * \b e1_bridge_configs \b (JSON) \b - Arquivo de configuração da DLL gerado no workdir caso usuário nao especifique a variável de ambiente \b e1_bridge_configfile.\n
     *
@@ -43,7 +43,7 @@ extern "C"{
     * -# Após acessar, no menu lateral você deve acessar a opção Token e então habilitar o aplicativo conforme imagem abaixo:
     * \image html imagem_token.jpeg
     * -#  No terminal, registrado com o token configurado anteriormente, você poderá realizar o download do aplicativo acessando o menu Elgin Store e clicando sobre o APP, \n vide imagem abaixo: \n
-    * \image html loja_elgin.jpg
+    * \image html loja_elgin.jpeg
     * -#  Com o app instalado você poderá começar a realizar as transações.\n
     * • É importante que você verifique as configurações do app antes de começar os testes. \n
     * • Para isso abra o aplicativo e role a página para cima. Um botão deve aparecer no rodapé, pressione-o e digite a senha de acesso às configurações <b>(987654321)</b>
