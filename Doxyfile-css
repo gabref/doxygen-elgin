@@ -925,6 +925,7 @@ INPUT                  = src/E1_impressora/exportafuncoes.h \
                          src/Pix/pix.md \
                          src/Pix/pixRetorno.md \
                          src/IDH/idh_0_description.md \
+                         src/IDH/idh_00_caminho_filtros.md \
                          src/IDH/idh_1_intent.md \
                          src/IDH/idh_2_utilizando_intents.md \
                          src/IDH/idh_3_payload.md \

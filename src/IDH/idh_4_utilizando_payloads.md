@@ -127,3 +127,6 @@ Agora vamos ver como ficaria o retorno dos 3 métodos de impressão do exemplo E
 
 @note Note que o resultado é `int`, no caso de funções que retornam String, o campo **resultado** será uma String.
 
+<br>
+
+Próximo passo: usar em suas aplicações Android intents para usar o **IntentDigitalHUB**. Para saber quais caminhos de filtro usar e se basear em exemplos acesse a página @ref idh00 .

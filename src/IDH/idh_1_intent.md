@@ -43,7 +43,7 @@ filtro.
 
 <br>
 
-Basicamente para utilizar um intent, temos que seguir **3 passos**:
+Na forma como vamos utilizar os intents, vamos seguir **3 passos**:
    1. Instanciar um objeto atribuindo o nome do componente (caminho do filtro)
    2. Adicionar os dados que deseja enviar (Payload)
    3. Realizar o envio

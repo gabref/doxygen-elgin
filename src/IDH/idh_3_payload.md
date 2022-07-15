@@ -14,6 +14,8 @@ O Json é um formato de texto simples para armazenar e transmitir dados. Este fo
    * Array (Json)
    * Object (Json)
 
+Para gerar e manipular os Json que representam o **Payload**, use as biblioteca de preferência para facilitar o processo de serialização e desserialização, o nosso objetivo aqui é deixar claro o formato que o **IntentDigitalHub** espera receber e retorna.
+
 Vamos ver como é composto nosso protocolo proprietário e quais são os atributos que são utilizados para o **IntentDigitalHub**.
 <br>
 
