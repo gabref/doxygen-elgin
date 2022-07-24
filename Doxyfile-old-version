@@ -47,7 +47,7 @@ PROJECT_NAME           = "Plataforma de Comunicação Elgin"
 # could be handy for archiving the generated documentation or if some version
 # control system is used.
 
-PROJECT_NUMBER         = "versão 2.42"
+PROJECT_NUMBER         = "versão 2.44.00"
 
 # Using the PROJECT_BRIEF tag one can provide an optional one line description
 # for a project that appears at the top of each page and should give viewer a
@@ -282,9 +282,7 @@ TAB_SIZE               = 4
 # with the commands \{ and \} for these it is advised to use the version @{ and
 # @} or use a double escape (\\{ and \\})
 
-ALIASES = mermaidl{1}="@htmlonly <div class=\"mermaid\"> ^^ @endhtmlonly @htmlinclude \"\1.mmd\" @htmlonly ^^ </div> @endhtmlonly" \
-          mermaidc{1}="@htmlonly <div class=\"mermaid mermaid-center\"> ^^ @endhtmlonly @htmlinclude \"\1.mmd\" @htmlonly ^^ </div> @endhtmlonly",
-
+ALIASES                = mermaidc{1}="@htmlonly <div class=\"mermaid\"> ^^ @endhtmlonly @htmlinclude \"\1.mmd\" @htmlonly ^^ </div> @endhtmlonly"
 
 # Set the OPTIMIZE_OUTPUT_FOR_C tag to YES if your project consists of C sources
 # only. Doxygen will then generate output that is more tailored for C. For
@@ -916,20 +914,14 @@ INPUT                  = src/E1_impressora/exportafuncoes.h \
                          src/E1_Balanca/exportafuncoes.h \
                          src/E1_Poste/exportafuncoesposte.h \
                          src/E1_Pdf/exportafuncoes.h \
+                         src/E1_Bridge/e1_brigde_retorno.md \
                          src/E1_TEF/e1_tef_description.md \
                          src/E1_TEF/e1_tef_ativo.md \
                          src/E1_TEF/e1_tef_passivo.md \
                          src/E1_TEF/e1_tef_funcoes.h \
-                         src/E1_Bridge/e1_brigde_retorno.md \
                          src/Pix/pix.doxy \
                          src/Pix/pix.md \
                          src/Pix/pixRetorno.md \
-                         src/IDH/idh_0_description.md \
-                         src/IDH/idh_00_caminho_filtros.md \
-                         src/IDH/idh_1_intent.md \
-                         src/IDH/idh_2_utilizando_intents.md \
-                         src/IDH/idh_3_payload.md \
-                         src/IDH/idh_4_utilizando_payloads.md \
                          src/Android/android.doxy \
                          src/Android/smartPOS.doxy \
                          src/Android/minipdvm8.doxy \
@@ -937,6 +929,7 @@ INPUT                  = src/E1_impressora/exportafuncoes.h \
                          src/Android/ElginPay.h \
                          src/Utilidades/ChangeLogs/changelog.doxy \
                          src/Utilidades/Erros/codigoerro.h \
+
 
 # This tag can be used to specify the character encoding of the source files
 # that doxygen parses. Internally doxygen uses the UTF-8 encoding. Doxygen uses
@@ -1056,7 +1049,7 @@ EXCLUDE_SYMBOLS        =
 # that contain example code fragments that are included (see the \include
 # command).
 
-EXAMPLE_PATH           = graphs
+EXAMPLE_PATH = graphs
 
 # If the value of the EXAMPLE_PATH tag contains directories, you can use the
 # EXAMPLE_PATTERNS tag to specify one or more wildcard pattern (like *.cpp and
@@ -1294,7 +1287,7 @@ GENERATE_HTML          = YES
 # The default directory is: html.
 # This tag requires that the tag GENERATE_HTML is set to YES.
 
-HTML_OUTPUT            = html-awesome
+HTML_OUTPUT            = html
 
 # The HTML_FILE_EXTENSION tag can be used to specify the file extension for each
 # generated HTML page (for example: .htm, .php, .asp).
@@ -1322,7 +1315,7 @@ HTML_FILE_EXTENSION    = .html
 # This tag requires that the tag GENERATE_HTML is set to YES.
 
 # DESFAZER
-HTML_HEADER            = header-css.html
+HTML_HEADER            = header.html
 
 # The HTML_FOOTER tag can be used to specify a user-defined HTML footer for each
 # generated HTML page. If the tag is left blank doxygen will generate a standard
@@ -1333,7 +1326,7 @@ HTML_HEADER            = header-css.html
 # This tag requires that the tag GENERATE_HTML is set to YES.
 
 # DESFAZER
-HTML_FOOTER            = footer-css.html
+HTML_FOOTER            = footer.html
 
 # The HTML_STYLESHEET tag can be used to specify a user-defined cascading style
 # sheet that is used by each HTML page. It can be used to fine-tune the look of
@@ -1359,9 +1352,7 @@ HTML_STYLESHEET        =
 # This tag requires that the tag GENERATE_HTML is set to YES.
 
 # DESFAZER
-HTML_EXTRA_STYLESHEET  = doxygen-awesome-css/doxygen-awesome.css custom-awesome.css \
-                         custom-mermaid.css \
-                        #  doxygen-awesome-css/doxygen-awesome-sidebar-only-darkmode-toggle.css
+HTML_EXTRA_STYLESHEET  =
 
 # The HTML_EXTRA_FILES tag can be used to specify one or more extra images or
 # other source files which should be copied to the HTML output directory. Note
@@ -1372,9 +1363,7 @@ HTML_EXTRA_STYLESHEET  = doxygen-awesome-css/doxygen-awesome.css custom-awesome.
 # This tag requires that the tag GENERATE_HTML is set to YES.
 
 # DESFAZER
-HTML_EXTRA_FILES       = doxygen-awesome-css/doxygen-awesome-darkmode-toggle.js \
-                         doxygen-awesome-css/doxygen-awesome-fragment-copy-button.js \
-                         imagens/logo-light.png imagens/logo-dark.png \
+HTML_EXTRA_FILES       =
 
 # The HTML_COLORSTYLE_HUE tag controls the color of the HTML output. Doxygen
 # will adjust the colors in the style sheet and background images according to

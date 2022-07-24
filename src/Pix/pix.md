@@ -5,7 +5,7 @@
 # Módulo PIX
 
 
-O processo de pagamento PIX ocorre por meio da biblioteca chamada `pagamentos-V1.0-dev-release.aar`. Essa biblioteca tem funções que facilitam o fluxo de uma transação PIX. 
+O processo de pagamento PIX ocorre por meio da biblioteca chamada `pagamentos-V1.1-dev-release.aar`. Essa biblioteca tem funções que facilitam o fluxo de uma transação PIX. 
 
 ## Fluxo da Transação
 
@@ -24,7 +24,7 @@ Para utilizar esse módulo deverão ser importados no projeto os seguintes compo
 @warning
 A biblioteca de pagamento possui versão de homologação e produção.
 Certifique-se de usar a versão de homologação durante sua implementação e após finalizada altere para a versão de produção.
- * Versão de desenvolvimento: `pagamentos-V1.0-dev-release.aar`
+ * Versão de desenvolvimento: `pagamentos-V1.1-dev-release.aar`
  * Versão de produção: `pagamentos-V1.0-prod-release.aar`
 
 ### Modo Ativo
@@ -39,7 +39,7 @@ A transaçao acontece automaticamente.
 O primeiro passo será a importação das bibliotecas para o projeto. 
 Para importar essas bibliotecas ao seu projeto, siga os passos abaixo.
 
-- Copie as bibliotecas AAR listadas acima (<i>`pagamentos-V1.0-dev-release.aar`</i>, <i>`comunicacao-release.aar`</i>) para o diretório
+- Copie as bibliotecas AAR listadas acima (<i>`pagamentos-V1.1-dev-release.aar`</i>, <i>`comunicacao-release.aar`</i>) para o diretório
 <i>`libs`</i>, localizado no diretório do módulo que irá acessá-las.
 Se o diretório <i>libs</i> não existir, crie-o.
 
@@ -53,8 +53,8 @@ mesmo diretório da pasta <i>libs</i>):<br>
         implementation 'com.squareup.retrofit2:converter-scalars:2.9.0'
         implementation 'com.squareup.okhttp3:okhttp:4.9.3'
         implementation 'com.squareup.okhttp3:logging-interceptor:4.9.3'
-        implementation files('libs/pagamentos-debug.aar')
-        implementation files('libs/comunicacao-debug.aar')
+        implementation files('libs/pagamentos-V1.1-dev-release.aar')
+        implementation files('libs/comunicacao-release.aar')
     @endcode
 
 - Agora basta importar a classe pixElgin<br>
@@ -63,7 +63,7 @@ mesmo diretório da pasta <i>libs</i>):<br>
     @endcode
 - E chamar a função de transação desejada<br>
     @code{.java}
-        PIXElgin pixElgin = new PIXElgin("<chave-autenticação>");
+        PIXElgin pixElgin = new PIXElgin("<chave-autenticação>", "<cnpj>");
         pixElgin.iniciarVendaPIX("1000", MainActivity.this, handler);
     @endcode
 - O retorno será obtido conforme trecho abaixo
