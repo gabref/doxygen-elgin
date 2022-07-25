@@ -29,6 +29,7 @@ extern "C"{
      * Essa biblioteca fornece diversas funções de integração com as balanças ELGIN.\n
      * Os modelos de balanças compatíveis com essa biblioteca são:\n
      * > DP-3005\n
+     * > DP-1502\n
      * > SA-110\n
      * > DPSC\n
      * > DP30CK\n
@@ -82,9 +83,10 @@ extern "C"{
      * \return
      * O retorno da função é do tipo numérico.\n
      * A função bem-sucedida deve retornar o código correspondente à balança em uso, conforme tabela abaixo:
+     * \n
      * Código | Modelo
      * ------ | ------
-     * 0      | DP-3005
+     * 0      | DP-3005, DP-1502
      * 1      | SA-110
      * 2      | DPSC
      * 3      | DP30CK
@@ -104,7 +106,7 @@ extern "C"{
      * \param modeloBalanca - Parâmetro do tipo numérico que corresponde ao código da balança desejada, conforme tabela abaixo:
      * Código | Modelo
      * ------ | ------
-     * 0      | DP-3005
+     * 0      | DP-3005, DP-1502
      * 1      | SA-110
      * 2      | DPSC
      * 3      | DP30CK
