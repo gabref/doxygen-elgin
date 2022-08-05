@@ -41,6 +41,9 @@ add todo o conteúdo e realizar o push
 > 	   * sp2 - E1_ElginPay (./ElginPay.h ./e1_elginpay.md)<br>
 >            * sp20 - Retorno<br>
 >            * sp21 - Funções<br>
+>      * sp3 - PIX
+>            * sp30 - JSON Retorno PIX
+>            * sp31 - Funções
 >    * g32 - Modulos (./android.doxy)<br>
 >        * ma0 - Impressora Termica<br>
 >        * ma1 - Impressora de Etiquetas<br>
@@ -70,3 +73,4 @@ add todo o conteúdo e realizar o push
 > * g10 - Poste sinalizador (../E1_Poste/exportafuncoesposte.h)<br>
 > * g11 - NFCe - E1 (../E1_Brigde/exportafuncoes.h)<br>
 > * g12 - E1_Brigde (../E1_Brigde/exportafuncoes.h)<br>
+> * g13 - PIX4

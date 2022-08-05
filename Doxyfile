@@ -921,6 +921,8 @@ INPUT                  = src/E1_impressora/exportafuncoes.h \
                          src/E1_TEF/e1_tef_passivo.md \
                          src/E1_TEF/e1_tef_funcoes.h \
                          src/E1_Bridge/e1_brigde_retorno.md \
+                         src/E1_Pix4/e1_pix4_description.md \
+                         src/E1_Pix4/e1_pix4_funcoes.h \
                          src/Pix/pix.doxy \
                          src/Pix/pix.md \
                          src/Pix/pixRetorno.md \
