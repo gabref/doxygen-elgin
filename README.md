@@ -54,6 +54,7 @@ add todo o conteúdo e realizar o push
 >            * ma40 - Termica<br>
 >            * ma41 - Etiqueta<br>
 >            * ma42 - SAT<br>
+>        * ma5 - Pix4
 > * g4 - Changelog (./changelog.doxy)<br>
 >    * g40 - Termica<br>
 >    * g41 - HPRT<br>

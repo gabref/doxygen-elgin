@@ -926,6 +926,12 @@ INPUT                  = src/E1_impressora/exportafuncoes.h \
                          src/Pix/pix.doxy \
                          src/Pix/pix.md \
                          src/Pix/pixRetorno.md \
+                         src/IDH/idh_0_description.md \
+                         src/IDH/idh_00_caminho_filtros.md \
+                         src/IDH/idh_1_intent.md \
+                         src/IDH/idh_2_utilizando_intents.md \
+                         src/IDH/idh_3_payload.md \
+                         src/IDH/idh_4_utilizando_payloads.md \
                          src/Android/android.doxy \
                          src/Android/smartPOS.doxy \
                          src/Android/minipdvm8.doxy \
@@ -934,12 +940,6 @@ INPUT                  = src/E1_impressora/exportafuncoes.h \
                          src/Utilidades/ChangeLogs/changelog.doxy \
                          src/Utilidades/Erros/codigoerro.h \
 
-                        #  src/IDH/idh_0_description.md \
-                        #  src/IDH/idh_00_caminho_filtros.md \
-                        #  src/IDH/idh_1_intent.md \
-                        #  src/IDH/idh_2_utilizando_intents.md \
-                        #  src/IDH/idh_3_payload.md \
-                        #  src/IDH/idh_4_utilizando_payloads.md \
 # This tag can be used to specify the character encoding of the source files
 # that doxygen parses. Internally doxygen uses the UTF-8 encoding. Doxygen uses
 # libiconv (or the iconv built into libc) for the transcoding. See the libiconv
