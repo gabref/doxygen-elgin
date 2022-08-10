@@ -139,18 +139,18 @@ int ApresentaTextoColorido(const char* texto, int idTexto,int tamanho,int posH,i
  * @brief Método utilizado para apresentar uma lista dinâmica de compras.
  * 
  * @param descricao `char*` Parâmetro do tipo caractere que define a descrição do produto.
- * @param valor `double` Parâmetro do tipo numérico que define o valor do Produto.
+ * @param valor `char*` Parâmetro do tipo cadeia de caracteres que define o valor do Produto.
  */
-void ApresentaListaCompras(const char* descricao, double valor);
+void ApresentaListaCompras(const char* descricao, const char* valor);
 
 /**
  * @brief Método utilizado para inicializar a tela de finalização de venda.
  * 
- * @param subTotal `double` Parâmetro do tipo numérico que define o valor do sub total da venda.
- * @param desconto `double` Parâmetro do tipo numérico que define o valor desconto da venda.
- * @param totalPagar `double` Parâmetro do tipo numérico que define o valor total a pagar da venda.
+ * @param subTotal `char*` Parâmetro do tipo cadeia de caracteres que define o valor do sub total da venda.
+ * @param desconto `char*` Parâmetro do tipo cadeia de caracteres que define o valor desconto da venda.
+ * @param totalPagar `char*` Parâmetro do tipo cadeia de caracteres que define o valor total a pagar da venda.
  */
-void InicializaLayoutPagamento(double subTotal, double desconto, double totalPagar);
+void InicializaLayoutPagamento(const char* subTotal, const char* desconto, const char* totalPagar);
 
 /**
  * @brief Método utilizado para adicionar uma forma de pagamento ao layout de finalização da venda.
@@ -163,12 +163,12 @@ void InicializaLayoutPagamento(double subTotal, double desconto, double totalPag
  * | 3 | Débito |
  * | 4 | PIX |
  * <br>
- * @param valor `double` Parâmetro do tipo double que define o valor da forma de pagamento.
+ * @param valor `const char*` Parâmetro do tipo const char* que define o valor da forma de pagamento.
  * @return `int` O retorno da função é do tipo numérico.<br>
  * A função bem sucedida deve retornar 0.<br>
  * A função mal sucedida deve retornar -1. <br>
  */
-int AdicionaFormaPagamento(int tipoPagamento, double valor);
+int AdicionaFormaPagamento(int tipoPagamento, const char* valor);
 
 /**
  * @} 
