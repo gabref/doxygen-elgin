@@ -43,6 +43,7 @@ extern "C"{
   * Essa biblioteca fornece diversas funções de integração com as impresoras não Fiscais ELGIN.\n
   * Os modelos de impressoras compatíveis com essa biblioteca são:\n
   * > Impressora i7\n
+  * > Impressora i7 Plus\n
   * > Impressora i9\n
   * > Impressora ix\n
   * > Impressora Fitpos\n
@@ -84,6 +85,7 @@ extern "C"{
      * Conforme lista:
      * > <b>Valores</b>\n
      * > i7\n
+     * > i7 Plus\n
      * > i8\n
      * > i9\n
      * > ix\n
