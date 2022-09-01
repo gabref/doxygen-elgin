@@ -1,0 +1,16 @@
+/****************************************************************/
+//      FAIXA DOS CODIGOS DE ERRO: Erros Doc Osmar (Wiki)       //
+/****************************************************************/
+
+/** \ingroup g1
+ * @brief The Tef_Erro_Android enum
+ *
+ * Define os erros relativos ao Tef Android.\n
+ */
+
+enum Tef_Erro_Android {
+    TEF_PIN_PAD_NAO_ENCONTRADO  = -5,  /**< <b>(-5)</b> Pin-pad não encontrado.*/
+    TEF_CANCELADO_OPERADOR      = -8,  /**< <b>(-8)</b> Cancelamento realizado pelo operador.*/
+    TEF_CANCELADO_SERVER        = -10, /**< <b>(-10)</b> Cancelamento realizado pelo server.*/
+    TEF_CANCELADO_SISTEMA       = -11  /**< <b>(-11)</b> Cancelamento realizado pelo sistema.*/
+};

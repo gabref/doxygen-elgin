@@ -1,0 +1,125 @@
+/*! @defgroup ma60 Funções
+  * @ingroup ma6
+  * @brief Descrição das funções de TEF Android
+  */
+
+/*!
+  * @defgroup ma600 Funções de Configuração
+  * @ingroup ma60
+  * @brief Estas deverão ser adicionadas para que as configurações internas sejam realizadas, assim como as operações que envolvem a solicitação de determinados tipos de dados. A recomendação do uso no ciclo de vida da aplicação inicial, geralmente no onCreate() preferencialmente.
+ */
+
+ /*!
+  * @defgroup ma601 Funções de Transação
+  * @ingroup ma60
+  * @brief Funções a ser adicionadas para o processamento da transação.
+  */
+
+/**
+ * @ingroup ma600 
+ * @{
+ */
+
+/**
+ * @brief Função responsável por informar o Context (this) da automação para realizar as devidas configurações internas do módulo.
+ * @param appContext (Context) Context atual utilizada para apresentação de diálogos com o usuário.
+ */
+void setContext(Context appContext);
+
+/**
+ * @brief Função responsável por informar o Handler da automação para receber as mensagens de progresso, coleta e retorno da transação de TEF.
+ * @param appHandler appHandler (Handler) Objeto para rebecer as mensagens das operações TEF.
+ */
+void setHandler(Handler appHandler);
+
+/**
+ * @brief Função responsável por coletar informações que serão utilizadas internamente para realizar configurações do produto TEF.
+ * @param acNome (String) Nome da aplicação da automação comercial.
+ * @param acVersao (String) Versão atual da aplicação da automação comercial.
+ * @param acTextoPinpad (String) Texto que será apresentado no PIN-PAD.
+ * @param estabelecimento (String) Nome definido com a operadora de TEF. (Opcional)
+ * @param loja (String) Nome da loja definida com a operadora de TEF. (Opcional)
+ * @param terminal (String) Número do terminal definido com a operadora de TEF. (Opcional)
+
+ */
+void InformarDadosAutomacao(String acNome, String acVersao, String acTextoPinpad, String estabelecimento, String loja, String terminal);
+
+/**
+ * @brief Função responsável pela ativação do terminal para realizar as transações e operações com TEF.
+ * @param cnpjCpf (String) Documento (CNPJ ou CPF) que foi informado para cadastro (formato XX.XXX.XXX/XXXX-XX ou XXX.XXX.XXX-XX).
+ *  */
+void AtivarTerminal(String cnpjCpf);
+
+/**
+ * @} 
+ */
+
+/**
+ * @ingroup ma601
+ * @{
+ */
+
+/**
+ * @brief Função responsável por fornecer a mensagem do passo atual no qual a operação está durante as transações.
+ * @return (String) Mensagem de progresso da operação.
+ */
+String ObterMensagemProgresso();
+
+/**
+ * @brief Função responsável por fornecer os dados da operação atual de TEF. Será utilizada para o retorno das funções de transações, cancelamentos e administrativas.
+ * @return  (String) JSON com todas as informações já conhecidas para a Automação Comercial.
+ */
+String ObterDadosTransacao();
+
+/**
+ * @brief Função responsável por fornecer as opções válidas para o próximo passo da operação. 
+ * @return (String) Opções para escolha do operador. As opções estão separadas por uma quebra de linha ("\n") e devem ser tratadas pela Automação Comer
+ */
+String ObterOpcaoColeta();
+
+/**
+ * @brief Função responsável por receber uma dentre as opções fornecidas por "ObterOpcaoColeta".
+ * @param opcaoColeta (String) Opção selecionada entre as fornecidas em “ObterOpçãoColeta”.
+ */
+void InformarOpcaoColeta(String opcaoColeta);
+
+/**
+ * @brief Função responsável por iniciar uma transação TEF com tipo de pagamento em débito.
+ * @param valorTotal (String) Valor do pagamento realizado na operação com TEF (formato 00.00).
+ */
+void RealizarTransacaoDebito(String valorTotal);
+
+/**
+ * @brief Função responsável por iniciar uma transação TEF com tipo de pagamento em crédito.
+ * @param valorTotal (String) Valor do pagamento realizado na operação com TEF (formato 00.00).
+ * @param tipoFinanciamento (String) Tipo do financiamento (A vista (1), parcelado emissor (2) ou parcelado estabelecimento (3)).
+ * @param numeroParcelas (String) Quantidade de parcelas para as transações parcelada.
+ */
+void RealizarTransacaoCredito(String valorTotal, String tipoFinanciamento, String numeroParcelas);
+
+/**
+ * @brief Função responsável por cancelar a operação no ponto atual (coletando informações, enviando mensagens, aguardando senha etc.).
+ */
+void RealizarCancelamentoOperacao();
+
+/**
+ * @brief Função responsável por realizar o processo de cancelamento de uma transação autorizada.
+ * @param valorTotal (String) Valor do pagamento da transação autorizada TEF (formato 00.00).
+ * @param nsu (String) Documento NSU da transação autorizada TEF.
+ * @param data (String) Data da transação autorizada TEF (formato dd/MM/yy).
+ */
+void RealizarCancelamentoTransacao(String valorTotal, String nsu, String data);
+
+/**
+ * @brief Função responsável pela impressão do relatório de transações (débito e crédito) do dia atual
+ */
+void ImprimirRelatorioDiario();
+
+/**
+ * @brief Função responsável pela reimpressão do último comprovante autorizado em uma transação.
+ */
+void ReimprimirUltimoComprovante();
+
+/**
+ * @} 
+ */
