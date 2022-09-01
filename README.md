@@ -55,6 +55,10 @@ add todo o conteúdo e realizar o push
 >            * ma41 - Etiqueta<br>
 >            * ma42 - SAT<br>
 >        * ma5 - Pix4
+>        * ma6 - TEF
+>            * ma60 - Funções
+>               * ma600 - Funções de Configuração
+>               * ma601 - Funções de Transação
 > * g4 - Changelog (./changelog.doxy)<br>
 >    * g40 - Termica<br>
 >    * g41 - HPRT<br>

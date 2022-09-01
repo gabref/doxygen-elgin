@@ -241,7 +241,7 @@ public void iniciarPagamentoDebito(String valorTransacao, Context context, Handl
  *                handleMessage. A resposta será enviada como String no formato JSON
  */
 @Deprecated
-public void inciarPagamentoCredito(String valorTransacao,int tipoFinanciamento,Context context,Handler handler);
+public void iniciarPagamentoCredito(String valorTransacao,int tipoFinanciamento,Context context,Handler handler);
 
 /**
  * \ingroup sp20

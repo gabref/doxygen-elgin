@@ -14,6 +14,7 @@
  * @param porta `char*` Parâmetro do tipo cadeia de caracteres que recebe a porta COM em que o PIX4 está conectado, por exemplo: `"COM4"`.
  * @return `int` O retorno da função é do tipo inteiro. <br>
  * A função bem sucedida deve retornar 0.<br>
+ * A função mal sucedida deve retornar -1.<br>
  * | Código Erro | Descrição| 
  * | :--- | :--- |
  * | -12 | Dispositivo não existe |
@@ -28,6 +29,10 @@ int AbreConexaoDisplay(const char* porta);
  * @return `int` O retorno da função é do tipo numérico.<br>
  * A função bem sucedida deve retornar a versao atual do firmware (ex: 13).<br>
  * A função mal sucedida deve retornar -1.
+ * | Código Erro | Descrição| 
+ * | :--- | :--- |
+ * | -4 | Porta Fechada |
+ * | -44 | Erro Escrita |
  */
 int ObtemVersaoFirmware(); 
 
@@ -55,6 +60,10 @@ int DesconectarDisplay();
  * @return `int` O retorno da função é do tipo numérico.<br>
  * A função bem sucedida deve retornar 0.<br>
  * A função mal sucedida deve retornar -1. <br>
+ * | Código Erro | Descrição| 
+ * | :--- | :--- |
+ * | -4 | Porta Fechada |
+ * | -44 | Erro Escrita |
  */
 int InicializaDisplay();
 
@@ -64,6 +73,9 @@ int InicializaDisplay();
  * @return `int` O retorno da função é do tipo numérico.<br>
  * A função bem sucedida deve retornar 0.<br>
  * A função mal sucedida deve retornar -1. <br>
+ * | Código Erro | Descrição| 
+ * | :--- | :--- |
+ * | -4 | Porta Fechada |
  */
 int ReinicializaDisplay();
 
@@ -81,11 +93,15 @@ int ReinicializaDisplay();
  * | Imagem 2 | p3.jpg |
  * <br>
  * @param filePath `char*` Define o caminho onde se encontra a imagem a ser salva.
- * @param largura `char*` Define a largura imagem. (ex. 320)
+ * @param largura `char*` Define a largura imagem. (ex. 300)
  * @param altura `char*` Define a altura imagem. (ex. 480)
  * @return `int` O retorno da função é do tipo numérico.<br>
  * A função bem sucedida deve retornar 0.<br>
  * A função mal sucedida deve retornar -1. <br>
+ * | Código Erro | Descrição| 
+ * | :--- | :--- |
+ * | -4 | Porta Fechada |
+ * | -44 | Erro Escrita |
  */
 int CarregaImagemDisplay(const char* fileName, const char* filePath, final int largura, final int altura);
 
@@ -93,8 +109,8 @@ int CarregaImagemDisplay(const char* fileName, const char* filePath, final int l
  * @brief Método utilizado para apresentar uma imagem  gravada anteriormente usando método CarregaImagemDisplay().
  * 
  * @param fileName `char*` Define o nome dado ao arquivo quando carregado.
- * @param posH `char*` Define a coordenada posição horizontal. 0 >= posH <= 480.
- * @param posV `char*` Define a coordenada posição vertical. 0 >= posV <= 300.
+ * @param posY `char*` Define a coordenada posição vertical. 0 >= posV <= 480.
+ * @param posX `char*` Define a coordenada posição horizontal. 0 >= posH <= 300.
  * @param tipo `char*` Define o tipo de apresentação.<br>
  * | Valor | Descrição |
  * | :--- | :--- |
@@ -104,21 +120,29 @@ int CarregaImagemDisplay(const char* fileName, const char* filePath, final int l
  * @return `int` O retorno da função é do tipo numérico.<br>
  * A função bem sucedida deve retornar 0.<br>
  * A função mal sucedida deve retornar -1. <br>
+ * | Código Erro | Descrição| 
+ * | :--- | :--- |
+ * | -4 | Porta Fechada |
+ * | -44 | Erro Escrita |
  */
-int ApresentaImagem(const char* fileName, int posH, int posV, int tipo);
+int ApresentaImagemDisplay(const char* fileName, int posY, int posX, int tipo);
 
 /**
  * @brief Método utilizado para apresentar o qrCode na coordenada especificada.
  * 
  * @param qrCode `char*` Define o valor do QRCode a ser apresentado.
  * @param tamanho `int` Parâmetro do tipo inteiro que define o  tamanho do qrCode. 15 >= tamanho <= 255.
- * @param posH `int` Parâmetro do tipo inteiro que define a coordenada posição horizontal. 0 >= posH <= 480.
- * @param posV `int` Parâmetro do tipo inteiro que define a coordenada posição vertical. 0 >= posV <= 300.
+ * @param posY `int` Parâmetro do tipo inteiro que define a coordenada posição vertical. 0 >= posH <= 480.
+ * @param posX `int` Parâmetro do tipo inteiro que define a coordenada posição horizontal. 0 >= posV <= 300.
  * @return `int` O retorno da função é do tipo numérico.<br>
  * A função bem sucedida deve retornar 0.<br>
  * A função mal sucedida deve retornar -1. <br>
+ * | Código Erro | Descrição| 
+ * | :--- | :--- |
+ * | -4 | Porta Fechada |
+ * | -44 | Erro Escrita |
  */
-int ApresentaQRCode(const char* qrCode, int tamanho, int posH, int posV);
+int ApresentaQRCode(const char* qrCode, int tamanho, int posY, int posX);
 
 /**
  * @brief Método utilizado para apresentar um texto colorido na coordenada especificada.
@@ -126,14 +150,18 @@ int ApresentaQRCode(const char* qrCode, int tamanho, int posH, int posV);
  * @param texto `char*` Parâmetro do tipo caractere que define o texto a ser apresentado.
  * @param idTexto `int` Parâmetro do tipo numérico que define o id do texto a ser apresentado. `1 >= idTexto =< 19`.
  * @param tamanho `int` Parâmetro do tipo numérico que define o tamanho da fonte. `10 >= tamanho =< 50`.
- * @param posH `int` Parâmetro do tipo numérico que define a coordenada posição horizontal. `0 >= posH <= 480`.
- * @param posV `int` Parâmetro do tipo numérico que define a coordenada posição vertical. `0 >= posV <= 300`.
+ * @param posY `int` Parâmetro do tipo numérico que define a coordenada posição vertical. `0 >= posY <= 480`.
+ * @param posX `int` Parâmetro do tipo numérico que define a coordenada posição horizontal. `0 >= posX <= 300`.
  * @param hexadecimal `char*` Parâmetro do tipo cadeia de caracteres que define a cor da fonte em hexadecimal.
  * @return `int` O retorno da função é do tipo numérico.<br>
  * A função bem sucedida deve retornar 0.<br>
  * A função mal sucedida deve retornar -1. <br>
+ * | Código Erro | Descrição| 
+ * | :--- | :--- |
+ * | -4 | Porta Fechada |
+ * | -44 | Erro Escrita |
  */
-int ApresentaTextoColorido(const char* texto, int idTexto,int tamanho,int posH,int posV,String hexadecimal);
+int ApresentaTextoColorido(const char* texto, int idTexto,int tamanho,int posY,int posX, const char* hexadecimal);
 
 /**
  * @brief Método utilizado para apresentar uma lista dinâmica de compras.
