@@ -47,7 +47,7 @@ DesconectarDisplay() \n
 InicializaDisplay() \n
 ReinicializaDisplay() \n
 CarregaImagemDisplay() \n
-ApresentaImagem() \n
+ApresentaImagemDisplay() \n
 ApresentaQRCode() \n
 ApresentaTextoColorido() \n
 ApresentaListaCompras() \n
