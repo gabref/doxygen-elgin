@@ -47,7 +47,7 @@ PROJECT_NAME           = "Plataforma de Comunicação Elgin"
 # could be handy for archiving the generated documentation or if some version
 # control system is used.
 
-PROJECT_NUMBER         = "versão 3.5"
+PROJECT_NUMBER         = "versão 3.8"
 
 # Using the PROJECT_BRIEF tag one can provide an optional one line description
 # for a project that appears at the top of each page and should give viewer a
@@ -933,6 +933,10 @@ INPUT                  = src/E1_impressora/exportafuncoes.h \
                          src/IDH/idh_2_utilizando_intents.md \
                          src/IDH/idh_3_payload.md \
                          src/IDH/idh_4_utilizando_payloads.md \
+                         src/IDH/idh_tef_android/idh_tef_0_description.md \
+                         src/IDH/idh_tef_android/idh_tef_1_iniciando_intent.md \
+                         src/IDH/idh_tef_android/idh_tef_2_tratamento_resultado.md \
+                         src/IDH/idh_tef_android/idh_tef_3_parametros.md \
                          src/Android/android.doxy \
                          src/Android/smartPOS.doxy \
                          src/Android/minipdvm8.doxy \

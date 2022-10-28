@@ -36,8 +36,13 @@ extern "C"{
      *  > __cdecl\n
      *
      *  ### Arquivo de configuracao
-     *  O arquivo de configuração é carregado do diretório atual onde a aplicação está\n
-     *  sendo executada. Um exemplo do arquivo sat-config.ini pode ser visto abaixo:
+	 *
+	 *  A biblioteca (dll) irá procurar o arquivo de configuração nos seguintes diretórios:\n
+	 *  Linux: `/etc/elgin/sat-config.ini`\n
+	 *  Windows: `C:\windows\system32\sat-config.ini`\n
+	 *  Se a biblioteca não encontrar o arquivo de configuração no diretório padrão, a 
+	 *  lib irá procurar no diretório onde a aplicação está sendo executada.\n\n
+	 *	Um exemplo do arquivo sat-config.ini pode ser visto abaixo:
      *
      * ``` ini
      * [Logging]
