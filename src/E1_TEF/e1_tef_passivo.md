@@ -17,10 +17,10 @@ Há 2 tipos de arquivos para troca de dados entre automação e API TEF. Um dele
 
 Abaixo segue um diagrama do fluxo de iterações entre PDV e E1_TEFPay_Passivo e logo adiante um exemplo dos arquivos de requisição e resposta:
 
-![[Diagrama de sequencia para fluxo de comunicação entre PDV e Módulo de troca de arquivos](https://user-images.githubusercontent.com/78883867/117910368-2fc08100-b2b2-11eb-8b97-952024370e13.png)
+![Diagrama de sequencia para fluxo de comunicação entre PDV e Módulo de troca de arquivos](https://user-images.githubusercontent.com/78883867/117910368-2fc08100-b2b2-11eb-8b97-952024370e13.png)
 
 
-Exemplo de Transação Venda Débito/Crédito 
+# Exemplo de Transação Venda Débito/Crédito 
 
 Arquivo IntPos.001 gerado pela Automação na Etapa 1 de uma operação CRT.
 `C:\Cliente\Req\IntPos.001`
@@ -132,3 +132,32 @@ Dados Retornados pela API:
     000-000 = CNF
     001-000 = 1
     999-999 = 0
+
+## Operações com Pix
+Para realizar uma operação Pix, a automação deve gerar um arquivo IntPos.001 com os seguintes dados:
+
+Dados escritos:
+
+	000-000 = PIX
+	001-000 = 1
+	002-000 = 123456
+	003-000 = 400
+	999-999 = 0
+
+## Utilizar o PIX4 para transações TEF Pix
+Para utilizar o PIX4 para transações com Pix, basta alterar no arquivo de configurações `config_tef.json` a chave `"pix4": 0` para `"pix4": 1`.
+<br>
+Exemplo de arquivo de configuração:  
+@code{.json}
+
+	{
+	"file_req": "IntPos.001",
+    "file_resp": "IntPos.Sts",
+    "log": 1,
+    "path_in": "C:/Cliente/Req",
+    "path_out": "C:/Cliente/Resp",
+    "pix4": 1,
+    "produto_tef": 2,
+    "tag_comprovante": 0
+	}
+@endcode
