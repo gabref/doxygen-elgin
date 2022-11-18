@@ -942,15 +942,15 @@ INPUT                  = src/E1_impressora/exportafuncoes.h \
                          src/Android/minipdvm8.doxy \
                          src/Android/e1_elginpay.md \
                          src/Android/ElginPay.h \
+                         src/Android/tef/tef_android.md \
+                         src/Android/tef/tef_android_contextualizacao.md \
+                         src/Android/tef/tef_android_integracao.md \
+                         src/Android/tef/tef_android_funcoes.doxy \
+                         src/Android/tef/tef_android_erros.doxy \
+                         src/Android/tef/tef_android_retorno.md \
                          src/Utilidades/ChangeLogs/changelog.doxy \
                          src/Utilidades/Erros/codigoerro.h \
 
-                        #  src/Android/tef/tef_android.md \
-                        #  src/Android/tef/tef_android_contextualizacao.md \
-                        #  src/Android/tef/tef_android_integracao.md \
-                        #  src/Android/tef/tef_android_funcoes.doxy \
-                        #  src/Android/tef/tef_android_erros.doxy \
-                        #  src/Android/tef/tef_android_retorno.md \
 # This tag can be used to specify the character encoding of the source files
 # that doxygen parses. Internally doxygen uses the UTF-8 encoding. Doxygen uses
 # libiconv (or the iconv built into libc) for the transcoding. See the libiconv
