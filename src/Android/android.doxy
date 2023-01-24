@@ -312,9 +312,9 @@
   * - #DefineAreaImpressao\n
   * - #DefinePosicao\n
   * - #DirecaoImpressao\n
-  * - DirectIO\n
+  * - #DirectIO\n
   * - #FechaConexaoImpressora\n
-  * - GetVersaoDLL\n
+  * - #GetVersaoDLL\n
   * - #ImpressaoCodigoBarras\n
   * - #ImpressaoPDF417\n
   * - #ImpressaoQRCode\n
