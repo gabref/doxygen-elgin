@@ -1,5 +1,9 @@
+/** @defgroup tf Funções
+  * @ingroup t2
+  */
+
 /**
- * @ingroup t2 
+ * @ingroup tf 
  * @{
  */
 
@@ -164,6 +168,36 @@ const char *RealizarPagamentoTEF(int codigoOperacao, const char* dadosCaptura, b
 const char *RealizarAdmTEF(int codigoOperacao, const char* dadosCaptura, bool novaTransacao);
 
 /**
+ * @brief Realiza uma operação de PIX. Essa função segue o mesmo fluxo da função 
+ * RealizarPagamentoTEF e depende do serviço habilitado na operadora de TEF.
+​​ * ​​​​​É importante que após a finalização da transação a automação realize a 
+ * confirmação da transação usando a função de confirmação.
+ * @note É obrigatório que se tenha um pinpad para a apresentação do QRCode.
+ * @param dadosCaptura Usado para enviar o valor da transação em centavos. Ex: 1000 = R$10,00
+ * @param novaTransacao Usado para indicar o inicio de uma transação.
+ * @return O Retorno será um JSON no padrão da API onde serão retornadas as informações de 
+ * acordo com o processamento da transação.
+ * Durante o processamento os dados utilizados para gerar a imagem do QRCode em tela 
+ * devem ser retornados na chave "mensagemResultado" do obj "tef". Tal mensagem tem a 
+ * seguinte estrutura: QRCODE;[dados];[infoComplementaresEmBase64]
+ * sendo que o index 1 dessa estrutura pode ser usado para gerar a imagem de apresentação.
+ * ### Exemplo de retorno
+ *      @code{.json}
+ *          {
+ *              "codigo": 0,
+ *              "mensagem": "Sucesso",
+ *              "tef": {
+ *                  "automacao_coleta_retorno": "0",
+ *                  "automacao_coleta_sequencial": "2",
+ *                  "mensagemResultado": "QRCODE;89504E470D0A1A0A0000000D4...hIEVMR0lOIn1dfQ"
+ *              }
+ *          }
+ *      @endcode
+ * Após o pagador realizar a leitura e pagamento da transação o retorno da transação deve ser similar ao retorno da transação convencional.
+*/
+const char *RealizarPixTEF(const char* dadosCaptura, bool novaTransacao);
+
+/**
  * @brief Função utilizada para confirmar ou cancelar uma operação recém-realizada.
  * 
  * Deve ser chamada após o término da coleta, quando  a chave `resultadoTransacao` == 0.
@@ -222,6 +256,87 @@ const char *ConfirmarOperacaoTEF(int id, int acao);
  * * **tef**: chave do tipo `objeto JSON` que contém as chaves de resposta do TEF Elgin. <br> Essa chave é **retornada somente** em casos de sucesso com as funções de operação TEF: `IniciarOperacaoTEF()`, `RecuperarOperacaoTEF()`, `RealizarPagamentoTEF()`, `RealizarAdmTEF()`, `ConfirmarOperacaoTEF()`, `FinalizarOperacaoTEF()`.
  */
 const char *FinalizarOperacaoTEF(int id);
+
+/**
+ * @brief Realiza a coleta de um dado no PINPAD. Os dados inseridos são apresentados no display 
+ * do pinpad mascarados com (*).
+ * @param tipoColeta Identifica qual coleta deve ser realizada. Os valores possíveis são: 
+ * 1(RG), 2(CPF), 3(CNPJ) e 4(Telefone)
+ * @param confirmar Indica que ao fim da operação deve ser realizada a confirmação do dado pelo pinpad.
+ * @return O retorno será um JSON no padrão da API onde a informação coletada esta preenchida na 
+ * chave "resultadoCapturaPinPad" do obj "tef". A automação deve validar o valor de "retorno", 
+ * quando igual a 1 a operação pode ser considerada como sucesso. Quando igual a 9 indica que 
+ * o usuário não cancelou a operação.
+ * ### Exemplo Sucesso
+ *      @code{.json}
+ *          {
+ *              "codigo": 0,
+ *              "mensagem": "Sucesso",
+ *              "tef": {
+ *                  "mensagemResultado": "CNPJC+691980880001",
+ *                  "resultadoCapturaPinPad": "691980880001",
+ *                  "retorno": "1",
+ *                  "sequencial": "101",
+ *                  "servico": "perguntar"
+ *              }
+ *          }
+ *      @endcode
+ * 
+ * ### Exemplo Cancelamento
+ *      @code{.json}
+ *          {
+ *              "codigo": 0,
+ *              "mensagem": "Sucesso",
+ *              "tef": {
+ *                  "mensagemResultado": "Operacao cancelada pelo cliente",
+ *                  "retorno": "9",
+ *                  "sequencial": "8",
+ *                  "servico": "coletar"
+ *              }
+ *          }
+ *      @endcode
+*/
+const char *RealizarColetaPinPad(int tipoColeta, bool confirmar);
+
+/**
+ * @brief Realiza a confirmação de um dado coletado usando o pinpad
+ * @param tipoCaptura Indica qual o tipo da confirmação a ser realizada. 
+ * Os valores possíveis são: 1(RG), 2(CPF), 3(CNPJ), 4(Telefone), 5(seleção) ou 6(Operadora)
+ * @param dadosCaptura Dados a serem apresentados no display do pinpad.
+ * @return O retorno será um JSON no padrão da API onde a informação coletada esta preenchida 
+ * na chave "resultadoCapturaPinPad" do obj "tef". A automação deve validar o valor de "retorno", 
+ * quando igual a 1 a operação pode ser considerada como sucesso. Quando igual a 9 indica que 
+ * o usuário não confirmou a operação.
+ * ### Exemplo Sucesso
+ *      @code{.json}
+ *          {
+ *              "codigo": 0,
+ *              "mensagem": "Sucesso",
+ *              "tef": {
+ *                  "mensagemResultado": "CNPJC+691980880001",
+ *                  "resultadoCapturaPinPad": "691980880001",
+ *                  "retorno": "1",
+ *                  "sequencial": "101",
+ *                  "servico": "perguntar"
+ *              }
+ *          }
+ *      @endcode
+ * 
+ * ### Exemplo Cancelamento
+ *      @code{.json}
+ *          {
+ *              "codigo": 0,
+ *              "mensagem": "Sucesso",
+ *              "tef": {
+ *                  "mensagemResultado": "RGC+000000000",
+ *                  "retorno": "9",
+ *                  "sequencial": "9",
+ *                  "servico": "perguntar"
+ *              }
+ *          }
+ *      @endcode
+*/
+const char *ConfirmarCapturaPinPad(int tipoCaptura, const char *dadosCaptura);
 
 /**
  * @} 
