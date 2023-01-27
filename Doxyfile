@@ -47,7 +47,7 @@ PROJECT_NAME           = "Plataforma de Comunicação Elgin"
 # could be handy for archiving the generated documentation or if some version
 # control system is used.
 
-PROJECT_NUMBER         = "versão 3.9.0"
+PROJECT_NUMBER         = "versão 3.9.1"
 
 # Using the PROJECT_BRIEF tag one can provide an optional one line description
 # for a project that appears at the top of each page and should give viewer a
@@ -922,6 +922,7 @@ INPUT                  = src/E1_impressora/exportafuncoes.h \
                          src/E1_TEF/tef_ativo/3_api.md \
                          src/E1_TEF/tef_ativo/4_payload.md \
                          src/E1_TEF/tef_ativo/5_arquivo_config.md \
+                         src/E1_TEF/tef_ativo/6_chaves.md \
                          src/E1_TEF/tef_ativo/funcoes.h \
                          src/E1_TEF/e1_tef_passivo.md \
                          src/E1_Bridge/e1_brigde_retorno.md \
@@ -957,7 +958,6 @@ INPUT                  = src/E1_impressora/exportafuncoes.h \
                          src/Utilidades/ChangeLogs/changelog.doxy \
                          src/Utilidades/Erros/codigoerro.h \
 
-                        #  src/E1_TEF/tef_ativo/6_chaves.md \
 # This tag can be used to specify the character encoding of the source files
 # that doxygen parses. Internally doxygen uses the UTF-8 encoding. Doxygen uses
 # libiconv (or the iconv built into libc) for the transcoding. See the libiconv
