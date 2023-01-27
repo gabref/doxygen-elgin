@@ -260,6 +260,9 @@ const char *FinalizarOperacaoTEF(int id);
 /**
  * @brief Realiza a coleta de um dado no PINPAD. Os dados inseridos são apresentados no display 
  * do pinpad mascarados com (*).
+ * 
+ * @note Essa função não tem correlação com o processo de transação.
+ * 
  * @param tipoColeta Identifica qual coleta deve ser realizada. Os valores possíveis são: 
  * 1(RG), 2(CPF), 3(CNPJ) e 4(Telefone)
  * @param confirmar Indica que ao fim da operação deve ser realizada a confirmação do dado pelo pinpad.
@@ -300,6 +303,12 @@ const char *RealizarColetaPinPad(int tipoColeta, bool confirmar);
 
 /**
  * @brief Realiza a confirmação de um dado coletado usando o pinpad
+ * 
+ * A função deve ser utilizada após um dado ter sido coletado com a função @ref RealizarColetaPinPad, permitindo ao usuário 
+ * visualizar o dado coletado sem a máscara, assim podendo confirmar o se o dado está correto por meio do pinpad.
+ *  
+ * @note Essa função não tem correlação com o processo de transação.
+ * 
  * @param tipoCaptura Indica qual o tipo da confirmação a ser realizada. 
  * Os valores possíveis são: 1(RG), 2(CPF), 3(CNPJ), 4(Telefone), 5(seleção) ou 6(Operadora)
  * @param dadosCaptura Dados a serem apresentados no display do pinpad.
