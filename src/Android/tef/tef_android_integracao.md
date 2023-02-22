@@ -26,7 +26,10 @@ As bibliotecas que utilizaremos no projeto são quatro `AAR` (um arquivo AAR con
 
 \n
 
-Com estas bibliotecas configuradas no arquivo `build.gradle`(:app) do projeto você consegue iniciar o desenvolvimento da sua aplicação. Mas ainda existe mais uma *lib* externa que devemos adicionar para dar suporte nas conversões internas:
+Com estas bibliotecas configuradas no arquivo `build.gradle`(:app) do projeto você consegue iniciar o desenvolvimento da sua aplicação chamando as funções da seguinte maneira:
+    * `import com.elgin.e1.pagamentos.tef.*;`
+
+Mas ainda existe mais uma *lib* externa que devemos adicionar para dar suporte nas conversões internas:
     * `implementation 'com.squareup.retrofit2:converter-gson:2.9.0'
 
 Sua configurações no arquivo build.gradle(:app) deve conter os componentes conforma abaixo:

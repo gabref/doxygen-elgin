@@ -121,5 +121,13 @@ void ImprimirRelatorioDiario();
 void ReimprimirUltimoComprovante();
 
 /**
+ * @brief Função utilizada para inciar uma transação pix.
+ * @param valorTransacao (String) Valor do pagamento da transação PIX (formato em centavos 0000)
+ * @param appHandler appHandler (Handler) Objeto para rebecer as mensagens das operações PIX.
+ * @return O retorno será enviado para o Handler.handleMessage em formato Json
+ */
+void iniciarTransacaoPIX(String valorTransacao, Handler appHandler)
+
+/**
  * @} 
  */
