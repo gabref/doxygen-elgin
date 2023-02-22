@@ -20,8 +20,8 @@ Após a criação deste diretório, vamos ao que interessa, adicionar as bibliot
 As bibliotecas que utilizaremos no projeto são quatro `AAR` (um arquivo AAR contém uma biblioteca de software usada para desenvolver aplicativos Android). Dois são de nossa propriedade e os demais são fornecidos por parceiros, eles são:
     1. core-[versão atual].aar
     2. pagamentos-[versão atual].aar
-    3. tef_componente1.arr
-    4. tef_componente2.arrr
+    3. tef_componente1.aar
+    4. tef_componente2.aar
 
 
 \n
@@ -37,8 +37,8 @@ Sua configurações no arquivo build.gradle(:app) deve conter os componentes con
 @code{.java}
 dependencies {
     // TEF
-    implementation files('libs/core-v1_beta.aar')
-    implementation files('libs/pagamentos-v1_beta.aar')
+    implementation files('libs/core-v01.00.02.aar')
+    implementation files('libs/pagamentos-v01.03.00.aar')
     implementation files('libs/tef_componente1.aar')
     implementation files('libs/tef_componente2.aar')
     // Default
