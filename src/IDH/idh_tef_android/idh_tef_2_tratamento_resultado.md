@@ -1,4 +1,4 @@
-@defgroup idh201 Resposta Intent
+@defgroup idh201 Resposta Intent TEF
 @ingroup idh20
 
 Depois que o IDH tiver termiado o processo do ElginTef, o fluxo é retornado à automação comercial, onde é devolvido um conjunto de informações, entre elas informações se o processamento ocorreu com êxito.

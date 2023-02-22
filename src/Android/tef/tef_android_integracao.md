@@ -30,7 +30,7 @@ Com estas bibliotecas configuradas no arquivo `build.gradle`(:app) do projeto vo
     * `import com.elgin.e1.pagamentos.tef.*;`
 
 Mas ainda existe mais uma *lib* externa que devemos adicionar para dar suporte nas conversões internas:
-    * `implementation 'com.squareup.retrofit2:converter-gson:2.9.0'
+    * `implementation 'com.squareup.retrofit2:converter-gson:2.9.0`
 
 Sua configurações no arquivo build.gradle(:app) deve conter os componentes conforma abaixo:
 
@@ -66,6 +66,7 @@ RealizarCancelamentoOperacao() \n
 RealizarCancelamentoTransacao() \n
 ImprimirRelatorioDiario() \n
 ReimprimirUltimoComprovante() \n
+iniciarTransacaoPIX() \n
 
 ## Handler - Como utilizar na API
 Aqui vamos explorar este tipo de dado que é responsável direto por enviar e receber mensagens para a API após as transações (venda, cancelamento ou administrativas) serem inicializadas. Se a implementação estiver errada, provavelmente você receberá informações nos passos errados durante uma operação. Então vamos deixar claro a forma que estamos utilizando este componente em nossa API.

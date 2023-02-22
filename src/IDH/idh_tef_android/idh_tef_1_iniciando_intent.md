@@ -1,4 +1,4 @@
-@defgroup idh200 Iniciando o Intent
+@defgroup idh200 Iniciando o Intent TEF
 @ingroup idh20
 
 O primeiro passo é instanciar um objeto Intent passando o nome da aplicação como argumento, neste caso, o nome é `com.elgin.e1.digitalhub.TEF`. Através desta informação, o Android buscará o aplicativo do IDH entre os aplicativos instalados no dispositivo. 
