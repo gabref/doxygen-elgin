@@ -1,4 +1,4 @@
-@defgroup idh00 Caminho Filtros
+@defgroup idh00 Filtros / Caminhos
 @ingroup idh1
 
 # Filter Actions para os Módulos
