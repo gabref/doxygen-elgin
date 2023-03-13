@@ -943,6 +943,7 @@ INPUT                  = src/E1_impressora/exportafuncoes.h \
                          src/IDH/idh_tef_android/idh_tef_1_iniciando_intent.md \
                          src/IDH/idh_tef_android/idh_tef_2_tratamento_resultado.md \
                          src/IDH/idh_tef_android/idh_tef_3_parametros.md \
+                         src/IDH/idh_tef_android/idh_tef_4_retorno.md \
                          src/IDH/idh_tef_android/idh_pix_1_transacao_pix.md \
                          src/Android/android.doxy \
                          src/Android/smartPOS.doxy \
