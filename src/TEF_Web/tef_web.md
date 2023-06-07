@@ -44,6 +44,8 @@ headers: {
 @endcode
 
 ## Configuração
+Função responsável por coletar informações que serão utilizadas internamente para realizar configurações do produto TEF
+
 URL: `http://localhost:2001/tef/v1/configuracao`
 <br>
 Método: `POST`
@@ -55,15 +57,17 @@ body:
     nome: string                // nome da aplicação
     versao: string              // versão da aplicação, será exibido no visor do pinpad
     textoPinpad: string         // texto que será exibido no visor do pinpad
-    macPinpad: string           // opcional
-    producao: string            //  0 ou 1 para homologação ou produção
-    estabelecimento: string     // o nome do estabelecimento no qual a AC está em execução
-    terminal: string            // o nome / código do terminal (pertencente ao estabelecimento) na qual a AC está em execução
-    loja: string                // o nome / código da loja (pertencente ao estabelecimento) na qual a AC está em execução
+    macPinpad: string           // Endereço Mac do PIN-PAD pareado com dispositivo (Preencher somente quando houver dispositivos)
+    producao: string            // Flag para indicação do ambiente de transação (0 - Testes e 1 - Produção)
+    estabelecimento: string     // Nome do estabelecimento definido com a operadora de TEF (Opcional)    
+    terminal: string            // Nome da loja definida com a operadora de TEF (Opcional)    
+    loja: string                // Número do terminal definido com a operadora de TEF (Opcional)
 }
 @endcode
 
 ## Ativação
+Função responsável pela ativação do terminal para realizar as transações e operações com ElginTef
+
 URL: `http://localhost:2001/tef/v1/ativacao`
 <br>
 Método: `POST`
@@ -72,11 +76,13 @@ body:
 
 @code{.json}
 {
-    cnpjCpf: string // cnpj ou cpf cadastrado no ElginTEF com pontuação
+    cnpjCpf: string // Documento (CNPJ ou CPF) que foi informado para cadastro
 }
 @endcode
 
 ## Reimpressão
+Função responsável pela reimpressão do último comprovante autorizado em uma transação
+
 URL: `http://localhost:2001/tef/v1/adm/reimpressao`
 <br>
 Método: `GET`
@@ -84,6 +90,8 @@ Método: `GET`
 body: não existe
 
 ## Relatório
+Função responsável pela impressão do relatorio de transações (débito, crédito e cancelamentos) do dia atual
+
 URL: `http://localhost:2001/tef/v1/adm/relatorio`
 <br>
 Método: `GET`
@@ -91,6 +99,8 @@ Método: `GET`
 body: não existe
 
 ## Venda
+Função responsável por iniciar uma venda e obter os dados dinâmicamente
+
 URL: `http://localhost:2001/tef/v1/venda`
 <br>
 Método: `POST`
@@ -98,6 +108,8 @@ Método: `POST`
 body: não existe
 
 ## Débito
+Função responsável por iniciar uma transação TEF com tipo de pagamento em débito
+
 URL: `http://localhost:2001/tef/v1/venda/debito`
 <br>
 Método: `POST`
@@ -106,11 +118,13 @@ body:
 
 @code{.json}
 {
-    valor: string           // valor maior que zero e contém valor da transação em R$ com ponto: '12.99
+    valor: string           // Valor do pagamento realizado na operação com TEF (formato 00.00)
 }
 @endcode
 
 ## Crédito
+Função responsável por iniciar uma transação TEF com tipo de pagamento em crédito
+
 URL: `http://localhost:2001/tef/v1/venda/credito`
 <br>
 Método: `POST`
@@ -119,13 +133,15 @@ body:
 
 @code{.json}
 {
-    valor: string           // valor maior que zero e contém valor da transação em R$ com ponto: '12.99
-    parcelas: string        // número de parcelas a ser utilizada an transação
-    financiamento: string   // Somente aplicado quando parcelas for maior que 1, opções: "Estabelecimento" ou "Administradora"
+    valor: string           // Valor do pagamento realizado na operação com TEF (formato 00.00)
+    parcelas: string        // Quantidade de parcelas para as transações parcelada
+    financiamento: string   // Tipo do financiamento (A vista(1), parcelado emissor(2) ou parcelado estabelecimento(3))
 }
 @endcode
 
 ## Cancelamento
+Função responsável por realizar o processo de cancelamento de uma transação autorizada
+
 URL: `http://localhost:2001/tef/v1/adm/cancelamento`
 <br>
 Método: `POST`
@@ -134,8 +150,42 @@ body:
 
 @code{.json}
 {
-    nsu: string         // nsu da transação a ser cancelada, deve conter 6 dígitos
-    valor: string       // valor maior que zero e contém valor da transação em R$ com ponto: '12.99
-    data: string        // data da transação no formato dd/mm/aa
+    valor: string       // Valor do pagamento da transação autorizada TEF (formato 00.00)
+    nsu: string         // Documento NSU da transação autorizada TEF com 6 dígitos
+    data: string        // Data da transação autorizada TEF (formato dd/MM/yy)
 }
+@endcode
+
+## IntPos
+
+@note Esse endpoint pode ser chamado apenas em ambientes integrados com o TEF GP Elgin, ou seja, Windows e Linux.
+
+URL: `http://localhost:2001/tef/v1/intpos`
+<br>
+Método: `POST`
+<br>
+body:
+
+@code{.json}
+{
+    intpos: string       // chaves iguais as enviadas em uma integração com o GP, porém as linhas devem ser separadas por \n ou \r\n
+}
+@endcode
+
+Exemplo:
+
+@code{.javascript}
+        const responseData = await fetch(BASE_URL + rota, {
+            headers: {
+                'Accept': 'application/json',
+                'Content-Type': 'application/json'
+            },
+            method: 'POST',
+            body: JSON.stringify({
+                'intpos': '000-000 = ADM\n001-000 = 123\n999-999 = 0\n'
+            })
+        })
+        const data = await responseData.json()
+        console.log('data json post', data)
+        alert(JSON.stringify(data))
 @endcode
