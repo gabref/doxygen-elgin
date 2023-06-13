@@ -47,7 +47,7 @@ PROJECT_NAME           = "Plataforma de Comunicação Elgin"
 # could be handy for archiving the generated documentation or if some version
 # control system is used.
 
-PROJECT_NUMBER         = "versão 3.13.1"
+PROJECT_NUMBER         = "versão 3.13.2"
 
 # Using the PROJECT_BRIEF tag one can provide an optional one line description
 # for a project that appears at the top of each page and should give viewer a
@@ -923,6 +923,7 @@ INPUT                  = src/E1_impressora/exportafuncoes.h \
                          src/E1_TEF/tef_ativo/4_payload.md \
                          src/E1_TEF/tef_ativo/5_arquivo_config.md \
                          src/E1_TEF/tef_ativo/6_chaves.md \
+                         src/E1_TEF/tef_ativo/7_descricao_completa_fluxo.md \
                          src/E1_TEF/tef_ativo/funcoes.h \
                          src/E1_TEF/tef_passivo/1_main.md \
                          src/E1_TEF/tef_passivo/2_exemplo.md \

@@ -1,7 +1,9 @@
 @defgroup t24 Descrição das Chaves
 @ingroup t2
 
-## INFORMAÇÕES
+# Chaves {#tef_api_chaves}
+
+## INFORMAÇÕES {#tef_api_informacoes}
 
 `loja`:
 Conterá o código da loja cadastrado dentro do estabelecimento no ElginTef para a qual as transações serão realizadas. A automação comercial cadastrará esse dado apenas uma vez usando a função @ref ConfigurarDadosPDV
@@ -14,9 +16,9 @@ Enviado obrigatoriamente no serviçoiniciar.
 <!-- estado, statusClient -->
 <!-- servico, servico -->
 
-<!-- retorno, resultadoTransacao -->
+<!-- retorno, retorno -->
 <!-- tabela -->
-`resultadoTransacao`:
+`retorno`:
 Contém o código com a solicitação ou resultado do serviço, onde:
 
 | Código | Situação | ElginTef -> Aplicação Comercial            | Aplicação Comercial -> ElginTef |
@@ -60,7 +62,7 @@ Enviado pela Aplicação Comercial e conterá a informação a ser exibida na te
 `nomeEstabelecimento`:
 Conterá o código do estabelecimento cadastrado no ElginTef para o qual as transações serão realizadas. A automação comercial cadastrará esse dado apenas uma vez usando a função @ref ConfigurarDadosPDV
 
-## TRANSAÇÕES
+## TRANSAÇÕES {#tef_api_transacoes}
 
 <!-- transacao_nsu -->
 `nsuTerminal`:
@@ -135,7 +137,7 @@ Quando especificado conterá(ão) o(s) comprovantes gerados pela execução da t
 É  o  código  do  usuário  enviado  pela Aplicação  Comercial para  o ElginTef para autenticação nas transações administrativas.
 
 
-## COLETA
+## COLETA {#tef_api_coleta}
 
 `automacao_coleta_tipo`:
 Enviado  pelo ElginTef para Aplicação  Comercial sempre quando for coletar alguma informação, e conterá o tipo de informação a ser coletada, onde:
@@ -145,7 +147,7 @@ Enviado  pelo ElginTef para Aplicação  Comercial sempre quando for coletar alg
    * (N) Numérico com casas decimais ou não;
    * (X) Alfanumérico;
 
-Quando informado e `automacao_coleta_mascara` não informado, as máscaraspadrões serão:
+Quando informado e `automacao_coleta_mascara` não informado, as máscaras padrões serão:
    * (*) Não exibivel com tamanho ilimitado;
    * (A) Letras com tamanho ilimitado;
    * (D) Data no formato "dd/MM/yy";

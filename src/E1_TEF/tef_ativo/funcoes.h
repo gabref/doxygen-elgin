@@ -200,7 +200,7 @@ const char *RealizarPixTEF(const char* dadosCaptura, bool novaTransacao);
 /**
  * @brief Função utilizada para confirmar ou cancelar uma operação recém-realizada.
  * 
- * Deve ser chamada após o término da coleta, quando  a chave `resultadoTransacao` == 0.
+ * Deve ser chamada após o término da coleta, quando  a chave `retorno` == 0.
  *
  * Essa função exige que alguma operação esteja em andamento.
  * Caso ocorra algum erro durante a operação (queda de conexão, queda de energia ou qualquer outro problema que interrompa a comunicação entre API <--> ElginTEF), existem duas formas para cancelá-la ou confirmá-la: 

@@ -7,7 +7,7 @@ O envio de um payload ao iniciar a operação é opcional, porém durante o esta
 
 A seguir, **exemplos** de payloads que podem ser enviados nas funções:
 
-1. Payload para funções `IniciarOperacaoTEF()` / `RecuperarOperacaoTEF()` 
+1. Payload para funções `IniciarOperacaoTEF()`
     - envio opcional, quando não enviado, assume-se os parâmetros do arquivo de configuração se houver
     
     @code{.json}

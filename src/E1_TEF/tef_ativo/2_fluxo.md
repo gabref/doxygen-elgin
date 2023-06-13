@@ -4,7 +4,7 @@
 ## Fluxo de Operação
 
 1. Inciar conexão com Client: `IniciarOperacaoTEF()`<sup>(1)</sup> 
-2. Realizar operação: `RealizarPagamentoTEF()`/`RealizarAdmTEF()`
+2. Realizar operação: `RealizarPagamentoTEF()`/`RealizarAdmTEF()`/`RealizarPixTEF`
     * **Fase da coleta de dados**: API retorna um JSON, automação comercial entrega dados pedidos chamando recursivamente o método da operação.
 3. Confirmar a operação: `ConfirmarOperacaoTEF()`
 4. Finalizar a operação: `FinalizarOperacaoTEF()`
