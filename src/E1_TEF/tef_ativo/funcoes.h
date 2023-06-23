@@ -179,7 +179,7 @@ const char *RealizarAdmTEF(int codigoOperacao, const char* dadosCaptura, bool no
  * acordo com o processamento da transação.
  * Durante o processamento os dados utilizados para gerar a imagem do QRCode em tela 
  * devem ser retornados na chave "mensagemResultado" do obj "tef". Tal mensagem tem a 
- * seguinte estrutura: QRCODE;[dados];[infoComplementaresEmBase64]
+ * seguinte estrutura: QRCODE;[dadosEmHexadecimal];[infoComplementaresEmBase64]
  * sendo que o index 1 dessa estrutura pode ser usado para gerar a imagem de apresentação.
  * ### Exemplo de retorno
  *      @code{.json}
