@@ -189,3 +189,7 @@ Exemplo:
         console.log('data json post', data)
         alert(JSON.stringify(data))
 @endcode
+
+## Retornos
+
+Os retornos são os mesmos do IDH documentados [aqui](@ref retornos_idh_tef_elgin).
