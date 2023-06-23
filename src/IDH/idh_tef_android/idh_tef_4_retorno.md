@@ -16,7 +16,7 @@
 | NSU_HOST | NSU do Host Autorizador. |
 | VIA_CLIENTE | Cupom referente à via do cliente. |
 | TIPO_PARC | Valores possíveis: <br>**00**: À vista <br>**01**: Pré-Datado <br>**02**: ParceladoEstabelecimento <br>**03**: Parcelado Administradora | 
-| CODRESP | Código de resposta da transação realizada com o SiTef.Veja a tabela a seguir para maiores detalhes |
+| CODRESP | Código de resposta da transação realizada com o SiTef. |
 
 ## Retornos Protocolo Elgin {#retornos_idh_tef_elgin}
 
