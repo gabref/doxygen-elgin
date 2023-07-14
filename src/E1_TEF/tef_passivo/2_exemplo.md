@@ -113,3 +113,14 @@ Dados Retornados pela API:
     000-000 = CNF
     001-000 = 1
     999-999 = 0
+
+# Exemplo de Coleta PinPad
+
+Arquivo IntPos.001 gerado pela Automação Comercial:
+
+Isso irá acionar o processo de coleta da informação escolhida, vide @ref t03:
+
+    000-000 = CLT
+    001-000 = 0052660
+    376-000 = 2
+    999-999 = 0

@@ -69,6 +69,20 @@
 | 210&minus;052 | NUMERO_PDV                   | (I)(O)   | Informa o número do PDV para o registro de ocorrência. Normalmente esta relacionado com o computador |
 | 210&minus;065 | SALDO_DISPONIVEL             | (O)      | Indica o valor do Saldo Disponível no cartão. |
 | 300&minus;001 | DATA_VALIDADE_CARTAO         | (O)      | Informa a data de vencimento do cartão |
+| 375&minus;000 | CODIGO_OPERACAO              | (*O)     | Código de retorno da operação realizada no produto de tef, normalmente retorno da DLL do produto configurado para chamada da operação |
+| 375&minus;001 | MENSAGEM_OPERACAO            | (*O)     | Mensagem referente ao código de retorno |
+| 375&minus;002 | SOLICITA_CUPOM_FISCAL        | (O)      | Chave utilizada para indicar ao POS ElginPay que deve ser questionado ao cliente se o mesmo deseja cupom fiscal |
+| 375&minus;008 | MODO_ENTRADA_CARTAO          | (O)      | Indica o modo como foi realizado a captura do cartão |
+| 375&minus;016 | ESTABELECIMENTO              | (I)(O)   | Nome do estabelecimento |
+| 375&minus;017 | APLICACAO                    | (I)      | Nome da aplicação usado nos arquivos de entrada |
+| 375&minus;018 | VERSAO_APLICACAO             | (I)      | Versão da aplicação usado nos arquivos de entrada |
+| 375&minus;019 | LOJA                         | (I)(O)   | Nome da Loja |
+| 375&minus;023 | TEXTO_PINPAD                 | (O)      | Texto a ser apresentado no PINPAD |
+| 375&minus;024 | ADM_USUARIO                  | (I)      | Usuario para operações administrativas |
+| 375&minus;025 | ADM_SENHA                    | (I)      | Senha para operações administrativas |
+| 375&ndash;028 | RETORNO                      | (O)      | 0 = Requer confirmação da transação com CNF ou NCN/ 1 = não requer confirmação/ if >= 2 = Erro |
+| 376&ndash;000 | OPCAO_COLETA                 | (*I)     | Tipo da coleta a ser realizada no pinpad ( 1 = RG, 2 = CPF, 3 = CNPJ, 4 = FONE) |
+| 376&ndash;001 | DADO_COLETADO                | (O)      | Resultado da captura no pinpad de acordo com a solicitação 376-000 |
 | 504&minus;000 | CODIGO_OP_CELULAR            | (O)      | Informa o código da operadora recarregado |
 | 600&minus;000 | CNPJ_CREDENCIADORA           | (O)      | É o CNPJ da rede credenciadora do cartão de débito/crédito. |
 | 707&minus;000 | VALOR_ORIGINAL               | (O)      | Valor original da transação informado pela AC no campo 003-000 do arquivo de solicitação, em centavos. Este campo é informado pelo GP caso seja diferente do valor final da transação informado no campo 003-000 do arquivo de resposta. |
@@ -87,17 +101,3 @@
 | 750&minus;000 | ID_PORTADOR_CARTEIRA_DIGITAL | (O)      | Forma de identificação do portador da carteira digital |
 | 805&minus;000 | NUMERO_TELEFONE              | (O)      | Campo que fornece o telefone do cliente, informação retornada do Autorizador. |
 | 999&minus;999 | REGISTRO_FINAL               | (*I)(*O) | Indica o final do arquivo. |
-| 375&minus;000 | CODIGO_OPERACAO              | (*O)     | Código de retorno da operação realizada no produto de tef, normalmente retorno da DLL do produto configurado para chamada da operação |
-| 375&minus;001 | MENSAGEM_OPERACAO            | (*O)     | Mensagem referente ao código de retorno |
-| 375&minus;002 | SOLICITA_CUPOM_FISCAL        | (O)      | Chave utilizada para indicar ao POS ElginPay que deve ser questionado ao cliente se o mesmo deseja cupom fiscal |
-| 375&minus;008 | MODO_ENTRADA_CARTAO          | (O)      | Indica o modo como foi realizado a captura do cartão |
-| 375&minus;016 | ESTABELECIMENTO              | (I)(O)   | Nome do estabelecimento |
-| 375&minus;017 | APLICACAO                    | (I)      | Nome da aplicação usado nos arquivos de entrada |
-| 375&minus;018 | VERSAO_APLICACAO             | (I)      | Versão da aplicação usado nos arquivos de entrada |
-| 375&minus;019 | LOJA                         | (I)(O)   | Nome da Loja |
-| 375&minus;023 | TEXTO_PINPAD                 | (O)      | Texto a ser apresentado no PINPAD |
-| 375&minus;024 | ADM_USUARIO                  | (I)      | Usuario para operações administrativas |
-| 375&minus;025 | ADM_SENHA                    | (I)      | Senha para operações administrativas |
-| 375&ndash;028 | RETORNO                      | (O)      | 0 = Requer confirmação da transação com CNF ou NCN/ 1 = não requer confirmação/ if >= 2 = Erro |
-| 376&ndash;000 | OPCAO_COLETA                 | (*I)     | Tipo da coleta a ser realizada no pinpad ( 1 = RG, 2 = CPF, 3 = CNPJ, 4 = FONE) |
-| 376&ndash;001 | DADO_COLETADO                | (O)      | Resultado da captura no pinpad de acordo com a solicitação 376-000 |
