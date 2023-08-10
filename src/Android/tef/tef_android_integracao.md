@@ -66,7 +66,7 @@ RealizarCancelamentoOperacao() \n
 RealizarCancelamentoTransacao() \n
 ImprimirRelatorioDiario() \n
 ReimprimirUltimoComprovante() \n
-iniciarTransacaoPIX() \n
+RealizarTransacaoPIX() \n
 
 ## Handler - Como utilizar na API
 Aqui vamos explorar este tipo de dado que é responsável direto por enviar e receber mensagens para a API após as transações (venda, cancelamento ou administrativas) serem inicializadas. Se a implementação estiver errada, provavelmente você receberá informações nos passos errados durante uma operação. Então vamos deixar claro a forma que estamos utilizando este componente em nossa API.
@@ -128,8 +128,10 @@ Já tivemos uma visão geral dos componentes acima, agora chegou o momento de co
 Para que possa receber as mensagens de processo da transação, você deve definir em sua aplicação os seguintes `message.what`:
     * Mensagens de progresso = 1
     * Opções de coleta = 2 
-    * Dados da transação = 3
-    * Finalização = 4
+    * Informar Valor 3
+    * Dados da transação = 4
+    * Finalização = 5
+    * Hex da imagem qrcode pix = 6
 
 O exemplo abaixo mostra como você deverá definir o `message.what` conforme o progresso da transação. 
 
