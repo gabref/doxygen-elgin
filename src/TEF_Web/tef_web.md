@@ -156,6 +156,21 @@ body:
 }
 @endcode
 
+## PIX
+Função responsável por realizar a operação de pix
+
+URL: `http://localhost:2001/tef/v1/pix`
+<br>
+Método: `POST`
+<br>
+body:
+
+@code{.json}
+{
+    valor: string       // Valor do pagamento da transação PIX (formato 00.00)
+}
+@endcode
+
 ## IntPos
 
 @note Esse endpoint pode ser chamado apenas em ambientes integrados com o TEF GP Elgin, ou seja, Windows e Linux.
