@@ -44,6 +44,7 @@ extern "C"{
   * Os modelos de impressoras compatíveis com essa biblioteca são:\n
   * > Impressora i7\n
   * > Impressora i7 Plus\n
+  * > Impressora i8\n
   * > Impressora i9\n
   * > Impressora ix\n
   * > Impressora Fitpos\n

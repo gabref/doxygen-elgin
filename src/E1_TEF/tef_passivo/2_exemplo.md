@@ -118,7 +118,7 @@ Dados Retornados pela API:
 
 Arquivo IntPos.001 gerado pela Automação Comercial:
 
-Isso irá acionar o processo de coleta da informação escolhida, vide @ref t03:
+Isso irá acionar o processo de coleta da informação escolhida, vide [Descrição das Chaves](@ref t03):
 
     000-000 = CLT
     001-000 = 0052660
