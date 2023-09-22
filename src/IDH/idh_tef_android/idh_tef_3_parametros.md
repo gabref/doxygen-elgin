@@ -4,7 +4,7 @@
 | Parâmetro | Descrição |
 | :--- | :--- |
 | empresaSitef | Empresa Sitef. <br> O tamanho é de 8 dígitos alfanuméricos. |
-| modalidade | Funcionalidade do ElginTef que deseja executar. Por exemplo: <br>0 - pagamento<br>200 - cancelamento <br>114 - reimpressão <br>? - configurações
+| modalidade | Funcionalidade do ElginTef que deseja executar. Por exemplo: <br>0 - venda<br>2 - débito<br>3 - crédito<br>200 - cancelamento <br>114 - reimpressão <br>
 | terminalSitef | Número de terminal Sitef. <br>Se não informado o IDH irá usar o número de série do APOS ou |
 | operador | Código do operador. O campo é alfanumérico com tamanho até 20 caracteres. |
 | data | Data fiscal no formato AAAAMMDD ou DD/MM/AA. |
